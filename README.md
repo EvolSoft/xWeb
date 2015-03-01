@@ -1,2 +1,2 @@
 # xWeb
-A simple responsive HTML, CSS a JavaScript framework
+A simple responsive HTML, CSS and JavaScript framework
