@@ -1,0 +1,111 @@
+//**** Borders ****//
+
+@border-radius: 4px;
+@border-square-radius: 0px;
+@border-ultra-rounded-radius: 20px;
+
+//**** Grays ****//
+
+@white: #fff;
+@gray-light: darken(@white, 2.6%);
+@gray-light_2: darken(@gray-light, 2.5%);
+@gray: darken(@gray-light_2, 15%);
+@gray-dark: darken(@gray, 30%);
+@gray-dark_2: darken(@gray-dark, 30%);
+@black: #000;
+
+//**** Default Colors ****//
+
+@primary: #0072dc;
+@success: #00dc00;
+@warning: #dca600;
+@danger: #dc0000;
+@info: #00dccf;
+
+//**** Typography ****//
+
+@default-font: Arial;
+@default-font-size: 14px;
+@default-font-weight: 100;
+@h1-size: 28px;
+@h2-size: 24px;
+@h3-size: 20px;
+@h4-size: 18px;
+@h5-size: 14px;
+@h6-size: 12px;
+
+//**** Alerts ****//
+
+//Base Style
+
+@alert-padding: 15px;
+@alert-margin-bottom: 20px;
+
+//Info
+
+@alert-info: lighten(@info, 50%);
+@alert-info-border: lighten(@info, 2.5%);
+@alert-info-color: darken(@info, 5%);
+
+//Success
+
+@alert-success: lighten(@success, 50%);
+@alert-success-border: lighten(@success, 2.5%);
+@alert-success-color: darken(@success, 5%);
+
+//Warning
+
+@alert-warning: lighten(@warning, 50%);
+@alert-warning-border: lighten(@warning, 2.5%);
+@alert-warning-color: darken(@warning, 5%);
+
+//Danger
+
+@alert-danger: lighten(@danger, 50%);
+@alert-danger-border: lighten(@danger, 2.5%);
+@alert-danger-color: darken(@danger, 5%);
+
+//**** Buttons ****//
+
+//Base Style
+
+@button: @gray-light;
+@button-border: lighten(@gray, 8%);
+@button-border-radius: @border-radius;
+@button-hover: darken(@button, 5%);
+@button-active: #ddd;
+
+//Primary
+
+@button-primary: @primary;
+@button-primary-border: darken(@button-primary, 15%);
+@button-primary-hover: darken(@button-primary, 5%);
+@button-primary-active: darken(@button-primary, 10%);
+
+//Success
+
+@button-success: @success;
+@button-success-border: darken(@button-success, 15%);
+@button-success-hover: darken(@button-success, 5%);
+@button-success-active: darken(@button-success, 10%);
+
+//Warning
+
+@button-warning: @warning;
+@button-warning-border: darken(@button-warning, 15%);
+@button-warning-hover: darken(@button-warning, 5%);
+@button-warning-active: darken(@button-warning, 10%);
+
+//Danger
+
+@button-danger: @danger;
+@button-danger-border: darken(@button-danger, 15%);
+@button-danger-hover: darken(@button-danger, 5%);
+@button-danger-active: darken(@button-danger, 10%);
+
+//Info
+
+@button-info: @info;
+@button-info-border: darken(@button-info, 15%);
+@button-info-hover: darken(@button-info, 5%);
+@button-info-active: darken(@button-info, 10%);
