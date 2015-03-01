@@ -1,0 +1,158 @@
+//**** Buttons ****//
+
+//Base Style
+
+.button {
+	background-color: @gray-light;
+	border-radius: @border-radius;
+	border: 1px solid @button-border;
+	box-shadow: inset 0px 1px 0px 0px @white;
+	-webkit-box-shadow: inset 0px 1px 0px 0px @white;
+	color: @gray-dark;
+	cursor: pointer;
+	display: inline-block;
+	font-family: @default-font;
+	font-size: 14px;
+	padding: 10px 20px;
+}
+
+.button:hover {
+	background-color: @button-hover;
+	box-shadow: inset 0px 1px 0px 0px lighten(@button-hover, 15%);
+	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-hover, 15%);
+}
+.button:active {
+	background-color: @button-active;
+	box-shadow: inset 0px 1px 4px 0px darken(@button-active, 15%);
+	-webkit-box-shadow: inset 0px 1px 4px 0px darken(@button-active, 5%);
+}
+
+//Primary Button
+
+.button.button-primary {
+    text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.50);
+	background: linear-gradient(@button-primary, darken(@button-primary, 15%));
+	border: 1px solid @button-primary-border;
+	box-shadow: inset 0px 1px 0px 0px lighten(@button-primary, 15%);
+	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-primary, 15%);
+	color: @white;
+}
+
+.button.button-primary:hover {
+	background: linear-gradient(@button-primary-hover, darken(@button-primary-hover, 15%));
+	box-shadow: inset 0px 1px 0px 0px lighten(@button-primary-hover, 15%);
+	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-primary-hover, 15%);
+}
+
+.button.button-primary:active {
+    background: transparent; //Reset gradient background
+	background-color: @button-primary-active;
+	box-shadow: inset 0px 1px 4px 0px darken(@button-primary-active, 5%);
+	-webkit-box-shadow: inset 0px 1px 4px 0px darken(@button-primary-active, 5%);
+}
+
+//Success Button
+
+.button.button-success {
+    text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.50);
+	background: linear-gradient(@button-success, darken(@button-success, 15%));
+	border: 1px solid @button-success-border;
+	box-shadow: inset 0px 1px 0px 0px lighten(@button-success, 15%);
+	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-success, 15%);
+	color: @white;
+}
+
+.button.button-success:hover {
+	background: linear-gradient(@button-success-hover, darken(@button-success-hover, 15%));
+	box-shadow: inset 0px 1px 0px 0px lighten(@button-success-hover, 15%);
+	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-success-hover, 15%);
+}
+
+.button.button-success:active {
+    background: transparent; //Reset gradient background
+	background-color: @button-success-active;
+	box-shadow: inset 0px 1px 4px 0px darken(@button-success-active, 5%);
+	-webkit-box-shadow: inset 0px 1px 4px 0px darken(@button-success-active, 5%);
+}
+
+//Warning Button
+
+.button.button-warning {
+    text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.50);
+	background: linear-gradient(@button-warning, darken(@button-warning, 15%));
+	border: 1px solid @button-warning-border;
+	box-shadow: inset 0px 1px 0px 0px lighten(@button-warning, 15%);
+	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-warning, 15%);
+	color: @white;
+}
+
+.button.button-warning:hover {
+	background: linear-gradient(@button-warning-hover, darken(@button-warning-hover, 15%));
+	box-shadow: inset 0px 1px 0px 0px lighten(@button-warning-hover, 15%);
+	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-warning-hover, 15%);
+}
+
+.button.button-warning:active {
+    background: transparent; //Reset gradient background
+	background-color: @button-warning-active;
+	box-shadow: inset 0px 1px 4px 0px darken(@button-warning-active, 5%);
+	-webkit-box-shadow: inset 0px 1px 4px 0px darken(@button-warning-active, 5%);
+}
+
+//Danger Button
+
+.button.button-danger {
+    text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.50);
+	background: linear-gradient(@button-danger, darken(@button-danger, 15%));
+	border: 1px solid @button-danger-border;
+	box-shadow: inset 0px 1px 0px 0px lighten(@button-danger, 15%);
+	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-danger, 15%);
+	color: @white;
+}
+
+.button.button-danger:hover {
+	background: linear-gradient(@button-danger-hover, darken(@button-danger-hover, 15%));
+	box-shadow: inset 0px 1px 0px 0px lighten(@button-danger-hover, 15%);
+	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-danger-hover, 15%);
+}
+
+.button.button-danger:active {
+    background: transparent; //Reset gradient background
+	background-color: @button-danger-active;
+	box-shadow: inset 0px 1px 4px 0px darken(@button-danger-active, 5%);
+	-webkit-box-shadow: inset 0px 1px 4px 0px darken(@button-danger-active, 5%);
+}
+
+//Info Button
+
+.button.button-info {
+    text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.50);
+	background: linear-gradient(@button-info, darken(@button-info, 15%));
+	border: 1px solid @button-info-border;
+	box-shadow: inset 0px 1px 0px 0px lighten(@button-info, 15%);
+	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-info, 15%);
+	color: @white;
+}
+
+.button.button-info:hover {
+	background: linear-gradient(@button-info-hover, darken(@button-info-hover, 15%));
+	box-shadow: inset 0px 1px 0px 0px lighten(@button-info-hover, 15%);
+	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-info-hover, 15%);
+}
+
+.button.button-info:active {
+    background: transparent; //Reset gradient background
+	background-color: @button-info-active;
+	box-shadow: inset 0px 1px 4px 0px darken(@button-info-active, 5%);
+	-webkit-box-shadow: inset 0px 1px 4px 0px darken(@button-info-active, 5%);
+}
+
+//Styles
+
+.button.square {
+    border-radius: @border-square-radius;
+}
+
+.button.ultra-rounded {
+    border-radius: @border-ultra-rounded-radius;
+}
