@@ -1,0 +1,47 @@
+//**** Breadcrumbs ****//
+
+//Base Style
+
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: @breadcrumb-margin-bottom;
+    list-style: none;
+    background-color: @breadcrumb;
+    border-radius: @border-radius;
+}
+
+.breadcrumb ul, .breadcrumb ol {
+    margin-top: 0px;
+    margin-bottom: @breadcrumb-ul-margin-bottom;
+}
+
+.breadcrumb ol {
+    display: block;
+    list-style-type: decimal;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+.breadcrumb > li+li:before {
+    padding: @breadcrumb-separator-padding;
+    color: @breadcrumb-color;
+    content: @breadcrumb-separator;
+}
+
+.breadcrumb > li {
+    color: @breadcrumb-li;
+    display: inline-block;
+}
+
+//Styles
+
+.breadcrumb.square {
+    border-radius: @border-square-radius;
+}
+
+.breadcrumb.ultra-rounded {
+    border-radius: @border-ultra-rounded-radius;
+}
