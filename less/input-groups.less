@@ -1,0 +1,78 @@
+/**** Input Groups ****/
+
+//Base Style
+
+.input-group {
+    position: relative;
+    font-size: 0px;
+	display: inline-block;
+    white-space: nowrap;
+}
+
+.input-group > .input-group-addon {
+    padding: 8px 12px;
+    font-size: @default-font-size;
+    color: @input-group-addon-color;
+    text-align: center;
+    background-color: @input-group-addon;
+    border: 1px solid @input-group-addon-border;
+}
+
+.input-group > .input {
+  position: relative;
+}
+
+.input-group > .button, .input-group > .input, .input-group > .input-group-addon {
+    margin: 0px;
+    border-radius: 0px;
+}
+
+.input-group > .button:first-child, .input-group > .input:first-child, .input-group > .input-group-addon:first-child {
+    border-top-left-radius: @border-radius;
+	border-bottom-left-radius: @border-radius;
+}
+
+.input-group > .button:last-child, .input-group > .input:last-child, .input-group > .input-group-addon:last-child {
+    border-top-right-radius: @border-radius;
+	border-bottom-right-radius: @border-radius;
+}
+
+//Disabled Input Group
+
+.input-group.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: @button-disabled-opacity;
+}
+
+//Styles
+
+.input-group.square > .button, .input-group.square > .input, .input-group.square > .input-group-addon {
+    margin: @border-square-radius;
+    border-radius: @border-square-radius;
+}
+
+.input-group.square > .button:first-child, .input-group.square > .input:first-child, .input-group.square > .input-group-addon:first-child {
+    border-top-left-radius: @border-square-radius;
+	border-bottom-left-radius: @border-square-radius;
+}
+
+.input-group.square > .button:last-child, .input-group.square > .input:last-child, .input-group.square > .input-group-addon:last-child {
+    border-top-right-radius: @border-square-radius;
+	border-bottom-right-radius: @border-square-radius;
+}
+
+.input-group.ultra-rounded > .button, .input-group.ultra-rounded > .input, .input-group.ultra-rounded > .input-group-addon {
+    margin: @border-square-radius;
+    border-radius: @border-square-radius;
+}
+
+.input-group.ultra-rounded > .button:first-child, .input-group.ultra-rounded > .input:first-child, .input-group.ultra-rounded > .input-group-addon:first-child {
+    border-top-left-radius: @border-ultra-rounded-radius;
+	border-bottom-left-radius: @border-ultra-rounded-radius;
+}
+
+.input-group.ultra-rounded > .button:last-child, .input-group.ultra-rounded > .input:last-child, .input-group.ultra-rounded > .input-group-addon:last-child {
+    border-top-right-radius: @border-ultra-rounded-radius;
+	border-bottom-right-radius: @border-ultra-rounded-radius;
+}
