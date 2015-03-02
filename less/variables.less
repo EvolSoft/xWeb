@@ -65,6 +65,33 @@
 @alert-danger-border: lighten(@danger, 2.5%);
 @alert-danger-color: darken(@danger, 10%);
 
+//**** Badges ****//
+
+@badge: lighten(@gray-dark_2, 25%);
+@badge-padding: 3px 7px;
+@badge-min-width: 10px;
+@badge-up-top: -6px;
+
+//Primary
+
+@badge-primary-color: @label-primary-color;
+
+//Success
+
+@badge-success-color: @label-success-color;
+
+//Warning
+
+@badge-warning-color: @label-warning-color;
+
+//Danger
+
+@badge-danger-color: @label-danger-color;
+
+//Info
+
+@badge-info-color: @label-info-color;
+
 //**** BlockQuotes ****//
 
 //Base Style
@@ -75,23 +102,23 @@
 
 //Primary
 
-@blockquote-primary-color: darken(@primary, 10%);
+@blockquote-primary-color: @label-primary-color;
 
 //Success
 
-@blockquote-success-color: darken(@success, 10%);
+@blockquote-success-color: @label-success-color;
 
 //Warning
 
-@blockquote-warning-color: darken(@warning, 10%);
+@blockquote-warning-color: @label-warning-color;
 
 //Danger
 
-@blockquote-danger-color: darken(@danger, 10%);
+@blockquote-danger-color: @label-danger-color;
 
 //Info
 
-@blockquote-info-color: darken(@info, 10%);
+@blockquote-info-color: @label-info-color;
 
 //**** Boxes ****//
 
@@ -196,6 +223,31 @@
 @footer-dark-border: lighten(@gray-dark_2, 20%);
 @footer-dark-p-color: darken(@gray, 6%);
 
+//**** Labels ****//
+
+@label: @gray;
+@label-padding: .3em .6em .4em;
+@label-font-size: 75%;
+
+//Primary
+
+@label-primary-color: darken(@primary, 10%);
+
+//Success
+
+@label-success-color: darken(@success, 10%);
+
+//Warning
+
+@label-warning-color: darken(@warning, 10%);
+
+//Danger
+
+@label-danger-color: darken(@danger, 10%);
+
+//Info
+
+@label-info-color: darken(@info, 10%);
 
 //**** Typography ****//
 
