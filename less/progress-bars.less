@@ -1,0 +1,105 @@
+//**** Progress Bars ****//
+
+//Base Style
+
+.progress {
+    height: @progress-height;
+    margin-bottom: @progress-margin-bottom;
+    background-color: @progress;
+    border-radius: @border-radius;
+	box-shadow: @progress-box-shadow;
+    -webkit-box-shadow: @progress-box-shadow;
+}
+
+.progress > .progress-bar:first-child {
+    border-top-left-radius: @border-radius;
+	border-bottom-left-radius: @border-radius;
+}
+
+.progress > .progress-bar:last-child {
+    border-top-right-radius: @border-radius;
+	border-bottom-right-radius: @border-radius;
+}
+
+.progress-bar {
+    float: left;
+    width: 0;
+    height: @progress-bar-height;
+    font-size: @default-font-size - 2px;
+    line-height: @progress-bar-line-height;
+    color: @white;
+    text-align: center;
+    background: linear-gradient(@progress-bar, darken(@progress-bar, 15%));
+	border: 1px solid @progress-bar-border;
+    box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar, 15%);
+    -webkit-box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar, 15%);
+    -webkit-transition: width .4s ease;
+    -o-transition: width .4s ease;
+    transition: width .4s ease;
+}
+
+//Success
+
+.progress > .progress-bar-success {
+    background: linear-gradient(@progress-bar-success, darken(@progress-bar-success, 15%));
+	border: 1px solid @progress-bar-success-border;
+    box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar-success, 15%);
+    -webkit-box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar-success, 15%);
+}
+
+//Warning
+
+.progress > .progress-bar-warning {
+    background: linear-gradient(@progress-bar-warning, darken(@progress-bar-warning, 15%));
+	border: 1px solid @progress-bar-warning-border;
+    box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar-warning, 15%);
+    -webkit-box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar-warning, 15%);
+}
+
+//Danger
+
+.progress > .progress-bar-danger {
+    background: linear-gradient(@progress-bar-danger, darken(@progress-bar-danger, 15%));
+	border: 1px solid @progress-bar-danger-border;
+    box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar-danger, 15%);
+    -webkit-box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar-danger, 15%);
+}
+
+//Info
+
+.progress > .progress-bar-info {
+    background: linear-gradient(@progress-bar-info, darken(@progress-bar-info, 15%));
+	border: 1px solid @progress-bar-info-border;
+    box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar-info, 15%);
+    -webkit-box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar-info, 15%);
+}
+
+//Styles
+
+.progress.square {
+    border-radius: @border-square-radius;
+}
+
+.progress.square > .progress-bar:first-child {
+    border-top-left-radius: @border-square-radius;
+	border-bottom-left-radius: @border-square-radius;
+}
+
+.progress.square > .progress-bar:last-child {
+    border-top-right-radius: @border-square-radius;
+	border-bottom-right-radius: @border-square-radius;
+}
+
+.progress.ultra-rounded {
+    border-radius: @border-ultra-rounded-radius;
+}
+
+.progress.ultra-rounded > .progress-bar:first-child {
+    border-top-left-radius: @border-ultra-rounded-radius;
+	border-bottom-left-radius: @border-ultra-rounded-radius;
+}
+
+.progress.ultra-rounded > .progress-bar:last-child {
+    border-top-right-radius: @border-ultra-rounded-radius;
+	border-bottom-right-radius: @border-ultra-rounded-radius;
+}
