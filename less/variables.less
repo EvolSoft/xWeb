@@ -67,6 +67,8 @@
 
 //**** Badges ****//
 
+//Base Style
+
 @badge: lighten(@gray-dark_2, 25%);
 @badge-padding: 3px 7px;
 @badge-min-width: 10px;
@@ -130,6 +132,8 @@
 @box-padding: 20px;
 
 //**** Breadcrumbs ****//
+
+//Base Style
 
 @breadcrumb: @gray-light_2;
 @breadcrumb-color: @gray;
@@ -223,7 +227,14 @@
 @footer-dark-border: lighten(@gray-dark_2, 20%);
 @footer-dark-p-color: darken(@gray, 6%);
 
+//**** Inputs ****//
+
+@input-placeholder: @gray-dark;
+@input-disabled-opacity: .60;
+
 //**** Labels ****//
+
+//Base Style
 
 @label: @gray;
 @label-padding: .3em .6em .4em;
@@ -248,6 +259,41 @@
 //Info
 
 @label-info-color: darken(@info, 10%);
+
+//**** Progress Bars ****//
+
+//Base Style
+
+@progress: @gray-light_2;
+@progress-height: 24px;
+@progress-margin-bottom: 20px;
+@progress-box-shadow: inset 0px 2px 3px rgba(0,0,0,.1);
+@progress-bar: @primary;
+@progress-bar-border: darken(@progress-bar, 15%);
+@progress-bar-height: 90%;
+@progress-bar-line-height: 23px;
+@progress-bar-margin-bottom: 20px;
+@progress-bar-box-shadow: inset 0px 2px 3px rgba(0,0,0,.1);
+
+//Success
+
+@progress-bar-success: @success;
+@progress-bar-success-border: darken(@progress-bar-success, 15%);
+
+//Warning
+
+@progress-bar-warning: @warning;
+@progress-bar-warning-border: darken(@progress-bar-warning, 15%);
+
+//Danger
+
+@progress-bar-danger: @danger;
+@progress-bar-danger-border: darken(@progress-bar-danger, 15%);
+
+//Info
+
+@progress-bar-info: @info;
+@progress-bar-info-border: darken(@progress-bar-info, 15%);
 
 //**** Typography ****//
 
