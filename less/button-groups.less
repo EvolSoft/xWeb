@@ -1,0 +1,128 @@
+//**** Button Groups ****//
+
+//Base Style
+
+.button-group {
+    position: relative;
+    font-size: 0px;
+	display: inline-block;
+    white-space: nowrap;
+}
+
+.button-group > .button {
+    margin: 0px;
+    border-radius: 0px;
+}
+
+.button-group > .button:focus {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	background: @button-active;
+}
+
+.button-group > .button:first-child {
+    border-top-left-radius: @border-radius;
+	border-bottom-left-radius: @border-radius;
+}
+
+.button-group > .button:last-child {
+    border-top-right-radius: @border-radius;
+	border-bottom-right-radius: @border-radius;
+}
+
+//Disabled Button Group
+
+.button-group.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: @button-disabled-opacity;
+}
+
+//Sizing
+
+.button-group.ultra-small > .button {
+    padding: @button-padding-ultra-small;
+	font-size: @default-font-size - 2px;
+}
+
+.button-group.small > .button {
+    padding: @button-padding-small;
+	font-size: @default-font-size - 1px;
+}
+
+.button-group.large > .button {
+    padding: @button-padding-large;
+	font-size: @default-font-size + 2px;
+}
+
+//Primary
+
+.button-group > .button.button-primary:focus {
+    box-shadow: none;
+	-webkit-box-shadow: none;
+	background: @button-primary-active;
+}
+
+//Success
+
+.button-group > .button.button-success:focus {
+    box-shadow: none;
+	-webkit-box-shadow: none;
+	background: @button-success-active;
+}
+
+//Warning
+
+.button-group > .button.button-warning:focus {
+    box-shadow: none;
+	-webkit-box-shadow: none;
+	background: @button-warning-active;
+}
+
+//Danger
+
+.button-group > .button.button-danger:focus {
+    box-shadow: none;
+	-webkit-box-shadow: none;
+	background: @button-danger-active;
+}
+
+//Info
+
+.button-group > .button.button-info:focus {
+    box-shadow: none;
+	-webkit-box-shadow: none;
+	background: @button-info-active;
+}
+
+//Styles
+
+.button-group.square > .button {
+    margin: 0px;
+    border-radius: 0px; //Must be always 0
+}
+
+.button-group.square > .button:first-child {
+    border-top-left-radius: @border-square-radius;
+	border-bottom-left-radius: @border-square-radius;
+}
+
+.button-group.square > .button:last-child {
+    border-top-right-radius: @border-square-radius;
+	border-bottom-right-radius: @border-square-radius;
+}
+
+.button-group.ultra-rounded > .button {
+    margin: 0px;
+    border-radius: 0px; //Must be always 0
+}
+
+.button-group.ultra-rounded > .button:first-child {
+    border-top-left-radius: @border-ultra-rounded-radius;
+	border-bottom-left-radius: @border-ultra-rounded-radius;
+}
+
+.button-group.ultra-rounded > .button:last-child {
+    border-top-right-radius: @border-ultra-rounded-radius;
+	border-bottom-right-radius: @border-ultra-rounded-radius;
+}
