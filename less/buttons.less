@@ -3,7 +3,7 @@
 //Base Style
 
 .button {
-	background-color: @gray-light;
+	background: @gray-light;
 	border-radius: @border-radius;
 	border: 1px solid @button-border;
 	box-shadow: inset 0px 1px 0px 0px @white;
@@ -17,12 +17,12 @@
 }
 
 .button:hover {
-	background-color: @button-hover;
+	background: @button-hover;
 	box-shadow: inset 0px 1px 0px 0px lighten(@button-hover, 15%);
 	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-hover, 15%);
 }
 .button:active {
-	background-color: @button-active;
+	background: @button-active;
 	box-shadow: inset 0px 1px 4px 0px darken(@button-active, 15%);
 	-webkit-box-shadow: inset 0px 1px 4px 0px darken(@button-active, 5%);
 }
@@ -71,8 +71,7 @@
 }
 
 .button.button-primary:active {
-    background: transparent; //Reset gradient background
-	background-color: @button-primary-active;
+	background: @button-primary-active;
 	box-shadow: inset 0px 1px 4px 0px darken(@button-primary-active, 5%);
 	-webkit-box-shadow: inset 0px 1px 4px 0px darken(@button-primary-active, 5%);
 }
@@ -95,8 +94,7 @@
 }
 
 .button.button-success:active {
-    background: transparent; //Reset gradient background
-	background-color: @button-success-active;
+	background: @button-success-active;
 	box-shadow: inset 0px 1px 4px 0px darken(@button-success-active, 5%);
 	-webkit-box-shadow: inset 0px 1px 4px 0px darken(@button-success-active, 5%);
 }
@@ -119,8 +117,7 @@
 }
 
 .button.button-warning:active {
-    background: transparent; //Reset gradient background
-	background-color: @button-warning-active;
+	background: @button-warning-active;
 	box-shadow: inset 0px 1px 4px 0px darken(@button-warning-active, 5%);
 	-webkit-box-shadow: inset 0px 1px 4px 0px darken(@button-warning-active, 5%);
 }
@@ -143,8 +140,7 @@
 }
 
 .button.button-danger:active {
-    background: transparent; //Reset gradient background
-	background-color: @button-danger-active;
+	background: @button-danger-active;
 	box-shadow: inset 0px 1px 4px 0px darken(@button-danger-active, 5%);
 	-webkit-box-shadow: inset 0px 1px 4px 0px darken(@button-danger-active, 5%);
 }
@@ -167,8 +163,7 @@
 }
 
 .button.button-info:active {
-    background: transparent; //Reset gradient background
-	background-color: @button-info-active;
+	background: @button-info-active;
 	box-shadow: inset 0px 1px 4px 0px darken(@button-info-active, 5%);
 	-webkit-box-shadow: inset 0px 1px 4px 0px darken(@button-info-active, 5%);
 }
