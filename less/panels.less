@@ -1,0 +1,187 @@
+//**** Panels ****//
+
+//Base Style
+
+.panel {
+    margin-bottom: @panel-margin-bottom;
+    background-color: @panel;
+    border-radius: @border-radius;
+	border: 1px solid transparent;
+	border-color: @panel-border;
+    -webkit-box-shadow: @panel-box-shadow;
+    box-shadow: @panel-box-shadow;
+}
+
+.panel-body {
+    padding: @panel-body-padding;
+}
+
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: @default-font-size + 2px;
+    color: inherit;
+}
+
+.panel-heading {
+    padding: @panel-heading-padding;
+    border-bottom: 1px solid transparent;
+    border-radius: @panel-heading-border-radius;
+}
+
+.panel > .panel-heading {
+    box-shadow: inset 0px 1px 0px 0px @gray-light;
+    color: @panel-heading-color;
+    background-color: @panel-heading;
+    border-color: @panel-heading-border;
+}
+
+//Primary
+
+.panel.panel-primary {
+    border-color: @panel-primary-border;
+}
+
+.panel.panel-primary > .panel-heading {
+    box-shadow: inset 0px 1px 0px 0px lighten(@panel-primary, 15%);
+    color: @white;
+    background-color: @panel-primary;
+    border-color: @panel-primary-border;
+}
+
+//Primary Lighten
+
+.panel.panel-primary-lt {
+    border-color: @panel-primary-lt-border;
+}
+
+.panel.panel-primary-lt > .panel-heading {
+    box-shadow: inset 0px 1px 0px 0px lighten(@panel-primary-lt, 15%);
+    color: @panel-primary-lt-color;
+    background-color: @panel-primary-lt;
+    border-color: @panel-primary-lt-border;
+}
+
+//Success
+
+.panel.panel-success {
+    border-color: @panel-success-border;
+}
+
+.panel.panel-success > .panel-heading {
+    box-shadow: inset 0px 1px 0px 0px lighten(@panel-success, 15%);
+    color: @white;
+    background-color: @panel-success;
+    border-color: @panel-success-border;
+}
+
+//Success Lighten
+
+.panel.panel-success-lt {
+    border-color: @panel-success-lt-border;
+}
+
+.panel.panel-success-lt > .panel-heading {
+    box-shadow: inset 0px 1px 0px 0px lighten(@panel-success-lt, 15%);
+    color: @panel-success-lt-color;
+    background-color: @panel-success-lt;
+    border-color: @panel-success-lt-border;
+}
+
+//Warning
+
+.panel.panel-warning {
+    border-color: @panel-warning-border;
+}
+
+.panel.panel-warning > .panel-heading {
+    box-shadow: inset 0px 1px 0px 0px lighten(@panel-warning, 15%);
+    color: @white;
+    background-color: @panel-warning;
+    border-color: @panel-warning-border;
+}
+
+//Warning Lighten
+
+.panel.panel-warning-lt {
+    border-color: @panel-warning-lt-border;
+}
+
+.panel.panel-warning-lt > .panel-heading {
+    box-shadow: inset 0px 1px 0px 0px lighten(@panel-warning-lt, 15%);
+    color: @panel-warning-lt-color;
+    background-color: @panel-warning-lt;
+    border-color: @panel-warning-lt-border;
+}
+
+//Danger
+
+.panel.panel-danger {
+    border-color: @panel-danger-border;
+}
+
+.panel.panel-danger > .panel-heading {
+    box-shadow: inset 0px 1px 0px 0px lighten(@panel-danger, 15%);
+    color: @white;
+    background-color: @panel-danger;
+    border-color: @panel-danger-border;
+}
+
+//Danger Lighten
+
+.panel.panel-danger-lt {
+    border-color: @panel-danger-lt-border;
+}
+
+.panel.panel-danger-lt > .panel-heading {
+    box-shadow: inset 0px 1px 0px 0px lighten(@panel-danger-lt, 15%);
+    color: @panel-danger-lt-color;
+    background-color: @panel-danger-lt;
+    border-color: @panel-danger-lt-border;
+}
+
+//Info
+
+.panel.panel-info {
+    border-color: @panel-info-border;
+}
+
+.panel.panel-info > .panel-heading {
+    box-shadow: inset 0px 1px 0px 0px lighten(@panel-info, 15%);
+    color: @white;
+    background-color: @panel-info;
+    border-color: @panel-info-border;
+}
+
+//Info Lighten
+
+.panel.panel-info-lt {
+    border-color: @panel-info-lt-border;
+}
+
+.panel.panel-info-lt > .panel-heading {
+    box-shadow: inset 0px 1px 0px 0px lighten(@panel-info-lt, 15%);
+    color: @panel-info-lt-color;
+    background-color: @panel-info-lt;
+    border-color: @panel-info-lt-border;
+}
+
+//Styles
+
+.panel.square {
+    border-radius: @border-square-radius;
+}
+
+.panel.square > .panel-heading {
+    border-top-left-radius: @border-square-radius;
+    border-top-right-radius: @border-square-radius;
+}
+
+.panel.ultra-rounded {
+    border-radius: @border-ultra-rounded-radius;
+}
+
+.panel.ultra-rounded > .panel-heading {
+    border-top-left-radius: @border-ultra-rounded-radius - 1px;
+    border-top-right-radius: @border-ultra-rounded-radius - 1px;
+}
