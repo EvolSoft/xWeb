@@ -1,0 +1,65 @@
+//**** Badges ****//
+
+//Base Style
+
+.badge {
+    display: inline-block;
+    min-width: @badge-min-width;
+    padding: @badge-padding;
+    font-size: @default-font-size - 2px;
+    font-weight: 700;
+    line-height: 1;
+    color: @white;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: @badge;
+    border-radius: @border-radius;
+}
+
+//UP
+
+.badge.badge.up {
+    position: relative;
+    top: @badge-up-top;
+}
+
+//Primary
+
+.badge.badge-primary {
+    background-color: @badge-primary-color;
+}
+
+//Success
+
+.badge.badge-success {
+    background-color: @badge-success-color;
+}
+
+//Warning
+
+.badge.badge-warning {
+    background-color: @badge-warning-color;
+}
+
+//Danger
+
+.badge.badge-danger {
+    background-color: @badge-danger-color;
+}
+
+//Info
+
+.badge.badge-info {
+    background-color: @badge-info-color;
+}
+
+//Styles
+
+.badge.square {
+    border-radius: @border-square-radius;
+}
+
+.badge.ultra-rounded {
+    border-radius: @border-ultra-rounded-radius;
+}
