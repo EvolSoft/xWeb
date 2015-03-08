@@ -1,0 +1,155 @@
+//**** Pagination ****//
+
+//Base Style
+
+.pagination {
+    display: inline-block;
+    padding-left: 0px;
+    margin: 20px 0px;
+    border-radius: @border-radius;
+}
+
+.pagination > li {
+    display: inline;
+}
+
+.pagination > li > a, .pagination > li > span {
+    position: relative;
+    float: left;
+    padding: @pagination-padding;
+    margin-left: -1px;
+    color: @gray-dark;
+    text-decoration: none;
+    background-color: @gray-light;
+    box-shadow: inset 0px 1px 0px 0px @white;
+    border: 1px solid @button-border;
+}
+
+.pagination > li.active > a, .pagination > li.active > span {
+    background-color: #D6D6D6;
+	box-shadow: none;
+}
+
+.pagination > li:first-child > a, .pagination > li:first-child > span {
+    border-top-left-radius: @border-radius;
+    border-bottom-left-radius: @border-radius;
+    box-shadow: inset 0px 1px 0px 0px @white;
+}
+
+.pagination > li:last-child > a, .pagination > li:last-child  > span {
+    border-top-right-radius: @border-radius;
+    border-bottom-right-radius: @border-radius;
+    box-shadow: inset 0px 1px 0px 0px @white;
+}
+
+.pagination > li:hover > a, .pagination > li:hover > span  {
+	background-color: @button-hover;
+	box-shadow: none;
+}
+
+.pagination > li:active > a, .pagination > li:active > span, .pagination > li > a:focus , .pagination > li > span:focus {
+    background-color: @button-active;
+	box-shadow: none;
+}
+
+//Disabled Pagination
+
+.pagination.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: @button-disabled-opacity;
+}
+
+//Sizing
+
+.pagination.small > li > a, .pagination.small > li > span {
+    padding: @pagination-padding-small;
+	font-size: @default-font-size - 1px;
+}
+
+.pagination.large > li > a, .pagination.large > li > span {
+    padding: @pagination-padding-large;
+	font-size: @default-font-size + 2px;
+}
+
+//Primary
+
+.pagination.pagination-primary > li.active > a, .pagination.pagination-primary > li.active > span {
+    z-index: 100;
+	box-shadow: none;
+	text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: none;
+	border: 1px solid @button-primary-active; //Border with the same color of background
+	background: @button-primary-active;
+	color: @white;
+}
+
+//Success
+
+.pagination.pagination-success > li.active > a, .pagination.pagination-success > li.active > span {
+    z-index: 100;
+	box-shadow: none;
+	text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: none;
+	border: 1px solid @button-success-active;	
+	background: @button-success-active;
+	color: @white;
+}
+
+//Warning
+
+.pagination.pagination-warning > li.active > a, .pagination.pagination-warning > li.active > span {
+    z-index: 100;
+    box-shadow: none;
+	text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: none;
+	border: 1px solid @button-warning-active;
+	background: @button-warning-active;
+	color: @white;
+}
+
+//Danger
+
+.pagination.pagination-danger > li.active > a, .pagination.pagination-danger > li.active > span {
+    z-index: 100;
+    box-shadow: none;
+	text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: none;
+	border: 1px solid @button-danger-active;
+	background: @button-danger-active;
+	color: @white;
+}
+
+//Info
+
+.pagination.pagination-info > li.active > a, .pagination.pagination-info > li.active > span {
+    z-index: 100;
+    box-shadow: none;
+	text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: none;
+	border: 1px solid @button-info-active;
+	background: @button-info-active;
+	color: @white;
+}
+
+//Styles
+
+.pagination.square > li:first-child > a, .pagination.square > li:first-child > span {
+    border-top-left-radius: @border-square-radius;
+    border-bottom-left-radius: @border-square-radius;
+}
+
+.pagination.square > li:last-child > a, .pagination.square > li:last-child  > span {
+    border-top-right-radius: @border-square-radius;
+    border-bottom-right-radius: @border-square-radius;
+}
+
+.pagination.ultra-rounded > li:first-child > a, .pagination.ultra-rounded > li:first-child > span {
+    border-top-left-radius: @border-ultra-rounded-radius;
+    border-bottom-left-radius: @border-ultra-rounded-radius;
+}
+
+.pagination.ultra-rounded > li:last-child > a, .pagination.ultra-rounded > li:last-child  > span {
+    border-top-right-radius: @border-ultra-rounded-radius;
+    border-bottom-right-radius: @border-ultra-rounded-radius;
+}
