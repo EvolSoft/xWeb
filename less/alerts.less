@@ -9,12 +9,23 @@
     border-radius: @border-radius;
 }
 
-.alert.alert-dismissable {
-    padding-right: 35px;
+.alert > a {
+    font-weight: bold;
 }
 
-.alert > a {
-   font-weight: bold;
+//Close
+
+.alert .close {
+    padding: 0;
+	border: none;
+	background: none;
+	cursor: pointer;
+	color: @alert-close-color;
+    float: right;
+    position: relative;
+	top: @alert-close-top;
+    right: @alert-close-right;
+    font-size: @alert-close-size;
 }
 
 //Info
@@ -33,6 +44,14 @@
    color: darken(@alert-info-color, 10%);
 }
 
+.alert.alert-info .close {
+   color: @alert-info-color;
+}
+
+.alert.alert-info .close:hover {
+   color: darken(@alert-info-color, 5%);
+}
+
 //Success
 
 .alert.alert-success {
@@ -47,6 +66,14 @@
 
 .alert.alert-success > a:hover, .alert.alert-success > a:focus {
    color: darken(@alert-success-color, 10%);
+}
+
+.alert.alert-success .close {
+   color: @alert-success-color;
+}
+
+.alert.alert-success .close:hover {
+   color: darken(@alert-success-color, 5%);
 }
 
 //Warning
@@ -65,6 +92,14 @@
    color: darken(@alert-warning-color, 10%);
 }
 
+.alert.alert-warning .close {
+   color: @alert-warning-color;
+}
+
+.alert.alert-warning .close:hover {
+   color: darken(@alert-warning-color, 5%);
+}
+
 //Danger
 
 .alert.alert-danger {
@@ -79,6 +114,14 @@
 
 .alert.alert-danger > a:hover, .alert.alert-danger > a:focus {
    color: darken(@alert-danger-color, 10%);
+}
+
+.alert.alert-danger .close {
+   color: @alert-danger-color;
+}
+
+.alert.alert-danger .close:hover {
+   color: darken(@alert-danger-color, 5%);
 }
 
 //Styles
