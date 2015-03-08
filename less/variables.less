@@ -22,6 +22,10 @@
 @default-font-weight: 100;
 @default-text-align: left;
 
+//**** Default Margin/Padding ****//
+
+@default-margin-bottom: 20px;
+
 //**** Devices ****//
 
 @desktop-width: 770px;
@@ -133,8 +137,10 @@
 
 @box: @gray-light_2;
 @box-border: lighten(@gray, 8%);
+@box-color: lighten(@gray-dark_2, 20%);
 @box-min-height: 20px;
 @box-padding: 20px;
+@box-padding-small: @box-padding / 2;
 
 //**** Breadcrumbs ****//
 
@@ -143,7 +149,7 @@
 @breadcrumb: @gray-light_2;
 @breadcrumb-color: @gray;
 @breadcrumb-padding: 8px 16px;
-@breadcrumb-margin-bottom: 20px;
+@breadcrumb-margin-bottom: @default-margin-bottom;
 @breadcrumb-separator: "> ";
 @breadcrumb-separator-padding: 0px 5px;
 @breadcrumb-li: lighten(@gray-dark_2, 20%);
@@ -158,7 +164,7 @@
 @button-border-radius: @border-radius;
 @button-hover: darken(@button, 5%);
 @button-active: darken(@button, 10%);
-@button-disabled-opacity: .70;
+@button-disabled-opacity: .50;
 
 //Sizing
 
@@ -207,15 +213,49 @@
 
 //Base Style
 
+//CSS
+
+//CSS > Comment
+
+@code-css-comment: @code-html-comment;
+
+//CSS > Selector
+
+@code-css-selector: #CA00A0;
+
+//CSS > Class Selector
+
+@code-css-class-selector: @code-html-tag;
+
+//CSS > Property
+
+@code-css-property: @code-html-attribute;
+
+//CSS > Value
+
+@code-css-value: #348DC4;
+
 //HTML
+
+//HTML > Attribute
+
+@code-html-attribute: #C68748;
+
+//HTML > Attribute Value
+
+@code-html-attribute-value: #6DC44A;
 
 //HTML > Comment
 
-//HTML > Key
+@code-html-comment: #34C4B7;
 
-//HTML > Class
+//HTML > Content
 
-//HTML > Class Value
+@code-html-content: lighten(@gray-dark_2, 20%);
+
+//HTML > Tag
+
+@code-html-tag: #C0504D;
 
 //**** Columns ****//
 
@@ -226,9 +266,10 @@
 
 //Base Style
 
-@footer-height: 100px;
+@footer-min-height: 150px;
 @footer: @gray-light;
 @footer-border: lighten(@gray, 8%);
+@footer-padding: 20px;
 @footer-p-color: @gray-dark;
 
 //Dark
@@ -243,7 +284,31 @@
 
 @input-placeholder: @gray-dark;
 @input-disabled-opacity: .60;
+@input-border: darken(@gray, 20%);
+@input-color: @gray-dark_2;
 @input-padding: 8px 10px;
+@input-shadow: @gray;
+
+//Default
+
+@input-default: lighten(@primary, 25%);
+
+//Success
+
+@input-success: @success;
+
+//Warning
+
+@input-warning: @warning;
+
+//Danger
+
+@input-danger: @danger;
+
+//Info
+
+@input-info: lighten(@info, 20%);
+
 
 //**** Input Groups ****//
 
@@ -289,7 +354,7 @@
 @panel: @white;
 @panel-border: lighten(@gray, 8%);
 @panel-box-shadow: 0px 1px 1px rgba(0, 0, 0, .05);
-@panel-margin-bottom: 20px;
+@panel-margin-bottom: @default-margin-bottom;
 @panel-body-padding: 15px;
 @panel-heading: @gray-light_2;
 @panel-heading-border: lighten(@gray, 8%);
@@ -352,6 +417,14 @@
 @panel-info-lt-border: darken(@panel-info-lt, 15%);
 @panel-info-lt-color: darken(@panel-info-lt, 40%);
 
+//**** Pagination ****//
+
+//Sizing
+
+@pagination-padding-small: 6px 10px;
+@pagination-padding: 8px 12px;
+@pagination-padding-large: 12px 16px;
+
 //**** Progress Bars ****//
 
 //Base Style
@@ -393,6 +466,28 @@
 
 @hr: lighten(@gray, 8%);
 @hr-margin: 20px;
+
+//Text Colors
+
+//Primary
+
+@text-primary-color: darken(@primary, 10%);
+
+//Success
+
+@text-success-color: darken(@success, 10%);
+
+//Warning
+
+@text-warning-color: darken(@warning, 10%);
+
+//Danger
+
+@text-danger-color: darken(@danger, 10%);
+
+//Info
+
+@text-info-color: darken(@info, 10%);
 
 //Headers
 
