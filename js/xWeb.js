@@ -2,7 +2,7 @@
  * xWeb (v1.0) by EvolSoft
  * Developer: EvolSoft
  * Website: http://www.evolsoft.tk
- * Date: 08/03/2015 07:56 PM (UTC)
+ * Date: 08/03/2015 07:16 PM (UTC)
  * Copyright & License: (C) 2015 EvolSoft
  * Licensed under MIT (https://github.com/EvolSoft/xWeb/blob/master/LICENSE)
  */
@@ -23,7 +23,9 @@ $(document).on("click", ".close", function() {
  * @param target The target modal
  */
 function toggleModal(target) {
-    $(target).toggleClass("modal-open");
+	if($(target).hasClass("modal"){
+	    $(target).toggleClass("modal-open");
+	}
 }
 
 $(document).on("click", ".modal", function() {
