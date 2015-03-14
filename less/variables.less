@@ -177,7 +177,6 @@
 @button-padding: 8px 16px;
 @button-padding-large: 12px 24px;
 
-
 //Primary
 
 @button-primary: @primary;
@@ -290,8 +289,14 @@
 @input-disabled-opacity: .60;
 @input-border: darken(@gray, 20%);
 @input-color: @gray-dark_2;
-@input-padding: 8px 10px;
 @input-shadow: @gray;
+
+//Sizing
+
+@input-padding-ultra-small: @button-padding-ultra-small;
+@input-padding-small: @button-padding-small;
+@input-padding: @button-padding;
+@input-padding-large: @button-padding-large;
 
 //Default
 
@@ -356,6 +361,8 @@
 //Base Style
 
 @modal: @black;
+@modal-visibility-transition: .5s;
+@modal-opacity-transition: .2s;
 @modal-opacity: .5;
 
 //**** Panels ****//
