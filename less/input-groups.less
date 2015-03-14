@@ -3,23 +3,19 @@
 //Base Style
 
 .input-group {
-    position: relative;
     font-size: 0px;
 	display: inline-block;
-    white-space: nowrap;
+	margin-bottom: @default-margin-bottom / 2;
 }
 
 .input-group > .input-group-addon {
-    padding: 8px 12px;
+    padding: @input-padding;
+	display: inline-block;
     font-size: @default-font-size;
     color: @input-group-addon-color;
     text-align: center;
     background-color: @input-group-addon;
     border: 1px solid @input-group-addon-border;
-}
-
-.input-group > .input {
-  position: relative;
 }
 
 .input-group > .button, .input-group > .input, .input-group > .input-group-addon {
@@ -43,6 +39,23 @@
     pointer-events: none;
     cursor: not-allowed;
     opacity: @button-disabled-opacity;
+}
+
+//Sizing
+
+.input-group.ultra-small > .input, .input-group.ultra-small > .button, .input-group.ultra-small > .input-group-addon {
+    padding: @input-padding-ultra-small;
+	font-size: @default-font-size - 2px;
+}
+
+.input-group.small > .input, .input-group.small > .button, .input-group.small > .input-group-addon {
+    padding: @input-padding-small;
+	font-size: @default-font-size - 1px;
+}
+
+.input-group.large > .input, .input-group.large > .button, .input-group.large > .input-group-addon {
+    padding: @input-padding-large;
+	font-size: @default-font-size + 2px;
 }
 
 //Styles
