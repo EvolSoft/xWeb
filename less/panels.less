@@ -3,6 +3,7 @@
 //Base Style
 
 .panel {
+    clear: both;
     margin-bottom: @panel-margin-bottom;
     background-color: @panel;
     border-radius: @border-radius;
@@ -12,8 +13,8 @@
     box-shadow: @panel-box-shadow;
 }
 
-.panel-body {
-    padding: @panel-body-padding;
+.panel-content {
+    padding: @panel-content-padding;
 }
 
 .panel-title {
@@ -23,17 +24,17 @@
     color: inherit;
 }
 
-.panel-heading {
-    padding: @panel-heading-padding;
+.panel-header {
+    padding: @panel-header-padding;
     border-bottom: 1px solid transparent;
-    border-radius: @panel-heading-border-radius;
+    border-radius: @panel-header-border-radius;
 }
 
-.panel > .panel-heading {
+.panel > .panel-header {
     box-shadow: inset 0px 1px 0px 0px @gray-light;
-    color: @panel-heading-color;
-    background-color: @panel-heading;
-    border-color: @panel-heading-border;
+    color: @panel-header-color;
+    background-color: @panel-header;
+    border-color: @panel-header-border;
 }
 
 //Primary
@@ -42,7 +43,7 @@
     border-color: @panel-primary-border;
 }
 
-.panel.panel-primary > .panel-heading {
+.panel.panel-primary > .panel-header {
     box-shadow: inset 0px 1px 0px 0px lighten(@panel-primary, 15%);
     color: @white;
     background-color: @panel-primary;
@@ -55,7 +56,7 @@
     border-color: @panel-primary-lt-border;
 }
 
-.panel.panel-primary-lt > .panel-heading {
+.panel.panel-primary-lt > .panel-header {
     box-shadow: inset 0px 1px 0px 0px lighten(@panel-primary-lt, 10%);
     color: @panel-primary-lt-color;
     background-color: @panel-primary-lt;
@@ -68,7 +69,7 @@
     border-color: @panel-success-border;
 }
 
-.panel.panel-success > .panel-heading {
+.panel.panel-success > .panel-header {
     box-shadow: inset 0px 1px 0px 0px lighten(@panel-success, 15%);
     color: @white;
     background-color: @panel-success;
@@ -81,7 +82,7 @@
     border-color: @panel-success-lt-border;
 }
 
-.panel.panel-success-lt > .panel-heading {
+.panel.panel-success-lt > .panel-header {
     box-shadow: inset 0px 1px 0px 0px lighten(@panel-success-lt, 10%);
     color: @panel-success-lt-color;
     background-color: @panel-success-lt;
@@ -94,7 +95,7 @@
     border-color: @panel-warning-border;
 }
 
-.panel.panel-warning > .panel-heading {
+.panel.panel-warning > .panel-header {
     box-shadow: inset 0px 1px 0px 0px lighten(@panel-warning, 15%);
     color: @white;
     background-color: @panel-warning;
@@ -107,7 +108,7 @@
     border-color: @panel-warning-lt-border;
 }
 
-.panel.panel-warning-lt > .panel-heading {
+.panel.panel-warning-lt > .panel-header {
     box-shadow: inset 0px 1px 0px 0px lighten(@panel-warning-lt, 10%);
     color: @panel-warning-lt-color;
     background-color: @panel-warning-lt;
@@ -120,7 +121,7 @@
     border-color: @panel-danger-border;
 }
 
-.panel.panel-danger > .panel-heading {
+.panel.panel-danger > .panel-header {
     box-shadow: inset 0px 1px 0px 0px lighten(@panel-danger, 15%);
     color: @white;
     background-color: @panel-danger;
@@ -133,7 +134,7 @@
     border-color: @panel-danger-lt-border;
 }
 
-.panel.panel-danger-lt > .panel-heading {
+.panel.panel-danger-lt > .panel-header {
     box-shadow: inset 0px 1px 0px 0px lighten(@panel-danger-lt, 10%);
     color: @panel-danger-lt-color;
     background-color: @panel-danger-lt;
@@ -146,7 +147,7 @@
     border-color: @panel-info-border;
 }
 
-.panel.panel-info > .panel-heading {
+.panel.panel-info > .panel-header {
     box-shadow: inset 0px 1px 0px 0px lighten(@panel-info, 15%);
     color: @white;
     background-color: @panel-info;
@@ -159,7 +160,7 @@
     border-color: @panel-info-lt-border;
 }
 
-.panel.panel-info-lt > .panel-heading {
+.panel.panel-info-lt > .panel-header {
     box-shadow: inset 0px 1px 0px 0px lighten(@panel-info-lt, 10%);
     color: @panel-info-lt-color;
     background-color: @panel-info-lt;
@@ -172,7 +173,7 @@
     border-radius: @border-square-radius;
 }
 
-.panel.square > .panel-heading {
+.panel.square > .panel-header {
     border-top-left-radius: @border-square-radius;
     border-top-right-radius: @border-square-radius;
 }
@@ -181,7 +182,7 @@
     border-radius: @border-ultra-rounded-radius;
 }
 
-.panel.ultra-rounded > .panel-heading {
+.panel.ultra-rounded > .panel-header {
     border-top-left-radius: @border-ultra-rounded-radius - 1px;
     border-top-right-radius: @border-ultra-rounded-radius - 1px;
 }
