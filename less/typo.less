@@ -72,13 +72,23 @@ hr.dashed {
 //Paragraphs
 
 p, .p {
-    margin: 0px 0px 10px 0px;
+    margin: 0 0 @typo-margin-min 0;
 }
 
 //Headers
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-weight: @default-font-weight;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+    margin-top: @typo-margin-max;
+    margin-bottom: @typo-margin-min;
+}
+
+h4, h5, h6, .h4, .h5, h6 {
+    margin-top: @typo-margin-min;
+	margin-bottom: @typo-margin-min;
 }
 
 h1, .h1 {
