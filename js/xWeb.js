@@ -23,7 +23,7 @@ $(document).on("click", ".close", function() {
  * @param target The target modal
  */
 function toggleModal(target) {
-	if($(target).hasClass("modal"){
+	if($(target).hasClass("modal")){
 	    $(target).toggleClass("modal-open");
 	}
 }
