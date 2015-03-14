@@ -1,0 +1,114 @@
+//**** Inputs ****//
+
+//Base Style
+
+.input {
+	background-color: @white;
+	border-radius: @border-radius;
+	border: 1px solid @input-border;
+	box-shadow: inset 0px 1px 1px 0px @input-shadow;
+	color: @input-color;
+	display: inline-block;
+	font-family: @default-font;
+	font-size: @default-font-size;
+	padding: @input-padding;
+	-webkit-box-shadow:inset 0px 1px 1px 0px @input-shadow;
+    -webkit-transition: border-color ease-in-out .1s, box-shadow ease-in-out .1s;
+    transition: border-color ease-in-out .1s, box-shadow ease-in-out .1s;
+}
+
+.input.input:focus {
+	border-color: @input-default;
+	box-shadow: inset 0px 1px 1px 0px @input-shadow, 0px 0px 6px 1px @input-default;
+	-webkit-box-shadow: inset 0px 1px 1px 0px @input-shadow, 0px 0px 6px 1px @input-default;	
+	transition: box-shadow ease-in-out .1s;
+    -webkit-transition: box-shadow ease-in-out .1s;
+}
+
+.input::-webkit-input-placeholder {
+    color: @input-placeholder;
+}
+.input::-moz-input-placeholder {
+    color: @input-placeholder;
+}
+.input::-ms-input-placeholder {
+    color: @input-placeholder;
+}
+
+//Disabled Input
+
+.input.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+	background: @gray-light_2;
+    opacity: @input-disabled-opacity;
+}
+
+//Sizing
+
+.input.ultra-small {
+    padding: @input-padding-ultra-small;
+	font-size: @default-font-size - 2px;
+}
+
+.input.small {
+    padding: @input-padding-small;
+	font-size: @default-font-size - 1px;
+}
+
+.input.large {
+    padding: @input-padding-large;
+	font-size: @default-font-size + 2px;
+}
+
+//Success
+
+.input.input-success {
+	border-color: @input-success;
+}
+
+.input.input-success:focus {
+	border-color: @input-success;
+	box-shadow: inset 0px 1px 1px 0px @input-shadow, 0px 0px 6px 1px @input-success;
+	-webkit-box-shadow: inset 0px 1px 1px 0px @input-shadow, 0px 0px 6px 1px @input-success;	
+	transition: box-shadow ease-in-out .1s;
+    -webkit-transition: box-shadow ease-in-out .1s;
+}
+
+//Warning
+
+.input.input-warning {
+	border-color: @input-warning;
+}
+
+.input.input-warning:focus {
+	border-color: @input-warning;
+	box-shadow: inset 0px 1px 1px 0px @input-shadow, 0px 0px 6px 1px @input-warning;
+	-webkit-box-shadow: inset 0px 1px 1px 0px @input-shadow, 0px 0px 6px 1px @input-warning;	
+	transition: box-shadow ease-in-out .1s;
+    -webkit-transition: box-shadow ease-in-out .1s;
+}
+
+//Danger
+
+.input.input-danger {
+	border-color: @input-danger;
+}
+
+.input.input-danger:focus {
+	border-color: @input-danger;
+	box-shadow: inset 0px 1px 1px 0px @input-shadow, 0px 0px 6px 1px @input-danger;
+	-webkit-box-shadow: inset 0px 1px 1px 0px @input-shadow, 0px 0px 6px 1px @input-danger;	
+	transition: box-shadow ease-in-out .1s;
+    -webkit-transition: box-shadow ease-in-out .1s;
+}
+
+//Styles
+
+.input.square {
+    border-radius: @border-square-radius;
+}
+
+.input.ultra-rounded {
+    border-radius: @border-ultra-rounded-radius;
+}
