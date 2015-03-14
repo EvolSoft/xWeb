@@ -1,0 +1,70 @@
+//**** Modals ****//
+
+//Base Style
+
+.modal {
+    position: fixed;
+	visibility: hidden;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: @modal-z-index;
+}
+
+.modal.modal-open {
+	visibility: visible;
+}
+
+.modal > .modal-background {
+    position: fixed;
+	visibility: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: @modal-z-index;
+	background: @modal;
+	opacity: 0;
+	transition: visibility linear @modal-visibility-transition, opacity @modal-opacity-transition ease-out;
+}
+
+.modal.modal-open  > .modal-background {
+    visibility: visible;
+	opacity: @modal-opacity;
+	transition: opacity @modal-opacity-transition ease-out;
+}
+
+.modal > .modal-window {
+    position: absolute;
+	left: 50%;
+	top: 50%;
+    transform: translate(-50%, -50%); //Center Modal Window
+    z-index: @modal-window-z-index;
+	padding: @modal-window-padding;
+	min-height: @modal-window-min-height;
+	min-width: @modal-window-min-width;
+    max-width: @modal-window-max-width;
+	background: @white;
+	border-radius: @border-radius;
+    box-shadow: 0px 4px 10px @modal-window-shadow;
+	word-wrap: break-word;
+}
+
+.modal > .modal-window > .close {
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    background: none;
+    position: relative;
+    display: block;
+    top: @modal-window-close-top;
+    right: @modal-window-close-left;
+    float: right;
+    width: @modal-window-close-size;  
+    height: @modal-window-close-size;
+	background-size: @modal-window-close-size;
+	background-image: url("../css/close.png");
+}
+
