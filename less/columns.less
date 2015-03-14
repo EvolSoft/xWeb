@@ -119,3 +119,16 @@
 .col-rs-12 {
    width: @column * 12;
 }
+
+//No Space
+*[class*="col-"].ns { //Columns only
+   padding: 0px;
+}
+
+//Clearfix
+
+.panel-body:before, .panel-body:after, .row:before, .row:after, .clfx:after {
+    content:"";
+    display: table;
+    clear:both;
+}
