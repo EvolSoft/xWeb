@@ -2,7 +2,7 @@
  * xWeb (v1.0) by EvolSoft
  * Developer: EvolSoft
  * Website: http://www.evolsoft.tk
- * Date: 14/03/2015 05:51 PM (UTC)
+ * Date: 15/03/2015 17:06 PM (UTC)
  * Copyright & License: (C) 2015 EvolSoft
  * Licensed under MIT (https://github.com/EvolSoft/xWeb/blob/master/LICENSE)
  */
@@ -14,6 +14,20 @@ $(document).on("click", ".close", function() {
 		$(this).parent().remove();
 	}
 });
+
+//**** Menus ****//
+
+/**
+ * Toggles a menu
+ * 
+ * @param current The current element
+ */
+function toggleMenu(current) {
+	if($(current).parent().hasClass("menu-group")){
+		$(".menu-group").removeClass("open"); //Closes all other menus
+	    $(current).parent().toggleClass("open");
+	}
+}
 
 //**** Modals ****//
 
