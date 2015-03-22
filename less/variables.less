@@ -12,7 +12,7 @@
 @primary: #0072dc;
 @success: #00dc00;
 @warning: #dca600;
-@danger: #dc0000;
+@error: #dc0000;
 @info: #00dccf;
 
 //**** Default Fonts ****//
@@ -72,11 +72,11 @@
 @alert-warning-border: lighten(@warning, 2.5%);
 @alert-warning-color: darken(@warning, 10%);
 
-//Danger
+//Error
 
-@alert-danger: lighten(@danger, 50%);
-@alert-danger-border: lighten(@danger, 2.5%);
-@alert-danger-color: darken(@danger, 10%);
+@alert-error: lighten(@error, 50%);
+@alert-error-border: lighten(@error, 2.5%);
+@alert-error-color: darken(@error, 10%);
 
 //**** Badges ****//
 
@@ -99,9 +99,9 @@
 
 @badge-warning-color: @label-warning-color;
 
-//Danger
+//Error
 
-@badge-danger-color: @label-danger-color;
+@badge-error-color: @label-error-color;
 
 //Info
 
@@ -127,9 +127,9 @@
 
 @blockquote-warning-color: @label-warning-color;
 
-//Danger
+//Error
 
-@blockquote-danger-color: @label-danger-color;
+@blockquote-error-color: @label-error-color;
 
 //Info
 
@@ -198,12 +198,12 @@
 @button-warning-hover: darken(@button-warning, 5%);
 @button-warning-active: darken(@button-warning, 10%);
 
-//Danger
+//Error
 
-@button-danger: @danger;
-@button-danger-border: darken(@button-danger, 15%);
-@button-danger-hover: darken(@button-danger, 5%);
-@button-danger-active: darken(@button-danger, 10%);
+@button-error: @error;
+@button-error-border: darken(@button-error, 15%);
+@button-error-hover: darken(@button-error, 5%);
+@button-error-active: darken(@button-error, 10%);
 
 //Info
 
@@ -271,15 +271,15 @@
 
 @footer-min-height: 150px;
 @footer: @gray-light;
-@footer-border: lighten(@gray, 8%);
+@footer-border: darken(@footer, 10%);
 @footer-padding: 20px;
-@footer-p-color: @gray-dark;
+@footer-color: @gray-dark;
 
 //Dark
 
 @footer-dark: @gray-dark_2;
-@footer-dark-border: lighten(@gray-dark_2, 20%);
-@footer-dark-p-color: darken(@gray, 6%);
+@footer-dark-border: darken(@footer-dark, 10%);
+@footer-dark-color: darken(@gray, 5%);
 
 //**** Inputs ****//
 
@@ -310,9 +310,9 @@
 
 @input-warning: @warning;
 
-//Danger
+//Error
 
-@input-danger: @danger;
+@input-error: @error;
 
 //Info
 
@@ -348,13 +348,38 @@
 
 @label-warning-color: darken(@warning, 10%);
 
-//Danger
+//Error
 
-@label-danger-color: darken(@danger, 10%);
+@label-error-color: darken(@error, 10%);
 
 //Info
 
 @label-info-color: darken(@info, 10%);
+
+//**** Lists ****//
+
+@list-margin-bottom: 20px;
+@list-border: @gray;
+@list-default-li-padding: 5px 0;
+@list-li-padding: 10px;
+@list-item-padding: 10px;
+@list-item-inside-margin: 5px;
+
+//**** Menus ****//
+
+//Base Style
+
+@menu: @white;
+@menu-border: darken(@gray, 20%);
+@menu-padding: 5px 0;
+@menu-z-index: 150;
+@menu-min-width: 170px;
+@menu-margin: 0;
+@menu-hr-margin: 10px;
+@menu-li-hover: darken(@gray-light, 5%);
+@menu-li-padding: 5px 15px;
+@menu-li-disabled-opacity: .50;
+@menu-li-active: darken(@gray-light, 10%);
 
 //**** Modals ****//
 
@@ -364,17 +389,45 @@
 @modal-visibility-transition: .5s;
 @modal-opacity-transition: .2s;
 @modal-opacity: .5;
-@modal-z-index: 200;
+@modal-z-index: @navbar-z-index * 2; //Modals must be in front of Navbar
 @modal-window-min-height: 100px;
 @modal-window-min-width: 400px;
 @modal-window-max-width: 600px;
 @modal-window-padding: 15px;
 @modal-window-shadow: lighten(@black, 20%);
-@modal-window-z-index: 300;
-@modal-window-close-size: 26px;
+@modal-window-z-index: @modal-z-index + 100;
+@modal-window-close-size: 25px;
 @modal-window-close-font-size: @default-font-size + 11px;
-@modal-window-close-top: -28px;
-@modal-window-close-left: -28px;
+@modal-window-close-top: -(@modal-window-close-size + 2px);
+@modal-window-close-left: -(@modal-window-close-size + 2px);
+
+//**** Navbar ****//
+
+//Base Style
+
+@navbar-min-height: 50px;
+@navbar: @gray-light;
+@navbar-active: darken(@navbar, 6%);
+@navbar-border: @navbar-active;
+@navbar-z-index: 1000;
+@navbar-color: @gray-dark;
+@navbar-color-hover: darken(@navbar-color, 20%);
+@navbar-color-active: @navbar-color-hover;
+@navbar-title-font-size: 18px;
+@navbar-title-line-height: @navbar-title-font-size;
+@navbar-title-padding-vertical: @navbar-min-height / 2 - @navbar-title-line-height / 2;
+@navbar-links-font-size: @default-font-size;
+@navbar-links-line-height: @navbar-links-font-size + 6px; //Badges and Labels support
+@navbar-links-padding-vertical: @navbar-min-height / 2 - @navbar-links-line-height / 2;
+
+//Dark
+
+@navbar-dark: @gray-dark_2;
+@navbar-dark-active: darken(@navbar-dark, 6%);
+@navbar-dark-border: @navbar-dark-active;
+@navbar-dark-color: darken(@gray, 5%);
+@navbar-dark-color-hover: lighten(@navbar-dark-color, 20%);
+@navbar-dark-color-active: @navbar-dark-color-hover;
 
 //**** Panels ****//
 
@@ -424,16 +477,16 @@
 @panel-warning-lt-border: darken(@panel-warning-lt, 15%);
 @panel-warning-lt-color: darken(@panel-warning-lt, 40%);
 
-//Danger
+//Error
 
-@panel-danger: @danger;
-@panel-danger-border: darken(@panel-danger, 15%);
+@panel-error: @error;
+@panel-error-border: darken(@panel-error, 15%);
 
-//Danger Lighten
+//Error Lighten
 
-@panel-danger-lt: lighten(@panel-danger, 40%);
-@panel-danger-lt-border: darken(@panel-danger-lt, 15%);
-@panel-danger-lt-color: darken(@panel-danger-lt, 40%);
+@panel-error-lt: lighten(@panel-error, 40%);
+@panel-error-lt-border: darken(@panel-error-lt, 15%);
+@panel-error-lt-color: darken(@panel-error-lt, 40%);
 
 //Info
 
@@ -479,15 +532,19 @@
 @progress-bar-warning: @warning;
 @progress-bar-warning-border: darken(@progress-bar-warning, 15%);
 
-//Danger
+//Error
 
-@progress-bar-danger: @danger;
-@progress-bar-danger-border: darken(@progress-bar-danger, 15%);
+@progress-bar-error: @error;
+@progress-bar-error-border: darken(@progress-bar-error, 15%);
 
 //Info
 
 @progress-bar-info: @info;
 @progress-bar-info-border: darken(@progress-bar-info, 15%);
+
+//**** Tables ****//
+
+
 
 //**** Typography ****//
 
@@ -501,25 +558,49 @@
 
 //Text Colors
 
+//Gray
+
+@text-gray-color: @gray-dark;
+
 //Primary
 
 @text-primary-color: darken(@primary, 10%);
+
+//Primary Lighten
+
+@text-primary-lt-color: lighten(@primary, 6.5%);
 
 //Success
 
 @text-success-color: darken(@success, 10%);
 
+//Success Lighten
+
+@text-success-lt-color: lighten(@success, 6.5%);
+
 //Warning
 
 @text-warning-color: darken(@warning, 10%);
 
-//Danger
+//Warning Lighten
 
-@text-danger-color: darken(@danger, 10%);
+@text-warning-lt-color: lighten(@warning, 6.5%);
+
+//Error
+
+@text-error-color: darken(@error, 10%);
+
+//Error Lighten
+
+@text-error-lt-color: lighten(@error, 6.5%);
 
 //Info
 
 @text-info-color: darken(@info, 10%);
+
+//Info Lighten
+
+@text-info-lt-color: lighten(@info, 6.5%);
 
 //Headers
 
