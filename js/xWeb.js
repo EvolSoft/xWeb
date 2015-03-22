@@ -2,7 +2,7 @@
  * xWeb (v1.0) by EvolSoft
  * Developer: EvolSoft
  * Website: http://www.evolsoft.tk
- * Date: 22/03/2015 10:09 AM (UTC)
+ * Date: 22/03/2015 16:31 PM (UTC)
  * Copyright & License: (C) 2015 EvolSoft
  * Licensed under MIT (https://github.com/EvolSoft/xWeb/blob/master/LICENSE)
  */
@@ -44,7 +44,18 @@ function checkElement(element){
 function getVersion(){
 	return XWEB_VERSION;
 }
- 
+
+/**
+ * px to int
+ * 
+ * @param px px
+ * 
+ * @return int
+ */
+function pxtoint(px){
+	return px.replace("px", "");
+}
+
 //**** Alerts ****//
 
 $(document).on("click", ".close", function() {
@@ -91,4 +102,41 @@ $(document).on("click", ".modal-background", function() {
 		    $(this).parent().removeClass("modal-open");
 		}
 	}
+});
+
+//**** Sliders ****//
+
+/** @var bool click **/
+var click = false;
+/** @var current **/
+var current = null;
+/** @var int pos **/
+var pos = 0;
+
+$(document).on("mousedown", function() {
+	click = true;
+	current = event.target;
+});
+
+$(document).on("mouseup", function() {
+	click = false;
+	current = null;
+});
+
+$(document).on("mousemove", function(e) {
+	if(click && current != null && $(current).attr("class") == "slider-handle"){
+		console.log(pxtoint($(current).css("left")) + " £: " +  Math.round($(current).parent().offset().left));
+		if(e.pageX > pos){
+			if(pxtoint($(current).css("left")) + 5 >= Math.round($(current).parent().offset().left) && pxtoint($(current).css("left"))  <= Math.round($(current).parent().offset().left + $(current).parent().width())){
+				console.log(">");
+				$(current).css("left", e.pageX - 5);
+			}
+		}else{
+			if(pxtoint($(current).css("left")) - 5 >= Math.round($(current).parent().offset().left) && pxtoint($(current).css("left"))  <= Math.round($(current).parent().offset().left + $(current).parent().width())){
+				console.log("<");
+				$(current).css("left", e.pageX - 5);
+			}
+		}
+	}
+	pos = e.pageX;
 });
