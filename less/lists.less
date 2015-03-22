@@ -1,0 +1,181 @@
+//**** Lists ****//
+
+//Default Style
+
+ul, ol {
+   margin: 0;
+}
+
+ul > li, ol > li {
+   padding: @list-default-li-padding;
+}
+
+//Base Style
+
+ul.list {
+   padding: 0;
+   display: block;
+   list-style: none;
+   width: 100%;
+   margin-bottom: @list-margin-bottom;
+}
+
+ul.list > li {
+   padding: @list-li-padding;
+}
+
+ul.list > li > a {
+   display: block;
+}
+
+ul.list > li {
+   display: block;
+   border-bottom: 1px solid @list-border;
+}
+
+ul.list > li:first-child {
+   border-top: 1px solid @list-border;
+}
+
+//Dashed Style
+
+ul.list.list-dashed > li {
+   display: block;
+   border-bottom: 1px dashed @list-border;
+}
+
+ul.list.list-dashed > li:first-child {
+   border-top: 1px dashed @list-border;
+}
+
+//Div List
+
+div.list {
+   padding: 0;
+   display: block;
+   list-style: none;
+   border: 1px solid @list-border;
+   border-radius: @border-radius;
+}
+
+div.list > .list-item {
+   display: block;
+   margin: 0;
+   padding: @list-item-padding;
+}
+
+div.list > .list-item:not(:last-child) {
+   border-bottom: 1px solid @list-border;
+}
+
+div.list > .list-item:first-child {
+    border-top-left-radius: @border-radius - 1px;
+	border-top-right-radius: @border-radius - 1px;
+}
+
+div.list > .list-item:last-child {
+    border-bottom-left-radius: @border-radius - 1px;
+	border-bottom-right-radius: @border-radius - 1px;
+}
+
+div.list > .list-item > * {
+   margin: 0;
+}
+
+div.list > .list-item > h1, div.list > .list-item > h2, div.list > .list-item > h3, div.list > .list-item > h4, div.list > .list-item > h5, div.list > .list-item > h6, div.list > .list-item > .h1, div.list > .list-item > .h2, div.list > .list-item > .h3, div.list > .list-item > .h4, div.list > .list-item > .h5, div.list > .list-item > .h6 {
+   margin-bottom: @list-item-inside-margin;
+}
+
+//Disabled Div List Item
+
+div.list > .list-item.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+	background: @gray-light_2;
+    opacity: @button-disabled-opacity; //Same as buttons
+}
+
+//Primary
+
+div.list.list-primary > .list-item.active {
+	background: @button-primary;
+}
+
+div.list.list-primary > .list-item.active > * {
+	color: @white;
+}
+
+//Success
+
+div.list.list-success > .list-item.active {
+	background: @button-success;
+	color: @white;
+}
+
+div.list.list-success > .list-item.active > * {
+	color: @white;
+}
+
+//Warning
+
+div.list.list-warning > .list-item.active {
+	background: @button-warning;
+	color: @white;
+}
+
+div.list.list-warning > .list-item.active > * {
+	color: @white;
+}
+
+//Error
+
+div.list.list-error > .list-item.active {
+	background: @button-error;
+	color: @white;
+}
+
+div.list.list-error > .list-item.active > * {
+	color: @white;
+}
+
+//Info
+
+div.list.list-info > .list-item.active {
+	background: @button-info;
+	color: @white;
+}
+
+div.list.list-info > .list-item.active > * {
+	color: @white;
+}
+
+//Styles
+
+div.list.square {
+    border-radius: @border-square-radius;
+}
+
+
+div.list.square > .list-item:first-child {
+    border-top-left-radius: @border-square-radius;
+	border-top-right-radius: @border-square-radius;
+}
+
+div.list.square > .list-item:last-child {
+    border-bottom-left-radius: @border-square-radius;
+	border-bottom-right-radius: @border-square-radius;
+}
+
+div.list.ultra-rounded {
+    border-radius: @border-ultra-rounded-radius;
+}
+
+div.list.ultra-rounded > .list-item:first-child {
+    border-top-left-radius: @border-ultra-rounded-radius - 1px;
+	border-top-right-radius: @border-ultra-rounded-radius - 1px;
+}
+
+div.list.ultra-rounded > .list-item:last-child {
+    border-bottom-left-radius: @border-ultra-rounded-radius - 1px;
+	border-bottom-right-radius: @border-ultra-rounded-radius - 1px;
+}
