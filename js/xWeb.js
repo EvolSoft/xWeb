@@ -2,10 +2,48 @@
  * xWeb (v1.0) by EvolSoft
  * Developer: EvolSoft
  * Website: http://www.evolsoft.tk
- * Date: 20/03/2015 12:30 AM (UTC)
+ * Date: 22/03/2015 10:09 AM (UTC)
  * Copyright & License: (C) 2015 EvolSoft
  * Licensed under MIT (https://github.com/EvolSoft/xWeb/blob/master/LICENSE)
  */
+
+//**** xWeb Core ****//
+
+/** @var string XWEB_VERSION **/
+var XWEB_VERSION = "1.0";
+
+/**
+ * Changes the Webpage title
+ * 
+ * @param title The new title
+ */
+function changeTitle(title){
+	if(checkElement("title")){
+		$("title").text(title);
+	}else{
+		$("head").append("<title>" + title + "</title>");
+	}
+}
+
+/**
+ * Checks if a element exists
+ * 
+ * @param element The element tag, class, name or id to check
+ * 
+ * @return int
+ */
+function checkElement(element){
+	return $(element).length;
+}
+
+/**
+ * Get xWeb version
+ * 
+ * @return string xWebVersion
+ */
+function getVersion(){
+	return XWEB_VERSION;
+}
  
 //**** Alerts ****//
 
