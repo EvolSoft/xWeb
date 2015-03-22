@@ -2,7 +2,7 @@
  * xWeb (v1.0) by EvolSoft
  * Developer: EvolSoft
  * Website: http://www.evolsoft.tk
- * Date: 22/03/2015 16:31 PM (UTC)
+ * Date: 22/03/2015 17:56 PM (UTC)
  * Copyright & License: (C) 2015 EvolSoft
  * Licensed under MIT (https://github.com/EvolSoft/xWeb/blob/master/LICENSE)
  */
@@ -125,16 +125,16 @@ $(document).on("mouseup", function() {
 
 $(document).on("mousemove", function(e) {
 	if(click && current != null && $(current).attr("class") == "slider-handle"){
-		console.log(pxtoint($(current).css("left")) + " £: " +  Math.round($(current).parent().offset().left));
+		fixedpos = e.pageX - $(current).parent().offset().left;
 		if(e.pageX > pos){
-			if(pxtoint($(current).css("left")) + 5 >= Math.round($(current).parent().offset().left) && pxtoint($(current).css("left"))  <= Math.round($(current).parent().offset().left + $(current).parent().width())){
-				console.log(">");
-				$(current).css("left", e.pageX - 5);
+			if(fixedpos >= 0 && fixedpos <= $(current).parent().width() - 10){
+				$(current).css("left", fixedpos - 5 + "px");
+				$(current).parent().find(".slider-progress").css("width", pxtoint($(current).css("left")));
 			}
 		}else{
-			if(pxtoint($(current).css("left")) - 5 >= Math.round($(current).parent().offset().left) && pxtoint($(current).css("left"))  <= Math.round($(current).parent().offset().left + $(current).parent().width())){
-				console.log("<");
-				$(current).css("left", e.pageX - 5);
+			if(fixedpos >= 0 && fixedpos <= $(current).parent().width() - 10){
+				$(current).css("left", fixedpos - 5 + "px");
+				$(current).parent().find(".slider-progress").css("width", pxtoint($(current).css("left")));
 			}
 		}
 	}
