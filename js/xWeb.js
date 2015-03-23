@@ -2,7 +2,7 @@
  * xWeb (v1.0) by EvolSoft
  * Developer: EvolSoft
  * Website: http://www.evolsoft.tk
- * Date: 22/03/2015 17:56 PM (UTC)
+ * Date: 23/03/2015 18:25 PM (UTC)
  * Copyright & License: (C) 2015 EvolSoft
  * Licensed under MIT (https://github.com/EvolSoft/xWeb/blob/master/LICENSE)
  */
@@ -126,15 +126,16 @@ $(document).on("mouseup", function() {
 $(document).on("mousemove", function(e) {
 	if(click && current != null && $(current).attr("class") == "slider-handle"){
 		fixedpos = e.pageX - $(current).parent().offset().left;
+		percent = Math.round(((fixedpos * 100) / pxtoint($(current).parent().css("width")))) - 1;
 		if(e.pageX > pos){
 			if(fixedpos >= 0 && fixedpos <= $(current).parent().width() - 10){
-				$(current).css("left", fixedpos - 5 + "px");
-				$(current).parent().find(".slider-progress").css("width", pxtoint($(current).css("left")));
+				$(current).css("left",  + percent + "%");
+				$(current).parent().find(".slider-progress").css("width", percent + "%");
 			}
 		}else{
 			if(fixedpos >= 0 && fixedpos <= $(current).parent().width() - 10){
-				$(current).css("left", fixedpos - 5 + "px");
-				$(current).parent().find(".slider-progress").css("width", pxtoint($(current).css("left")));
+				$(current).css("left",  + percent + "%");
+				$(current).parent().find(".slider-progress").css("width", percent + "%");
 			}
 		}
 	}
