@@ -71,6 +71,16 @@ nav {
 @media (max-width: (@small-screen-width - 1px)){
    .navbar .navbar-links {
       display: none;
+	  clear: both;
+	  float: none;
+	  border-top: 1px solid @navbar-border;
+	  padding: 5px 0;
+   }
+   .navbar .navbar-links > li {
+	  float: none;
+   }
+   .navbar .navbar-links > li > a {
+	  padding: @navbar-links-padding-vertical - 2px;
    }
    .navbar .navbar-links.open {
       display: block;
