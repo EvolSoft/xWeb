@@ -2,7 +2,7 @@
  * xWeb (v1.0) by EvolSoft
  * Developer: EvolSoft
  * Website: http://www.evolsoft.tk
- * Date: 25/03/2015 11:17 AM (UTC)
+ * Date: 25/03/2015 02:02 PM (UTC)
  * Copyright & License: (C) 2015 EvolSoft
  * Licensed under MIT (https://github.com/EvolSoft/xWeb/blob/master/LICENSE)
  */
@@ -104,6 +104,14 @@ $(document).on("click", ".modal-background", function() {
 	}
 });
 
+//**** Navbar ****//
+
+$(document).on("click", ".navbar-toggle", function(){
+	if($(this).parent().hasClass("navbar")){ //.navbar > .navbar-toggle
+		$(this).parent().find(".navbar-links").toggleClass("open");
+	}
+});
+
 //**** Sliders ****//
 
 /** @var bool click **/
@@ -145,12 +153,12 @@ $(document).on("mousemove", function(e) {
 //**** Tabs ****//
 
 $(document).on("click", "a", function(){
-	if($(event.target).parent().parent().hasClass("tabs")){ //ul.tabs > li > a
-		$(event.target).parent().parent().find("li").removeClass("active"); //ul.tabs > li
-		$(event.target).parent().addClass("active"); //ul.tabs > li
-		$(event.target).parent().parent().parent().find(".tab-content").css("display", "none"); //Closes all tab-contents (div.tabs > ul.tabs > li > a)
-		if($(event.target).parent().parent().parent().find("[tab-id=" + $(event.target).attr("open-tab") + "]").hasClass("tab-content")){
-			$(event.target).parent().parent().parent().find("[tab-id=" + $(event.target).attr("open-tab") + "]").css("display", "block");
+	if($(this).parent().parent().hasClass("tabs")){ //ul.tabs > li > a
+		$(this).parent().parent().find("li").removeClass("active"); //ul.tabs > li
+		$(this).parent().addClass("active"); //ul.tabs > li
+		$(this).parent().parent().parent().find(".tab-content").css("display", "none"); //Closes all tab-contents (div.tabs > ul.tabs > li > a)
+		if($(this).parent().parent().parent().find("[tab-id=" + $(event.target).attr("open-tab") + "]").hasClass("tab-content")){
+			$(this).parent().parent().parent().find("[tab-id=" + $(event.target).attr("open-tab") + "]").css("display", "block");
 		}
 	}
 });
