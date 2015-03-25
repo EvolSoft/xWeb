@@ -28,7 +28,9 @@
 
 //**** Devices ****//
 
-@desktop-width: 770px;
+@small-screen-width: 750px;
+@medium-screen-width: 900px;
+@large-screen-width: 1200px;
 
 //**** Grays ****//
 
@@ -512,13 +514,13 @@
 //Base Style
 
 @progress: @gray-light_2;
-@progress-height: 24px;
+@progress-height: 25px;
 @progress-margin-bottom: 20px;
 @progress-box-shadow: inset 0px 2px 3px rgba(0,0,0,.1);
 @progress-bar: @primary;
 @progress-bar-border: darken(@progress-bar, 15%);
 @progress-bar-height: 90%;
-@progress-bar-line-height: 23px;
+@progress-bar-line-height: 24px;
 @progress-bar-margin-bottom: 20px;
 @progress-bar-box-shadow: inset 0px 2px 3px rgba(0,0,0,.1);
 
@@ -541,6 +543,57 @@
 
 @progress-bar-info: @info;
 @progress-bar-info-border: darken(@progress-bar-info, 15%);
+
+//**** Sliders ****//
+
+@slider: @progress;
+@slider-box-shadow: @progress-box-shadow;
+@slider-height: @progress-height;
+@slider-margin: 20px;
+@slider-handle-padding: 10px;
+@slider-handle-size: 30px;
+@slider-handle-top: -0.2em;
+@slider-progress: @primary;
+@slider-progress-border: darken(@slider-progress, 15%);
+
+//Sizing
+
+@slider-ultra-small-height: 10px;
+@slider-handle-ultra-small-top: -0.17em;
+@slider-handle-ultra-small-size: @slider-ultra-small-height + 5;
+@slider-handle-ultra-small-padding: 3px;
+@slider-small-height: 15px;
+@slider-handle-small-top: -0.17em;
+@slider-handle-small-size: @slider-small-height + 5;
+@slider-handle-small-padding: 6px;
+@slider-large-height: 35px;
+@slider-large-top: -0.2em;
+@slider-large-size: @slider-large-height + 5;
+@slider-large-padding: 10px;
+
+//Success
+
+@slider-progress-success: @success;
+@slider-progress-success-border: darken(@slider-progress-success, 15%);
+
+//Warning
+
+@slider-progress-warning: @warning;
+@slider-progress-warning-border: darken(@slider-progress-warning, 15%);
+
+//Error
+
+@slider-progress-error: @error;
+@slider-progress-error-border: darken(@slider-progress-error, 15%);
+
+//Info
+
+@slider-progress-info: @info;
+@slider-progress-info-border: darken(@slider-progress-info, 15%);
+
+//**** Tabs ****//
+
+@tabs-margin: 10px;
 
 //**** Tables ****//
 
