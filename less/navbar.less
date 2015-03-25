@@ -1,0 +1,179 @@
+//**** Navbar ****//
+
+//Base Style
+
+nav {
+   display: block;
+}
+
+.navbar {
+   position: relative;
+   background: @navbar;
+   margin: 0 0 20px 0;
+   border: 1px solid @navbar-border;
+   border-radius: @border-radius;
+   min-height: @navbar-min-height;
+}
+
+.navbar.nm {
+   margin: 0;
+}
+
+.navbar:after {
+   content: " ";
+   display: table;
+   clear: both;
+}
+
+.navbar .navbar-title {
+   font-size: @navbar-title-font-size;
+   float: left;
+   color: @navbar-color;
+   line-height: @navbar-title-line-height;
+   padding: @navbar-title-padding-vertical;
+}
+
+.navbar .navbar-title:hover {
+   color: @navbar-color-hover;
+}
+
+.navbar .navbar-links {
+   display: block;
+   float: left;
+   padding-left: 0;
+   margin: 0;
+}
+
+.navbar .navbar-links > li {
+   padding: 0; //No conflict with default list style
+   list-style: none;
+   display: block;
+   float: left;
+}
+
+.navbar .navbar-links > li > a {
+   display: block;
+   font-size: @navbar-links-font-size;
+   line-height: @navbar-links-line-height;
+   padding: @navbar-links-padding-vertical;
+   color: @navbar-color;
+}
+
+.navbar .navbar-links > li > a:hover, .navbar .navbar-links > li > a:focus {
+   color: @navbar-color-hover;
+}
+
+.navbar .navbar-links > li.active > a {
+   background: @navbar-active;
+   color: @navbar-color-active;
+}
+
+@media (max-width: (@small-screen-width - 1px)){
+   .navbar .navbar-links {
+      display: none;
+   }
+   .navbar .navbar-links.open {
+      display: block;
+   }
+}
+
+.navbar .navbar-toggle {
+   float: right;
+   background: none;
+   border: none;
+   padding: 14px;
+   color: @navbar-color;
+}
+
+.navbar .navbar-toggle:hover {
+   color: @navbar-color-hover;
+}
+
+.navbar .navbar-toggle:after {
+   content: "\f0c9";
+   font: normal normal normal 14px/1 FontAwesome;
+   font-size: 21px;
+}
+
+@media (min-width: @small-screen-width){
+   .navbar .navbar-toggle {
+      display: none;
+   }
+}
+
+
+//Navbar Static
+
+.navbar.navbar-static {
+   border: none; //Reset Borders
+   border-bottom: 1px solid @navbar-border;
+   border-radius: 0px;
+}
+
+//Navbar Fixed
+
+.navbar.navbar-fixed {
+   position: fixed;
+   right: 0;
+   left: 0;
+   top: 0;
+   z-index: @navbar-z-index;
+   border: none; //Reset Borders
+   border-bottom: 1px solid @navbar-border;
+   border-radius: 0px;
+}
+
+
+//Navbar Dark
+
+.navbar.navbar-dark {
+   border: 1px solid @navbar-dark-border;
+   background: @navbar-dark;
+}
+
+.navbar.navbar-dark .navbar-title {
+   color: @navbar-dark-color;
+}
+
+.navbar.navbar-dark .navbar-title:hover {
+   color: @navbar-dark-color-hover;
+}
+
+.navbar.navbar-dark .navbar-links > li > a {
+   color: @navbar-dark-color;
+}
+
+.navbar.navbar-dark .navbar-links > li > a:hover, .navbar.navbar-dark .navbar-links > li > a:focus {
+   color: @navbar-dark-color-hover;
+}
+
+.navbar.navbar-dark .navbar-links > li > a:active {
+   color: @navbar-dark-color-active;
+}
+
+.navbar.navbar-dark .navbar-links > li.active > a {
+   background: @navbar-dark-active;
+   color: @navbar-dark-color-active;
+}
+
+.navbar.navbar-dark .navbar-toggle {
+   color: @navbar-dark-color;
+}
+
+.navbar.navbar-dark .navbar-toggle:hover {
+   color: @navbar-dark-color-hover;
+}
+
+//Navbar Dark Static
+
+.navbar.navbar-dark.navbar-static {
+   border: none; //Reset Borders
+   border-bottom: 1px solid @navbar-dark-border;
+}
+
+//Navbar Dark Fixed
+
+.navbar.navbar-dark.navbar-fixed {
+   border: none; //Reset Borders
+   border-bottom: 1px solid @navbar-dark-border;
+}
