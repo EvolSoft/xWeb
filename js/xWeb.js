@@ -2,7 +2,7 @@
  * xWeb (v1.0) by EvolSoft
  * Developer: EvolSoft
  * Website: http://www.evolsoft.tk
- * Date: 23/03/2015 8:30 PM (UTC)
+ * Date: 25/03/2015 11:17 AM (UTC)
  * Copyright & License: (C) 2015 EvolSoft
  * Licensed under MIT (https://github.com/EvolSoft/xWeb/blob/master/LICENSE)
  */
@@ -140,4 +140,17 @@ $(document).on("mousemove", function(e) {
 		}
 	}
 	pos = e.pageX;
+});
+
+//**** Tabs ****//
+
+$(document).on("click", "a", function(){
+	if($(event.target).parent().parent().hasClass("tabs")){ //ul.tabs > li > a
+		$(event.target).parent().parent().find("li").removeClass("active"); //ul.tabs > li
+		$(event.target).parent().addClass("active"); //ul.tabs > li
+		$(event.target).parent().parent().parent().find(".tab-content").css("display", "none"); //Closes all tab-contents (div.tabs > ul.tabs > li > a)
+		if($(event.target).parent().parent().parent().find("[tab-id=" + $(event.target).attr("open-tab") + "]").hasClass("tab-content")){
+			$(event.target).parent().parent().parent().find("[tab-id=" + $(event.target).attr("open-tab") + "]").css("display", "block");
+		}
+	}
 });
