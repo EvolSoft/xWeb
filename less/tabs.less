@@ -1,0 +1,193 @@
+//**** Tabs ****//
+//Same style of buttons
+
+//Base Style
+
+.tabs {
+   padding: 0;
+   display: block;
+   float: left;
+   list-style: none;
+}
+
+div.tabs {
+   width: 100%;
+   margin-top: @tabs-margin;
+}
+
+.tabs > li {
+   display: block;
+   float: left;
+   padding: 0px;
+}
+
+.tabs > li > a {
+   background: @button;
+   border-top-left-radius: @border-radius;
+   border-top-right-radius: @border-radius;
+   border: 1px solid @button-border;
+   border-bottom: 1px solid @button;
+   box-shadow: inset 0px 1px 0px 0px @white;
+   -webkit-box-shadow: inset 0px 1px 0px 0px @white;
+   color: @gray-dark;
+   cursor: pointer;
+   display: inline-block;
+   font-family: Arial;
+   font-size: @default-font-size;
+   padding: 8px 16px;
+}
+
+.tabs > li:hover > a {
+	background: @button-hover;
+	border-bottom: 1px solid @button-hover;
+	box-shadow: inset 0px 1px 0px 0px lighten(@button-hover, 15%);
+	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-hover, 15%);
+}
+
+.tabs > li.active > a {
+   box-shadow: none;
+   background: @button-active;
+   border-bottom: 1px solid @button-active;
+}
+
+.tabs > .tab-content {
+   float: left;
+   padding: 15px;
+   width: 100%;
+   border-radius: @border-radius;
+   border-top-left-radius: 0px; //Must be always 0
+   margin-bottom: 10px;
+   border: 1px solid #d6d6d6;
+   display: none;
+}
+
+.tabs.tabs-left ul {
+   float: left;
+}
+
+.tabs.tabs-right ul {
+   float: right;
+}
+
+.tabs.tabs-left .tab-content {
+   border-top-left-radius: 0px; //Must be always 0
+   border-top-right-radius: @border-radius; //Reset border
+}
+
+.tabs.tabs-right .tab-content {
+   border-top-right-radius: 0px; //Must be always 0
+   border-top-left-radius: @border-radius; //Reset border
+}
+
+//Primary
+
+.tabs.tabs-primary > ul > li.active > a {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.5);
+	border: 1px solid @button-primary-active; //Border with the same color of background
+	background: @button-primary-active;
+	color: @white;
+}
+
+//Success
+
+.tabs.tabs-success > ul > li.active > a {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.5);
+	border: 1px solid @button-success-active;
+	background: @button-success-active;
+	color: @white;
+}
+
+//Warning
+
+.tabs.tabs-warning > ul > li.active > a {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.5);
+	border: 1px solid @button-warning-active;
+	background: @button-warning-active;
+	color: @white;
+}
+
+//Error
+
+.tabs.tabs-error > ul > li.active > a {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.5);
+	border: 1px solid @button-error-active;
+	background: @button-error-active;
+	color: @white;
+}
+
+//Info
+
+.tabs.tabs-info > li.active > a {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.5);
+	border: 1px solid @button-info-active;
+	background: @button-info-active;
+	color: @white;
+}
+
+//Disabled Tabs
+
+div.tabs.disabled li, div.tabs.disabled .tab-content {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: @button-disabled-opacity;
+}
+
+//Disabled Tab menu items
+
+.tabs > li.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: @button-disabled-opacity;
+}
+
+//Styles
+
+div.tabs.square li a {
+    border-top-left-radius: @border-square-radius;
+	border-top-right-radius: @border-square-radius;
+}
+
+div.tabs.square.tabs-left .tab-content {
+   border-top-left-radius: 0px; //Must be always 0
+   border-top-right-radius: @border-square-radius; //Reset border
+}
+
+div.tabs.squaretabs-right .tab-content{
+   border-top-right-radius: 0px; //Must be always 0
+   border-top-left-radius: @border-square-radius; //Reset border
+}
+
+div.tabs.square .tab-content {
+    border-radius: @border-square-radius;
+	border-top-left-radius: 0px; //Must be always 0
+}
+
+div.tabs.ultra-rounded li a {
+    border-top-left-radius: @border-ultra-rounded-radius;
+    border-top-right-radius: @border-ultra-rounded-radius;
+}
+
+div.tabs.ultra-rounded.tabs-left .tab-content {
+   border-top-left-radius: 0px; //Must be always 0
+   border-top-right-radius: @border-ultra-rounded-radius; //Reset border
+}
+
+div.tabs.ultra-rounded.tabs-right .tab-content{
+   border-top-right-radius: 0px; //Must be always 0
+   border-top-left-radius: @border-ultra-rounded-radius; //Reset border
+}
+
+div.tabs.ultra-rounded .tab-content {
+    border-radius: @border-ultra-rounded-radius;
+	border-top-left-radius: 0px; //Must be always 0
+}
