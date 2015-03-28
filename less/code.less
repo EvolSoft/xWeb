@@ -1,0 +1,100 @@
+//**** Code ****//
+
+//Base Style
+
+code:not(.code-box) {
+    font-family: @code-font;
+	font-size: @default-font-size - 1px;
+	font-weight: bold;
+	color: @code-inline-color;
+	border: 1px solid @code-inline-border;
+	background: @code-inline;
+	border-radius: @code-inline-border-radius;
+	padding: @code-inline-padding;
+}
+
+
+code.code-box {
+    font-family: @code-font;
+    min-height: @box-min-height;
+	display: block;
+    padding: @box-padding;
+    margin-bottom: @default-margin;
+    border-radius: @border-radius;
+    color: @box-color;
+    background-color: @box;
+    border: 1px solid @box-border;
+}
+
+code.code-box p {
+    margin: 0px;
+}
+
+//Code Box
+
+//Highligters
+
+//Success
+
+code.code-box > span.scs {
+    background: @code-success;
+    color: @code-success-color;
+}
+
+//Warning
+
+code.code-box > span.wrn {
+    background: @code-warning;
+    color: @code-warning-color;
+}
+
+//Error
+
+code.code-box > span.err {
+    background: @code-error;
+    color: @code-error-color;
+}
+
+//Info
+
+code.code-box > span.inf {
+    background: @code-info;
+    color: @code-info-color;
+}
+
+//Attribute
+
+code.code-box > span.attr {
+    color: @code-attr;
+}
+
+//Class
+
+code.code-box > span.cls {
+    color: @code-cls;
+}
+
+//Comment
+
+code.code-box > span.cm {
+    font-style: italic;
+    color: @code-cm;
+}
+
+//Function
+
+code.code-box > span.fnc {
+    color: @code-fnc;
+}
+
+//Number
+
+code.code-box > span.nm {
+    color: @code-nm;
+}
+
+//String
+
+code.code-box > span.str {
+    color: @code-str;
+}
