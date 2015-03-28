@@ -4,10 +4,12 @@
 
 .breadcrumb {
     padding: 8px 15px;
-    margin-bottom: @breadcrumb-margin-bottom;
+	margin: 0px; //Clear default margin
+    margin-bottom: @default-margin / 2;;
     list-style: none;
+	border-radius: @border-radius;
     background-color: @breadcrumb;
-    border-radius: @border-radius;
+    text-align: @default-text-align;
 }
 
 .breadcrumb ul, .breadcrumb ol {
@@ -32,6 +34,7 @@
 }
 
 .breadcrumb > li {
+    padding: 0;
     color: @breadcrumb-li;
     display: inline-block;
 }
