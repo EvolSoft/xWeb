@@ -24,7 +24,7 @@
 
 //**** Default Margin/Padding ****//
 
-@default-margin-bottom: 20px;
+@default-margin: 20px;
 
 //**** Devices ****//
 
@@ -155,7 +155,7 @@
 @breadcrumb: @gray-light_2;
 @breadcrumb-color: @gray;
 @breadcrumb-padding: 8px 16px;
-@breadcrumb-margin-bottom: @default-margin-bottom;
+@breadcrumb-margin-bottom: @default-margin;
 @breadcrumb-separator: "> ";
 @breadcrumb-separator-padding: 0px 5px;
 @breadcrumb-li: lighten(@gray-dark_2, 20%);
@@ -218,49 +218,53 @@
 
 //Base Style
 
-//CSS
+//Code Box
 
-//CSS > Comment
+//Highlighters
 
-@code-css-comment: @code-html-comment;
+//Success
 
-//CSS > Selector
+@code-success: lighten(@success, 40%);
+@code-success-color: @success;
 
-@code-css-selector: #CA00A0;
+//Warning
 
-//CSS > Class Selector
+@code-warning: lighten(@warning, 40%);
+@code-warning-color: @warning;
 
-@code-css-class-selector: @code-html-tag;
+//Error
 
-//CSS > Property
+@code-error: lighten(@error, 40%);
+@code-error-color: @error;
 
-@code-css-property: @code-html-attribute;
+//Info
 
-//CSS > Value
+@code-info: lighten(@info, 40%);
+@code-info-color: @info;
 
-@code-css-value: #348DC4;
+//Attribute
 
-//HTML
+@code-attr: #C68748;
 
-//HTML > Attribute
+//Class
 
-@code-html-attribute: #C68748;
+@code-cls: #C0504D;
 
-//HTML > Attribute Value
+//Comment
 
-@code-html-attribute-value: #6DC44A;
+@code-cm: #34C4B7;
 
-//HTML > Comment
+//Function
 
-@code-html-comment: #34C4B7;
+@code-fnc: #CA00A0;
 
-//HTML > Content
+//Number
 
-@code-html-content: lighten(@gray-dark_2, 20%);
+@code-nm: #348DC4;
 
-//HTML > Tag
+//String
 
-@code-html-tag: #C0504D;
+@code-str: #6DC44A;
 
 //**** Columns ****//
 
@@ -438,7 +442,7 @@
 @panel: @white;
 @panel-border: lighten(@gray, 8%);
 @panel-box-shadow: 0px 1px 1px rgba(0, 0, 0, .05);
-@panel-margin-bottom: @default-margin-bottom;
+@panel-margin-bottom: @default-margin;
 @panel-content-padding: 15px;
 @panel-header: @gray-light_2;
 @panel-header-border: lighten(@gray, 8%);
@@ -590,10 +594,6 @@
 
 @slider-progress-info: @info;
 @slider-progress-info-border: darken(@slider-progress-info, 15%);
-
-//**** Tabs ****//
-
-@tabs-margin: 10px;
 
 //**** Tables ****//
 
