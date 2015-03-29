@@ -1,0 +1,110 @@
+//**** Tables ****//
+
+//Base Style
+
+.table {
+   width: 100%;
+   border-collapse: collapse;
+   text-align: left;
+   margin-bottom: @default-margin;
+}
+
+.table > thead > tr {
+   border-bottom: 2px solid @table-border;
+   padding: @table-tr-padding;
+}
+
+.table > tbody > tr:not(:last-child), .table > tbody > tr:not(:last-child){
+   border-bottom: 1px solid @table-border;
+}
+
+.table th, .table td {
+   padding: @table-th-td-padding;
+}
+.table tr.active, .table th.active, .table td.active {
+   background: @table-active;
+}
+
+.table.table-bordered th, .table.table-bordered tr, .table.table-bordered td {
+   border: 1px solid @table-border;
+}
+
+.table.table-bordered > thead > tr {
+   border-bottom: 2px solid @table-border;
+}
+
+.table.table-striped > tbody > tr:nth-of-type(odd){
+   background: @table-striped;
+}
+
+.table.table-selectable > tbody > tr:hover {
+   background: @table-tr-hover;
+}
+
+.table.table-selectable > tbody > tr.active:hover {
+   background: @table-tr-active-hover;
+}
+
+.table.table-selectable > tbody tr:hover td.active, .table.table-selectable > tbody tr:hover  th.active {
+   background: @table-tr_th-td-hover-active;
+}
+
+//Primary
+
+.table tr.primary, .table th.primary, .table td.primary {
+   background: @table-tr-primary;
+}
+.table tr.primary > th, .table tr.primary > td {
+   background: @table-tr-primary;
+}
+.table.table-selectable > tbody tr.primary:hover td, .table.table-selectable > tbody tr.primary:hover  th, .table.table-selectable > tbody tr:hover td.primary, .table.table-selectable > tbody tr:hover  th.primary {
+   background: @table-tr-primary-active;
+}
+
+//Success
+
+.table tr.success, .table th.success, .table td.success {
+   background: @table-tr-success;
+}
+.table tr.success > th, .table tr.success > td {
+   background: @table-tr-success;
+}
+.table.table-selectable > tbody tr.success:hover td, .table.table-selectable > tbody tr.success:hover  th, .table.table-selectable > tbody tr:hover td.success, .table.table-selectable > tbody tr:hover  th.success {
+   background: @table-tr-success-active;
+}
+
+//Warning
+
+.table tr.warning, .table th.warning, .table td.warning {
+   background: @table-tr-warning;
+}
+.table tr.warning > th, .table tr.warning > td {
+   background: @table-tr-warning;
+}
+.table.table-selectable > tbody tr.warning:hover td, .table.table-selectable > tbody tr.warning:hover  th, .table.table-selectable > tbody tr:hover td.warning, .table.table-selectable > tbody tr:hover  th.warning {
+   background: @table-tr-warning-active;
+}
+
+//Error
+
+.table tr.error, .table th.error, .table td.error {
+   background: @table-tr-error;
+}
+.table tr.error > th, .table tr.error > td {
+   background: @table-tr-error;
+}
+.table.table-selectable > tbody tr.error:hover td, .table.table-selectable > tbody tr.error:hover  th, .table.table-selectable > tbody tr:hover td.error, .table.table-selectable > tbody tr:hover  th.error {
+   background: @table-tr-error-active;
+}
+
+//Info
+
+.table tr.info, .table th.info, .table td.info {
+   background: @table-tr-info;
+}
+.table tr.info > th, .table tr.info > td {
+   background: @table-tr-info;
+}
+.table.table-selectable > tbody tr.info:hover td, .table.table-selectable > tbody tr.info:hover  th, .table.table-selectable > tbody tr:hover td.info, .table.table-selectable > tbody tr:hover  th.info {
+   background: @table-tr-info-active;
+}
