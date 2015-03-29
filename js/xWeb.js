@@ -2,7 +2,7 @@
  * xWeb (v1.0) by EvolSoft
  * Developer: EvolSoft
  * Website: http://www.evolsoft.tk
- * Date: 28/03/2015 02:47 PM (UTC)
+ * Date: 29/03/2015 01:28 PM (UTC)
  * Copyright & License: (C) 2015 EvolSoft
  * Licensed under MIT (https://github.com/EvolSoft/xWeb/blob/master/LICENSE)
  */
@@ -150,20 +150,38 @@ $(document).on("mousemove", function(e) {
 	if(click && current != null && $(current).attr("class") == "slider-handle"){
 		fixedpos = e.pageX - $(current).parent().offset().left;
 		percent = Math.round(((fixedpos * 100) / pxtoint($(current).parent().css("width")))) - 1;
-		if(e.pageX > pos){
+		if(e.pageX > pos){ //Check mouse direction
 			if(fixedpos >= 0 && fixedpos <= $(current).parent().width() - 3){
 				$(current).css("left",  + percent + "%");
 				$(current).parent().find(".slider-progress").css("width", percent + 1 + "%");
+				$(current).parent().trigger("slider.change");
 			}
 		}else{
 			if(fixedpos >= 0 && fixedpos <= $(current).parent().width() - 3){
 				$(current).css("left",  + percent + "%");
 				$(current).parent().find(".slider-progress").css("width", percent + 1 + "%");
+				$(current).parent().trigger("slider.change");
 			}
 		}
 	}
 	pos = e.pageX;
 });
+
+/**
+ * Get range slider value
+ * 
+ * @param r_slider the range slider
+ *
+ * @return int|null range slider value in percentage or null if the element isn't a range slider
+ */
+function getRSliderVal(r_slider){
+	if($(r_slider).hasClass("slider")){
+		percentage = percent = Math.round(((pxtoint($(r_slider).find(".slider-handle").css("left")) * 100) / pxtoint($(r_slider).css("width"))));
+		return percentage;
+	}else{
+		return null;
+	}
+}
 
 //**** Tabs ****//
 
