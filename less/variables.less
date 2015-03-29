@@ -22,7 +22,7 @@
 @default-font-weight: 100;
 @default-text-align: left;
 
-//**** Default Margin/Padding ****//
+//**** Default Margin ****//
 
 @default-margin: 20px;
 
@@ -56,12 +56,6 @@
 @alert-close-right: -10px;
 @alert-close-color: @black;
 
-//Info
-
-@alert-info: lighten(@info, 50%);
-@alert-info-border: lighten(@info, 2.5%);
-@alert-info-color: darken(@info, 10%);
-
 //Success
 
 @alert-success: lighten(@success, 50%);
@@ -79,6 +73,12 @@
 @alert-error: lighten(@error, 50%);
 @alert-error-border: lighten(@error, 2.5%);
 @alert-error-color: darken(@error, 10%);
+
+//Info
+
+@alert-info: lighten(@info, 50%);
+@alert-info-border: lighten(@info, 2.5%);
+@alert-info-color: darken(@info, 10%);
 
 //**** Badges ****//
 
@@ -296,6 +296,8 @@
 
 //**** Header ****//
 
+//Base Style
+
 @header: @primary;
 @header-padding: 85px 0;
 
@@ -375,6 +377,8 @@
 @label-info-color: darken(@info, 10%);
 
 //**** Lists ****//
+
+//Base Style
 
 @list-margin-bottom: 20px;
 @list-border: @gray;
@@ -562,6 +566,8 @@
 
 //**** Sliders ****//
 
+//Base Style
+
 @slider: @progress;
 @slider-box-shadow: @progress-box-shadow;
 @slider-height: @progress-height;
@@ -609,9 +615,45 @@
 
 //**** Tables ****//
 
+//Base Style
 
+@table-border: @gray;
+@table-th-td-padding: 10px;
+@table-tr-padding: @table-th-td-padding + 5px;
+@table-striped: @gray-light;
+@table-active: darken(@table-striped, 3%);
+@table-tr-hover: darken(@table-active, 1%);
+@table-tr-active-hover: darken(@table-tr-hover, 3%);
+@table-tr_th-td-hover-active: darken(@table-tr-hover, 3%);
+
+//Primary
+
+@table-tr-primary: lighten(@primary, 45%);
+@table-tr-primary-active: darken(@table-tr-primary, 3%);
+
+//Success
+
+@table-tr-success: lighten(@success, 45%);
+@table-tr-success-active: darken(@table-tr-success, 3%);
+
+//Warning
+
+@table-tr-warning: lighten(@warning, 45%);
+@table-tr-warning-active: darken(@table-tr-warning, 3%);
+
+//Error
+
+@table-tr-error: lighten(@error, 45%);
+@table-tr-error-active: darken(@table-tr-error, 3%);
+
+//Info
+
+@table-tr-info: lighten(@info, 45%);
+@table-tr-info-active: darken(@table-tr-info, 3%);
 
 //**** Typography ****//
+
+//Base Style
 
 @typo-margin-min: 10px;
 @typo-margin-max: 20px;
