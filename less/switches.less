@@ -1,0 +1,82 @@
+//**** Switches ****//
+
+//Base Style
+
+.switch {
+  position: absolute;
+  display: none;
+}
+
+.switch + label {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+input.switch + label {
+  width: @switch-width;
+  height: @switch-height;
+}
+
+input.switch + label:before, input.switch + label:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+}
+
+input.switch + label:before {
+  right: 0px;
+  background: @switch;
+  box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.1);
+  border-radius: @border-radius;
+}
+
+input.switch + label:after {
+  width: 49%; //50% - 1% of border
+  border-radius: @border-radius;
+  transition: margin 0.2s;
+  background: @button;
+  border: 1px solid @button-border;
+  box-shadow: inset 0px 1px 0px 0px @white;
+  -webkit-box-shadow: inset 0px 1px 0px 0px @white;
+}
+
+input.switch + label:hover:after {
+  background: @button-hover;
+  border: 1px solid @button-border;
+  box-shadow: inset 0px 1px 0px 0px @white;
+  -webkit-box-shadow: inset 0px 1px 0px 0px @white;
+}
+
+input.switch:checked + label:before {
+   background: linear-gradient(@button-primary, darken(@button-primary, 15%));
+   box-shadow: inset 0px 1px 0px 0px lighten(@button-primary, 15%);
+   border: 1px solid @button-primary-border;
+}
+
+input.switch:checked + label:after {
+  margin-left: @switch-width / 2;
+}
+
+//Styles
+
+input.switch.square + label:before {
+  border-radius: @border-square-radius;
+}
+
+input.switch.square + label:after {
+  border-radius: @border-square-radius;
+}
+
+input.switch.ultra-rounded + label:before {
+  border-radius: @border-ultra-rounded-radius;
+}
+
+input.switch.ultra-rounded + label:after {
+  border-radius: @border-ultra-rounded-radius;
+}
+
