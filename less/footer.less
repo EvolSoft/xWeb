@@ -4,21 +4,16 @@
 
 .footer {
     text-decoration: none;
-    height: @footer-height;
-    padding-left: 0px;
-	padding-bottom: 20px;
-	padding-top: 20px;
+    padding: @footer-padding 0;
     background-color: @footer;
     font-size: @default-font-size;
-    position: relative;
+    position: absolute;
 	border-top: 1px solid @footer-border;
+	width: 100%;
 }
 .footer p {
-    color: @footer-p-color;
+    color: @footer-color;
 	text-align: center;
-}
-.footer p.top {
-    padding-top: 0px;
 }
 
 //Dark
@@ -28,5 +23,5 @@
 	border-top: 1px solid @footer-dark-border;
 }
 .footer.footer-dark p {
-    color: @footer-dark-p-color;
+    color: @footer-dark-color;
 }
