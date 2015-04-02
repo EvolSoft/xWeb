@@ -99,3 +99,57 @@ code.code-box > span.nm {
 code.code-box > span.str {
     color: @code-str;
 }
+
+//Dark
+
+code.code-box.code-box-dark {
+    color: @box-dark-color;
+    background-color: @box-dark;
+    border: 1px solid @box-dark-border;
+}
+
+//Attribute
+
+code.code-box.code-box-dark > span.attr {
+    color: lighten(@code-attr, 10%);
+}
+
+//Class
+
+code.code-box.code-box-dark > span.cls {
+    color: lighten(@code-cls, 10%);
+}
+
+//Comment
+
+code.code-box.code-box-dark > span.cm {
+    color: lighten(@code-cm, 10%);
+}
+
+//Function
+
+code.code-box.code-box-dark > span.fnc {
+    color: lighten(@code-fnc, 10%);
+}
+
+//Number
+
+code.code-box.code-box-dark > span.nm {
+    color: lighten(@code-nm, 10%);
+}
+
+//String
+
+code.code-box.code-box-dark > span.str {
+    color: lighten(@code-str, 10%);
+}
+
+//Styles
+
+code.code-box.square {
+    border-radius: @border-square-radius;
+}
+
+code.code-box.ultra-rounded {
+    border-radius: @border-ultra-rounded-radius;
+}
