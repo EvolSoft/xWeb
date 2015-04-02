@@ -6,13 +6,24 @@
     min-height: @box-min-height;
     padding: @box-padding;
     margin-bottom: 20px;
-    border-radius: @border-radius;
-    color: #666666;
+	border-radius: @border-radius;
+    color: @box-color;
     background-color: @box;
     border: 1px solid @box-border;
 }
+
+.box.box-small {
+    padding: @box-padding-small;
+}
+
 .box p {
     margin: 0px;
+}
+
+.box.box-dark {
+    color: @box-dark-color;
+    background-color: @box-dark;
+    border: 1px solid @box-dark-border;
 }
 
 //Styles
