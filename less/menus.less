@@ -1,0 +1,140 @@
+//**** Menus ****//
+
+//Base Style
+
+.menu-group {
+   position: relative;
+   display: inline-block;
+}
+
+.menu-group > .menu {
+   display: none;
+}
+
+.menu-group.open > .menu {
+   display: block;
+}
+
+.menu {
+   position: absolute;
+   z-index: @menu-z-index;
+   left: 0;
+   min-width: @menu-min-width;
+   top: 100%;
+   list-style: none;
+   background-color: @menu;
+   border: 1px solid @menu-border;
+   border-radius: @border-radius;
+   //box-shadow: 0px 6px 12px @gray-dark;
+   float: left;
+   min-width: @menu-min-width;
+   padding: @menu-padding;
+   margin: @menu-margin;
+}
+
+.menu > hr {
+   margin-top: @menu-hr-margin;
+   margin-bottom: @menu-hr-margin;
+}
+
+.menu > li {
+   padding: 0; //No conflict with default list style
+}
+
+.menu > li > a {
+   display: block;
+   padding: @menu-li-padding;
+   color: @gray-dark_2;
+}
+
+.menu > li > a:hover {
+   background: @menu-li-hover;
+}
+
+.menu > li.active > a {
+   background: @menu-li-active;
+}
+
+//Disabled Menu Item
+
+.menu > li.disabled > a {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: @menu-li-disabled-opacity;
+}
+
+//Submenu
+
+.menu > li.submenu {
+   position: relative;
+}
+
+.menu > li.submenu:hover > .menu {
+   display: block;
+}
+
+.menu li.submenu > .menu {
+   top: 0;
+   left: 100%;
+   display: none;
+   margin-top: -6px;
+   border-top-left-radius: 0;
+   border-top-right-radius: @border-radius;
+}
+
+.menu.menu-right {
+   right: 0;
+   left: auto;
+}
+
+.menu.menu-right li.submenu > .menu {
+   left: -100%;
+   margin-left: -2px;
+   border-top-left-radius: @border-radius;
+   border-top-right-radius: 0;
+}
+
+//Primary
+
+.menu.menu-primary > li.active > a {
+   background: @button-primary-hover;
+   color: @white;
+}
+
+//Success
+
+.menu.menu-success > li.active > a {
+   background: @button-success-hover;
+   color: @white;
+}
+
+//Warning
+
+.menu.menu-warning > li.active > a {
+   background: @button-warning-hover;
+   color: @white;
+}
+
+//Error
+
+.menu.menu-error > li.active > a {
+   background: @button-error-hover;
+   color: @white;
+}
+
+//Info
+
+.menu.menu-info > li.active > a {
+   background: @button-info-hover;
+   color: @white;
+}
+
+//Styles (square-only)
+
+.menu.square {
+   border-radius: @border-square-radius;
+}
+
+.menu.square li.submenu > .menu {
+   border-radius: @border-square-radius;
+}
