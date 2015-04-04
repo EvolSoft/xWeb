@@ -162,8 +162,8 @@
 @breadcrumb-color: @gray;
 @breadcrumb-padding: 8px 16px;
 @breadcrumb-margin-bottom: @default-margin;
-@breadcrumb-separator: "> ";
-@breadcrumb-separator-padding: 0px 5px;
+@breadcrumb-separator: "\f0da";
+@breadcrumb-separator-padding: 0px 10px;
 @breadcrumb-li: lighten(@gray-dark_2, 20%);
 @breadcrumb-ul-margin-bottom: 10px;
 
@@ -399,6 +399,7 @@
 @list-default-li-padding: 5px 0;
 @list-li-padding: 10px;
 @list-item-padding: 10px;
+@list-item-active: darken(@gray-light, 3%);
 @list-item-inside-margin: 5px;
 
 //**** Menus ****//
@@ -406,7 +407,7 @@
 //Base Style
 
 @menu: @white;
-@menu-border: darken(@gray, 20%);
+@menu-border: darken(@gray, 10%);
 @menu-padding: 5px 0;
 @menu-z-index: 150;
 @menu-min-width: 170px;
@@ -454,7 +455,7 @@
 @navbar-title-padding-vertical: @navbar-min-height / 2 - @navbar-title-line-height / 2;
 @navbar-links-font-size: @default-font-size;
 @navbar-links-line-height: @navbar-links-font-size + 6px; //Badges and Labels support
-@navbar-links-padding-vertical: @navbar-min-height / 2 - @navbar-links-line-height / 2;
+@navbar-links-padding: @navbar-min-height / 2 - @navbar-links-line-height / 2;
 
 //Dark
 
@@ -471,7 +472,6 @@
 
 @panel: @white;
 @panel-border: lighten(@gray, 8%);
-@panel-box-shadow: 0px 1px 1px rgba(0, 0, 0, .05);
 @panel-margin-bottom: @default-margin;
 @panel-content-padding: 15px;
 @panel-header: @gray-light_2;
