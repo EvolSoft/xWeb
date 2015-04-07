@@ -2,7 +2,7 @@
  * xWeb (v1.0) by EvolSoft
  * Developer: EvolSoft
  * Website: http://www.evolsoft.tk
- * Date: 07/04/2015 02:00 PM (UTC)
+ * Date: 07/04/2015 08:22 PM (UTC)
  * Copyright & License: (C) 2015 EvolSoft
  * Licensed under MIT (https://github.com/EvolSoft/xWeb/blob/master/LICENSE)
  */
@@ -74,53 +74,190 @@ $(document).on("click", "[alert-close]", function() {
 
 //**** Image Sliders ****//
 
+
+//Auto initialize Image Slider
+$(document).ready(function(){
+	$(".image-slider").each(function(){
+		initializeImageSlider(this);
+	});
+	setInterval(function(){
+		$("[auto-scroll]").each(function(){
+			if($(this).hasClass("image-slider")){
+				slideRight(this);
+			}
+		});
+	}, 4000);
+});
+
 $(document).on("click", ".image-slider-control-left", function(){
-	parent = $(event.target).parent().find(".image-slider-images").children(".image-slider-item");
-	activeParent = $(event.target).parent().find(".image-slider-images").children(".image-slider-item.active");
-	if(activeParent.prev().length > 0){ //Check if previous element exists
-		parent.removeClass("active");
-		activeParent.prev().addClass("active");
-		activeParent.css("margin-left", "0%");
-		activeParent.prev().css("margin-left", "-100%");
-		activeParent.animate({"margin-left" : "100%"}, 200);
-		activeParent.prev().animate({"margin-left" : "0%"}, 200);
-		$(event.target).parent().find(".image-slider-navigation").children("li").removeClass("active");
-		$(event.target).parent().find(".image-slider-navigation").find("[img-id='" + activeParent.prev().attr("img-item") + "']").addClass("active");
-	}else{
-		parent.removeClass("active");
-		parent.last().addClass("active");
-		activeParent.css("margin-left", "0%");
-		parent.last().css("margin-left", "-100%");
-		activeParent.animate({"margin-left" : "100%"}, 200);
-		parent.last().animate({"margin-left" : "0%"}, 200);
-		$(event.target).parent().find(".image-slider-navigation").children("li").removeClass("active");
-		$(event.target).parent().find(".image-slider-navigation").find("[img-id='" + parent.last().attr("img-item") + "']").addClass("active");
-	}
+	slideLeft($(event.target).parent());
 });
 
 $(document).on("click", ".image-slider-control-right", function(){
-	parent = $(event.target).parent().find(".image-slider-images").children(".image-slider-item");
-	activeParent = $(event.target).parent().find(".image-slider-images").children(".image-slider-item.active");
-	if(activeParent.next().length > 0){ //Check if next element exists
-		parent.removeClass("active");
-		activeParent.next().addClass("active");
-		activeParent.css("margin-left", "0%");
-		activeParent.next().css("margin-left", "100%");
-		activeParent.animate({"margin-left" : "-100%"}, 200);
-		activeParent.next().animate({"margin-left" : "0%"}, 200);
-		$(event.target).parent().find(".image-slider-navigation").children("li").removeClass("active");
-		$(event.target).parent().find(".image-slider-navigation").find("[img-id='" + activeParent.next().attr("img-item") + "']").addClass("active");
-	}else{
-		parent.removeClass("active");
-		parent.first().addClass("active");
-		activeParent.css("margin-left", "0%");
-		parent.first().css("margin-left", "100%");
-		activeParent.animate({"margin-left" : "-100%"}, 200);
-		parent.first().animate({"margin-left" : "0%"}, 200);
-		$(event.target).parent().find(".image-slider-navigation").children("li").removeClass("active");
-		$(event.target).parent().find(".image-slider-navigation").find("[img-id='" + parent.first().attr("img-item") + "']").addClass("active");
-	}
+	slideRight($(event.target).parent());
 });
+
+$(document).on("click", ".image-slider > .image-slider-navigation > li", function(){
+	if(!$(event.target).hasClass("active")){
+		if($(event.target).nextAll().hasClass("active")){
+			slideRightPos($(event.target).parent().parent(), $(this).attr("img-id"));
+		}else{
+			slideLeftPos($(event.target).parent().parent(), $(this).attr("img-id"));
+		}
+	}
+
+});
+
+/**
+ * Initialize an Image Slider
+ * 
+ * @param image_slider The image-slider
+ */
+function initializeImageSlider(image_slider){
+	if($(image_slider).hasClass("image-slider")){
+		ImageItem = $(image_slider).find(".image-slider-images").children(".image-slider-item");
+		activeImageItem = $(image_slider).find(".image-slider-images").children(".image-slider-item.active");
+		$(image_slider).trigger("image-slider.initialize");
+		if(activeImageItem.length > 0){
+			activeImageItem.css("margin-left", "0%");
+			activeImageItem.prevAll().css("margin-left", "-100%");
+			activeImageItem.nextAll().css("margin-left", "100%");
+			$(image_slider).find(".image-slider-navigation").find("[img-id='" + activeImageItem.attr("img-item") + "']").addClass("active");
+		}else{
+			ImageItem.first().addClass("active");
+			ImageItem.nextAll().css("margin-left", "100%");
+			$(image_slider).find(".image-slider-navigation").find("[img-id='" + ImageItem.attr("img-item") + "']").addClass("active");
+		}
+	}
+}
+
+/**
+ * Slide to left image on Image Slider
+ * 
+ * @param image_slider The image-slider
+ */
+function slideLeft(image_slider){
+	if($(image_slider).hasClass("image-slider")){ //Check if the element is an image-slider
+		parent = $(image_slider).find(".image-slider-images").children(".image-slider-item");
+		activeParent = $(image_slider).find(".image-slider-images").children(".image-slider-item.active");
+		$(image_slider).trigger("image-slider.slide");
+		if(activeParent.prev().length > 0){ //Check if previous element exists
+			parent.removeClass("active");
+			activeParent.prev().addClass("active");
+			activeParent.css("margin-left", "0%");
+			activeParent.prev().css("margin-left", "-100%");
+			activeParent.animate({"margin-left" : "100%"}, 200);
+			activeParent.prev().animate({"margin-left" : "0%"}, 200);
+			$(image_slider).find(".image-slider-navigation").children("li").removeClass("active");
+			$(image_slider).find(".image-slider-navigation").find("[img-id='" + activeParent.prev().attr("img-item") + "']").addClass("active");
+		}else{
+			parent.removeClass("active");
+			parent.last().addClass("active");
+			activeParent.css("margin-left", "0%");
+			parent.last().css("margin-left", "-100%");
+			activeParent.animate({"margin-left" : "100%"}, 200);
+			parent.last().animate({"margin-left" : "0%"}, 200);
+			$(image_slider).find(".image-slider-navigation").children("li").removeClass("active");
+			$(image_slider).find(".image-slider-navigation").find("[img-id='" + parent.last().attr("img-item") + "']").addClass("active");
+		}
+	}
+}
+
+/**
+ * Slide to left image on the specified position on Image Slider
+ * 
+ * @param image_slider The image-slider
+ * @param position The position
+ */
+function slideLeftPos(image_slider, position){
+	if($(image_slider).hasClass("image-slider") && $(image_slider).find(".image-slider-images").children("[img-item='" + position + "']")){ //Check if the element is an image-slider
+		parent = $(image_slider).find(".image-slider-images").children(".image-slider-item");
+		parent.removeClass("active");
+		$(image_slider).find(".image-slider-images").children("[img-item='" + position + "']").addClass("active");
+		initializeImageSlider(image_slider);
+		activeParent = $(image_slider).find(".image-slider-images").children(".image-slider-item.active");
+		$(image_slider).trigger("image-slider.slide");
+		if(activeParent.prev().length > 0){ //Check if element exists
+			activeParent.prev().css("margin-left", "0%");
+			activeParent.css("margin-left", "100%");
+			activeParent.animate({"margin-left" : "0%"}, 200);
+			activeParent.prev().animate({"margin-left" : "-100%"}, 200);
+			$(image_slider).find(".image-slider-navigation").children("li").removeClass("active");
+			$(image_slider).find(".image-slider-navigation").find("[img-id='" + activeParent.attr("img-item") + "']").addClass("active");
+		}else{
+			activeParent.css("margin-left", "100%");
+			parent.last().css("margin-left", "0%");
+			activeParent.animate({"margin-left" : "0%"}, 200);
+			parent.last().animate({"margin-left" : "-100%"}, 200);
+			$(image_slider).find(".image-slider-navigation").children("li").removeClass("active");
+			$(image_slider).find(".image-slider-navigation").find("[img-id='" + activeParent.attr("img-item") + "']").addClass("active");
+		}
+	}
+}
+
+/**
+ * Slide to right image on Image Slider
+ * 
+ * @param image_slider The image-slider
+ */
+function slideRight(image_slider){
+	if($(image_slider).hasClass("image-slider")){ //Check if the element is an image-slider
+		parent = $(image_slider).find(".image-slider-images").children(".image-slider-item");
+		activeParent = $(image_slider).find(".image-slider-images").children(".image-slider-item.active");
+		$(image_slider).trigger("image-slider.slide");
+		if(activeParent.next().length > 0){ //Check if next element exists
+			parent.removeClass("active");
+			activeParent.next().addClass("active");
+			activeParent.css("margin-left", "0%");
+			activeParent.next().css("margin-left", "100%");
+			activeParent.animate({"margin-left" : "-100%"}, 200);
+			activeParent.next().animate({"margin-left" : "0%"}, 200);
+			$(image_slider).find(".image-slider-navigation").children("li").removeClass("active");
+			$(image_slider).find(".image-slider-navigation").find("[img-id='" + activeParent.next().attr("img-item") + "']").addClass("active");
+		}else{
+			parent.removeClass("active");
+			parent.first().addClass("active");
+			activeParent.css("margin-left", "0%");
+			parent.first().css("margin-left", "100%");
+			activeParent.animate({"margin-left" : "-100%"}, 200);
+			parent.first().animate({"margin-left" : "0%"}, 200);
+			$(image_slider).find(".image-slider-navigation").children("li").removeClass("active");
+			$(image_slider).find(".image-slider-navigation").find("[img-id='" + parent.first().attr("img-item") + "']").addClass("active");
+		}
+	}
+}
+
+/**
+ * Slide to right image on the specified position on Image Slider
+ * 
+ * @param image_slider The image-slider
+ * @param position The position
+ */
+function slideRightPos(image_slider, position){
+	if($(image_slider).hasClass("image-slider") && $(image_slider).find(".image-slider-images").children("[img-item='" + position + "']")){ //Check if the element is an image-slider
+		parent = $(image_slider).find(".image-slider-images").children(".image-slider-item");
+		parent.removeClass("active");
+		$(image_slider).find(".image-slider-images").children("[img-item='" + position + "']").addClass("active");
+		initializeImageSlider(image_slider);
+		activeParent = $(image_slider).find(".image-slider-images").children(".image-slider-item.active");
+		$(image_slider).trigger("image-slider.slide");
+		if(activeParent.next().length > 0){ //Check if element exists
+			activeParent.next().css("margin-left", "0%");
+			activeParent.css("margin-left", "-100%");
+			activeParent.animate({"margin-left" : "0%"}, 200);
+			activeParent.next().animate({"margin-left" : "100%"}, 200);
+			$(image_slider).find(".image-slider-navigation").children("li").removeClass("active");
+			$(image_slider).find(".image-slider-navigation").find("[img-id='" + activeParent.attr("img-item") + "']").addClass("active");
+		}else{
+			activeParent.css("margin-left", "-100%");
+			parent.first().css("margin-left", "0%");
+			activeParent.animate({"margin-left" : "0%"}, 200);
+			parent.first().animate({"margin-left" : "100%"}, 200);
+			$(image_slider).find(".image-slider-navigation").children("li").removeClass("active");
+			$(image_slider).find(".image-slider-navigation").find("[img-id='" + activeParent.attr("img-item") + "']").addClass("active");
+		}
+	}
+}
 
 //**** Menus ****//
 
@@ -256,7 +393,3 @@ $(document).on("click", "a", function(){
 		}
 	}
 });
-
-
-
-
