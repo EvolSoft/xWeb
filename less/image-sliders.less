@@ -1,0 +1,99 @@
+//**** Image Sliders ****//
+
+//Base Style
+
+.image-slider {
+   position: relative;
+   overflow: hidden;
+}
+
+.image-slider.hover-buttons:not(:hover) > .image-slider-control-left, .image-slider.hover-buttons:not(:hover) > .image-slider-control-right {
+   display: none;
+}
+
+.image-slider > .image-slider-images {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   position: relative;
+}
+
+.image-slider > .image-slider-images > li {
+   margin: 0;
+   padding: 0;
+}
+
+.image-slider > .image-slider-images > .image-slider-item {
+   position: absolute;
+   top: 0;
+   width: 100%;
+   z-index: @image-slider-item-z-index;
+}
+
+.image-slider > .image-slider-images > .image-slider-item.active {
+  z-index: @image-slider-item-active-z-index;
+}
+
+.image-slider > .image-slider-images > .image-slider-item > img {
+   display: block;
+   height: auto;
+   max-width: 100%;
+}
+
+.image-slider > .image-slider-images > .image-slider-item > .image-slider-caption {
+   position: absolute;
+   width: 100%;
+   padding: @image-slider-caption-padding;
+   background: @image-slider-caption;
+   color: @white;
+}
+
+.image-slider > .image-slider-images > .image-slider-item > .image-slider-caption > p {
+   margin: 0;
+}
+
+.image-slider > .image-slider-navigation {
+   position: absolute;
+   bottom: 0;
+   margin-bottom: @image-slider-navigation-size;
+   width: 100%;
+   text-align: center;
+   list-style: none;
+   padding: 0;
+   z-index: @image-slider-navigation-z-index;
+}
+
+.image-slider > .image-slider-navigation > li {
+   display: inline-block;
+   width: @image-slider-navigation-size;
+   height: @image-slider-navigation-size;
+   margin: @image-slider-navigation-margin;
+   cursor: pointer;
+   border-radius: 100%;
+   background: @black;
+}
+
+.image-slider > .image-slider-navigation > li.active {
+   background: @white;
+}
+
+.image-slider > .image-slider-control-left, .image-slider > .image-slider-control-right {
+   position: absolute;
+   top: 50%;
+   background-size: @image-slider-control-size;
+   margin-top: @image-slider-control-margin-top;
+   width: @image-slider-control-size;
+   height: @image-slider-control-size;
+   display: block;
+   z-index: @image-slider-control-z-index;
+}
+
+.image-slider > .image-slider-control-left {
+   left: @image-slider-control-space;
+   background-image: url("../css/arrow-left.png");
+}
+
+.image-slider > .image-slider-control-right {
+   right: @image-slider-control-space;
+   background-image: url("../css/arrow-right.png");
+}
