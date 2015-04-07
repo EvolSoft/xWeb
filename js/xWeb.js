@@ -2,7 +2,7 @@
  * xWeb (v1.0) by EvolSoft
  * Developer: EvolSoft
  * Website: http://www.evolsoft.tk
- * Date: 29/03/2015 06:01 PM (UTC)
+ * Date: 07/04/2015 02:00 PM (UTC)
  * Copyright & License: (C) 2015 EvolSoft
  * Licensed under MIT (https://github.com/EvolSoft/xWeb/blob/master/LICENSE)
  */
@@ -72,16 +72,77 @@ $(document).on("click", "[alert-close]", function() {
 	}
 });
 
+//**** Image Sliders ****//
+
+$(document).on("click", ".image-slider-control-left", function(){
+	parent = $(event.target).parent().find(".image-slider-images").children(".image-slider-item");
+	activeParent = $(event.target).parent().find(".image-slider-images").children(".image-slider-item.active");
+	if(activeParent.prev().length > 0){ //Check if previous element exists
+		parent.removeClass("active");
+		activeParent.prev().addClass("active");
+		activeParent.css("margin-left", "0%");
+		activeParent.prev().css("margin-left", "-100%");
+		activeParent.animate({"margin-left" : "100%"}, 200);
+		activeParent.prev().animate({"margin-left" : "0%"}, 200);
+		$(event.target).parent().find(".image-slider-navigation").children("li").removeClass("active");
+		$(event.target).parent().find(".image-slider-navigation").find("[img-id='" + activeParent.prev().attr("img-item") + "']").addClass("active");
+	}else{
+		parent.removeClass("active");
+		parent.last().addClass("active");
+		activeParent.css("margin-left", "0%");
+		parent.last().css("margin-left", "-100%");
+		activeParent.animate({"margin-left" : "100%"}, 200);
+		parent.last().animate({"margin-left" : "0%"}, 200);
+		$(event.target).parent().find(".image-slider-navigation").children("li").removeClass("active");
+		$(event.target).parent().find(".image-slider-navigation").find("[img-id='" + parent.last().attr("img-item") + "']").addClass("active");
+	}
+});
+
+$(document).on("click", ".image-slider-control-right", function(){
+	parent = $(event.target).parent().find(".image-slider-images").children(".image-slider-item");
+	activeParent = $(event.target).parent().find(".image-slider-images").children(".image-slider-item.active");
+	if(activeParent.next().length > 0){ //Check if next element exists
+		parent.removeClass("active");
+		activeParent.next().addClass("active");
+		activeParent.css("margin-left", "0%");
+		activeParent.next().css("margin-left", "100%");
+		activeParent.animate({"margin-left" : "-100%"}, 200);
+		activeParent.next().animate({"margin-left" : "0%"}, 200);
+		$(event.target).parent().find(".image-slider-navigation").children("li").removeClass("active");
+		$(event.target).parent().find(".image-slider-navigation").find("[img-id='" + activeParent.next().attr("img-item") + "']").addClass("active");
+	}else{
+		parent.removeClass("active");
+		parent.first().addClass("active");
+		activeParent.css("margin-left", "0%");
+		parent.first().css("margin-left", "100%");
+		activeParent.animate({"margin-left" : "-100%"}, 200);
+		parent.first().animate({"margin-left" : "0%"}, 200);
+		$(event.target).parent().find(".image-slider-navigation").children("li").removeClass("active");
+		$(event.target).parent().find(".image-slider-navigation").find("[img-id='" + parent.first().attr("img-item") + "']").addClass("active");
+	}
+});
+
 //**** Menus ****//
 
 $(document).on("mousedown", function() {
-	if($(event.target).parent().hasClass("open") && $(event.target).parent().hasClass("menu-group")){
+	var target = event.target;
+	if($(target).parent().hasClass("open") && $(target).parent().hasClass("menu-group")){
 		$(".menu-group").removeClass("open"); //Closes all other menus
-	}else if($(event.target).parent().hasClass("menu-group") && $(event.target).attr("openmenu") == ""){
+		$(".menu-group").each(function(){
+			$(this).not($(target).parent()).trigger("menu.close"); //Trigger menu.close event on all closed menus
+		});
+	}else if($(target).parent().hasClass("menu-group") && $(target).attr("openmenu") == ""){
 		$(".menu-group").removeClass("open"); //Closes all other menus
-		$(event.target).parent().toggleClass("open");
+		$(".menu-group").each(function(){
+			$(this).not($(target).parent()).trigger("menu.close"); //Trigger menu.close event on all closed menus
+		});
+		$(target).parent().toggleClass("open");
+		$(target).parent().trigger("menu.open");
 	}else{ //Close all opened menus
 		$(".menu-group").removeClass("open"); //Closes all other menus
+		$(".menu-group").each(function(){
+			$(this).not($(target).parent()).trigger("menu.close"); //Trigger menu.close event on all closed menus
+		});
 	}
 });
 
@@ -195,3 +256,7 @@ $(document).on("click", "a", function(){
 		}
 	}
 });
+
+
+
+
