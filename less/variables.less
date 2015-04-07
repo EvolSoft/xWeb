@@ -315,6 +315,21 @@
 @header: @primary;
 @header-padding: 85px 0;
 
+//**** Image Sliders ****//
+
+//Base Style
+@image-slider-item-z-index: 2;
+@image-slider-item-active-z-index: @image-slider-item-z-index + 1;
+@image-slider-caption: rgba(0, 0, 0, 0.7);
+@image-slider-caption-padding: 10px;
+@image-slider-navigation-size: 10px;
+@image-slider-navigation-margin: 1px;
+@image-slider-navigation-z-index: @image-slider-control-z-index + 1;
+@image-slider-control-space: 5px;
+@image-slider-control-size: 25px;
+@image-slider-control-margin-top: floor(@image-slider-control-size / 2) * -1;
+@image-slider-control-z-index: 10;
+
 //**** Inputs ****//
 
 //Base Style
@@ -429,7 +444,7 @@
 @modal-z-index: @navbar-z-index * 2; //Modals must be in front of Navbar
 @modal-window-min-height: 100px;
 @modal-window-min-width: 400px;
-@modal-window-max-width: 600px;
+@modal-window-max-width: 1000px;
 @modal-window-padding: 15px;
 @modal-window-shadow: lighten(@black, 20%);
 @modal-window-z-index: @modal-z-index + 100;
