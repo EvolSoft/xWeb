@@ -27,10 +27,13 @@
     z-index: @modal-z-index;
 	background: @modal;
 	opacity: 0;
+}
+
+.modal.closing > .modal-background { //Prevent transition to be shown on page loading
 	transition: visibility linear @modal-visibility-transition, opacity @modal-opacity-transition ease-out;
 }
 
-.modal.modal-open  > .modal-background {
+.modal.modal-open > .modal-background {
     visibility: visible;
 	opacity: @modal-opacity;
 	transition: opacity @modal-opacity-transition ease-out;
@@ -38,8 +41,8 @@
 
 .modal > .modal-window {
     position: absolute;
-	left: 50%;
 	top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%); //Center Modal Window
     z-index: @modal-window-z-index;
 	padding: @modal-window-padding;
@@ -52,15 +55,24 @@
 	word-wrap: break-word;
 }
 
+@media(max-width: @small-screen-width){
+    .modal > .modal-window {
+	    left: 0;
+		transform: translate(0%, -50%); //Center Modal Window (vertical only)
+		margin: @modal-small-window-margin;
+		width: @modal-small-window-width;
+	}
+}
+
 .modal > .modal-window > .close {
     padding: 0;
     cursor: pointer;
     border: none;
     background: none;
-    position: relative;
+    position: absolute;
     display: block;
-    top: @modal-window-close-top;
-    right: @modal-window-close-left;
+    top: floor(@modal-window-close-top / 2) + 1;
+    right: floor(@modal-window-close-left / 2) + 1;
     float: right;
     width: @modal-window-close-size;  
     height: @modal-window-close-size;
@@ -68,7 +80,7 @@
 	background-image: url("../css/close.png");
 }
 
-//Styles
+//Styles (square-only)
 
 .modal.square > .modal-window {
     border-radius: @border-square-radius;
