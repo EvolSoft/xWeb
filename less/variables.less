@@ -442,6 +442,8 @@
 @modal-opacity-transition: .2s;
 @modal-opacity: .5;
 @modal-z-index: @navbar-z-index * 2; //Modals must be in front of Navbar
+@modal-small-window-width: 90%;
+@modal-small-window-margin: 0 ((100% - @modal-small-window-width) / 2) - 2;
 @modal-window-min-height: 100px;
 @modal-window-min-width: 400px;
 @modal-window-max-width: 1000px;
@@ -711,47 +713,47 @@
 
 //Gray
 
-@text-gray-color: @gray-dark;
+@out-gray-color: @gray-dark;
 
 //Primary
 
-@text-primary-color: darken(@primary, 10%);
+@out-primary-color: darken(@primary, 10%);
 
 //Primary Lighten
 
-@text-primary-lt-color: lighten(@primary, 6.5%);
+@out-primary-lt-color: lighten(@primary, 6.5%);
 
 //Success
 
-@text-success-color: darken(@success, 10%);
+@out-success-color: darken(@success, 10%);
 
 //Success Lighten
 
-@text-success-lt-color: lighten(@success, 6.5%);
+@out-success-lt-color: lighten(@success, 6.5%);
 
 //Warning
 
-@text-warning-color: darken(@warning, 10%);
+@out-warning-color: darken(@warning, 10%);
 
 //Warning Lighten
 
-@text-warning-lt-color: lighten(@warning, 6.5%);
+@out-warning-lt-color: lighten(@warning, 6.5%);
 
 //Error
 
-@text-error-color: darken(@error, 10%);
+@out-error-color: darken(@error, 10%);
 
 //Error Lighten
 
-@text-error-lt-color: lighten(@error, 6.5%);
+@out-error-lt-color: lighten(@error, 6.5%);
 
 //Info
 
-@text-info-color: darken(@info, 10%);
+@out-info-color: darken(@info, 10%);
 
 //Info Lighten
 
-@text-info-lt-color: lighten(@info, 6.5%);
+@out-info-lt-color: lighten(@info, 6.5%);
 
 //Headers
 
