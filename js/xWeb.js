@@ -2,7 +2,7 @@
  * xWeb (v1.0) by EvolSoft
  * Developer: EvolSoft
  * Website: http://www.evolsoft.tk
- * Date: 07/04/2015 08:22 PM (UTC)
+ * Date: 08/04/2015 02:59 PM (UTC)
  * Copyright & License: (C) 2015 EvolSoft
  * Licensed under MIT (https://github.com/EvolSoft/xWeb/blob/master/LICENSE)
  */
@@ -301,18 +301,32 @@ function toggleModal(target) {
 	}
 }
 
+/**
+ * Closes a modal
+ * 
+ * @param target The target modal
+ */
+function closeModal(target){
+	if($(target).hasClass("modal")){
+		$(target).trigger("modal.close");
+		$(target).removeClass("modal-open");
+		$(target).addClass("closing");
+		$(target).on('transitionend', function() {
+			$(this).removeClass("closing");
+		});
+	}
+}
+
 $(document).on("click", ".close", function() {
 	if($(this).parent().parent().hasClass("modal")){ //.modal > .modal-window > .close
-		$(this).parent().parent().trigger("modal.close");
-		$(this).parent().parent().removeClass("modal-open");
+    	closeModal($(this).parent().parent());
 	}
 });
 
 $(document).on("click", ".modal-background", function() {
 	if($(this).parent().hasClass("modal")){ //.modal > .modal-background
 	    if($(this).parent().attr("static") == "false" || typeof $(this).parent().attr("static") === typeof undefined){
-			$(this).parent().trigger("modal.close");
-	    	$(this).parent().removeClass("modal-open");
+	    	closeModal($(this).parent());
 		}
 	}
 });
