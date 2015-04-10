@@ -2,7 +2,7 @@
  * xWeb (v1.0) by EvolSoft
  * Developer: EvolSoft
  * Website: http://www.evolsoft.tk
- * Date: 08/04/2015 02:59 PM (UTC)
+ * Date: 10/04/2015 03:17 PM (UTC)
  * Copyright & License: (C) 2015 EvolSoft
  * Licensed under MIT (https://github.com/EvolSoft/xWeb/blob/master/LICENSE)
  */
@@ -53,7 +53,7 @@ function getVersion(){
  * @return int
  */
 function pxtoint(px){
-	return px.replace("px", "");
+	return parseInt(px.replace("px", ""));
 }
 
 //**** Alerts ****//
@@ -404,6 +404,38 @@ $(document).on("click", "a", function(){
 		$(this).parent().parent().parent().find(".tab-content").css("display", "none"); //Closes all tab-contents (div.tabs > ul.tabs > li > a)
 		if($(this).parent().parent().parent().find("[tab-id=" + $(event.target).attr("open-tab") + "]").hasClass("tab-content")){
 			$(this).parent().parent().parent().find("[tab-id=" + $(event.target).attr("open-tab") + "]").css("display", "block");
+			$(this).parent().parent().parent().find("[tab-id=" + $(event.target).attr("open-tab") + "]").trigger("tab.open");
 		}
 	}
 });
+
+//**** Tooltips ****//
+
+$(document).on("mouseover", function(){
+	$("[tooltip]").hover(function(){
+		tooltip = $("[tooltip-id='" + $(event.target).attr("tooltip") + "']");
+		$(event.target).trigger("tooltip.show", [tooltip]);
+		$(tooltip).css("visibility", "visible");
+		$(tooltip).css("opacity", "0.8");
+		if($(tooltip).hasClass("tooltip-top")){ //Top Tooltip
+		    $(tooltip).css("top", $(event.target).position().top - ($(tooltip).outerHeight(true) - pxtoint($(event.target).css("marginTop"))));
+			$(tooltip).css("left", $(event.target).position().left + (($(event.target).outerWidth(true) / 2) - ($(tooltip).outerWidth(true) / 2)));
+		}else if($(tooltip).hasClass("tooltip-bottom")){ //Bottom Tooltip
+		    $(tooltip).css("top", $(event.target).position().top + ($(event.target).outerHeight(true) - pxtoint($(event.target).css("marginBottom"))));
+			$(tooltip).css("left", $(event.target).position().left + (($(event.target).outerWidth(true) / 2) - ($(tooltip).outerWidth(true) / 2)));
+		}else if($(tooltip).hasClass("tooltip-left")){ //Left Tooltip
+			$(tooltip).css("top", $(event.target).position().top + (($(event.target).outerHeight(true) / 2) - ($(tooltip).outerHeight(true) / 2)));
+			$(tooltip).css("left", $(event.target).position().left + pxtoint($(event.target).css("marginLeft")) - ($(tooltip).outerWidth() + pxtoint($(tooltip).css("padding"))));
+		}else if($(tooltip).hasClass("tooltip-right")){ //Right Tooltip
+			$(tooltip).css("top", $(event.target).position().top + (($(event.target).outerHeight(true) / 2) - ($(tooltip).outerHeight(true) / 2)));
+			$(tooltip).css("left", $(event.target).position().left + $(event.target).outerWidth(true) - pxtoint($(event.target).css("marginRight")) + pxtoint($(tooltip).css("padding")));
+		}
+	}, function(){
+		tooltip = $("[tooltip-id='" + $(event.target).attr("tooltip") + "']");
+		$(event.target).trigger("tooltip.hide", [tooltip]);
+		$(tooltip).css("visibility", "hidden");
+		$(tooltip).css("opacity", "0");
+	});
+});
+
+
