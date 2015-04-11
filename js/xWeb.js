@@ -2,7 +2,7 @@
  * xWeb (v1.0) by EvolSoft
  * Developer: EvolSoft
  * Website: http://www.evolsoft.tk
- * Date: 10/04/2015 03:17 PM (UTC)
+ * Date: 11/04/2015 11:59 AM (UTC)
  * Copyright & License: (C) 2015 EvolSoft
  * Licensed under MIT (https://github.com/EvolSoft/xWeb/blob/master/LICENSE)
  */
@@ -265,21 +265,18 @@ $(document).on("mousedown", function() {
 	var target = event.target;
 	if($(target).parent().hasClass("open") && $(target).parent().hasClass("menu-group")){
 		$(".menu-group").removeClass("open"); //Closes all other menus
-		$(".menu-group").each(function(){
-			$(this).not($(target).parent()).trigger("menu.close"); //Trigger menu.close event on all closed menus
-		});
+	    $(target).parent().trigger("menu.close"); //Trigger menu.close events
 	}else if($(target).parent().hasClass("menu-group") && $(target).attr("openmenu") == ""){
 		$(".menu-group").removeClass("open"); //Closes all other menus
-		$(".menu-group").each(function(){
-			$(this).not($(target).parent()).trigger("menu.close"); //Trigger menu.close event on all closed menus
-		});
 		$(target).parent().toggleClass("open");
 		$(target).parent().trigger("menu.open");
 	}else{ //Close all opened menus
-		$(".menu-group").removeClass("open"); //Closes all other menus
 		$(".menu-group").each(function(){
-			$(this).not($(target).parent()).trigger("menu.close"); //Trigger menu.close event on all closed menus
-		});
+			if($(this).hasClass("open")){
+				$(this).trigger("menu.close");
+			}
+		})
+		$(".menu-group").removeClass("open"); //Closes all other menus
 	}
 });
 
@@ -437,5 +434,3 @@ $(document).on("mouseover", function(){
 		$(tooltip).css("opacity", "0");
 	});
 });
-
-
