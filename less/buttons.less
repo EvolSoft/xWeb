@@ -3,7 +3,7 @@
 //Base Style
 
 .button {
-	background: @gray-light;
+	background: @button;
 	border-radius: @border-radius;
 	border: 1px solid @button-border;
 	box-shadow: inset 0px 1px 0px 0px @white;
@@ -62,6 +62,7 @@
 .button.button-primary {
     text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.50);
 	background: linear-gradient(@button-primary, darken(@button-primary, 15%));
+    background-color: @button-primary; //Fix for IE 9 and older
 	border: 1px solid @button-primary-border;
 	box-shadow: inset 0px 1px 0px 0px lighten(@button-primary, 15%);
 	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-primary, 15%);
@@ -70,12 +71,14 @@
 
 .button.button-primary:hover {
 	background: linear-gradient(@button-primary-hover, darken(@button-primary-hover, 15%));
+	background-color: @button-primary-hover; //Fix for IE 9 and older
 	box-shadow: inset 0px 1px 0px 0px lighten(@button-primary-hover, 15%);
 	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-primary-hover, 15%);
 }
 
 .button.button-primary:active {
 	background: @button-primary-active;
+	background-color: @button-primary-active; //Fix for IE 9 and older
 	box-shadow: inset 0px 1px 4px 0px darken(@button-primary-active, 5%);
 	-webkit-box-shadow: inset 0px 1px 4px 0px darken(@button-primary-active, 5%);
 }
@@ -85,6 +88,7 @@
 .button.button-success {
     text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.50);
 	background: linear-gradient(@button-success, darken(@button-success, 15%));
+    background-color: @button-success; //Fix for IE 9 and older
 	border: 1px solid @button-success-border;
 	box-shadow: inset 0px 1px 0px 0px lighten(@button-success, 15%);
 	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-success, 15%);
@@ -93,12 +97,14 @@
 
 .button.button-success:hover {
 	background: linear-gradient(@button-success-hover, darken(@button-success-hover, 15%));
+    background-color: @button-success-hover; //Fix for IE 9 and older
 	box-shadow: inset 0px 1px 0px 0px lighten(@button-success-hover, 15%);
 	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-success-hover, 15%);
 }
 
 .button.button-success:active {
 	background: @button-success-active;
+    background-color: @button-success-active; //Fix for IE 9 and older
 	box-shadow: inset 0px 1px 4px 0px darken(@button-success-active, 5%);
 	-webkit-box-shadow: inset 0px 1px 4px 0px darken(@button-success-active, 5%);
 }
@@ -108,6 +114,7 @@
 .button.button-warning {
     text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.50);
 	background: linear-gradient(@button-warning, darken(@button-warning, 15%));
+    background-color: @button-warning; //Fix for IE 9 and older
 	border: 1px solid @button-warning-border;
 	box-shadow: inset 0px 1px 0px 0px lighten(@button-warning, 15%);
 	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-warning, 15%);
@@ -116,37 +123,42 @@
 
 .button.button-warning:hover {
 	background: linear-gradient(@button-warning-hover, darken(@button-warning-hover, 15%));
+    background-color: @button-warning-active; //Fix for IE 9 and older
 	box-shadow: inset 0px 1px 0px 0px lighten(@button-warning-hover, 15%);
 	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-warning-hover, 15%);
 }
 
 .button.button-warning:active {
 	background: @button-warning-active;
+    background-color: @button-warning-active; //Fix for IE 9 and older
 	box-shadow: inset 0px 1px 4px 0px darken(@button-warning-active, 5%);
 	-webkit-box-shadow: inset 0px 1px 4px 0px darken(@button-warning-active, 5%);
 }
 
-//Danger
+//Error
 
-.button.button-danger {
+.button.button-error {
     text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.50);
-	background: linear-gradient(@button-danger, darken(@button-danger, 15%));
-	border: 1px solid @button-danger-border;
-	box-shadow: inset 0px 1px 0px 0px lighten(@button-danger, 15%);
-	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-danger, 15%);
+	background: linear-gradient(@button-error, darken(@button-error, 15%));
+    background-color: @button-error; //Fix for IE 9 and older
+	border: 1px solid @button-error-border;
+	box-shadow: inset 0px 1px 0px 0px lighten(@button-error, 15%);
+	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-error, 15%);
 	color: @white;
 }
 
-.button.button-danger:hover {
-	background: linear-gradient(@button-danger-hover, darken(@button-danger-hover, 15%));
-	box-shadow: inset 0px 1px 0px 0px lighten(@button-danger-hover, 15%);
-	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-danger-hover, 15%);
+.button.button-error:hover {
+	background: linear-gradient(@button-error-hover, darken(@button-error-hover, 15%));
+    background-color: @button-error-hover; //Fix for IE 9 and older
+	box-shadow: inset 0px 1px 0px 0px lighten(@button-error-hover, 15%);
+	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-error-hover, 15%);
 }
 
-.button.button-danger:active {
-	background: @button-danger-active;
-	box-shadow: inset 0px 1px 4px 0px darken(@button-danger-active, 5%);
-	-webkit-box-shadow: inset 0px 1px 4px 0px darken(@button-danger-active, 5%);
+.button.button-error:active {
+	background: @button-error-active;
+    background-color: @button-error-active; //Fix for IE 9 and older
+	box-shadow: inset 0px 1px 4px 0px darken(@button-error-active, 5%);
+	-webkit-box-shadow: inset 0px 1px 4px 0px darken(@button-error-active, 5%);
 }
 
 //Info
@@ -154,6 +166,7 @@
 .button.button-info {
     text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.50);
 	background: linear-gradient(@button-info, darken(@button-info, 15%));
+	background-color: @button-info; //Fix for IE 9 and older
 	border: 1px solid @button-info-border;
 	box-shadow: inset 0px 1px 0px 0px lighten(@button-info, 15%);
 	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-info, 15%);
@@ -162,12 +175,14 @@
 
 .button.button-info:hover {
 	background: linear-gradient(@button-info-hover, darken(@button-info-hover, 15%));
+    background-color: @button-info-hover; //Fix for IE 9 and older
 	box-shadow: inset 0px 1px 0px 0px lighten(@button-info-hover, 15%);
 	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-info-hover, 15%);
 }
 
 .button.button-info:active {
 	background: @button-info-active;
+    background-color: @button-info-active; //Fix for IE 9 and older
 	box-shadow: inset 0px 1px 4px 0px darken(@button-info-active, 5%);
 	-webkit-box-shadow: inset 0px 1px 4px 0px darken(@button-info-active, 5%);
 }
