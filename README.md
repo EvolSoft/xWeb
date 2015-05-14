@@ -15,3 +15,6 @@ It has been written by @_Flavius12 at EvolSoft using [Less.js](http://lesscss.or
 
 By default xWeb uses [Font-Awesome icons](http://fontawesome.io) by Dave Gandy and it has been compiled on Windows using the fantastic [WinLess](http://winless.org/) compiler :)
 
+## Contributing
+
+If you want to contribute to this project please follow the Contribution Guidelines
