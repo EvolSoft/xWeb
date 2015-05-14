@@ -17,6 +17,8 @@ By default xWeb uses [Font-Awesome icons](http://fontawesome.io) by Dave Gandy a
 
 ##Documentation
 
+Documentation is available at http://xweb.evolsoft.tk
+
 ##Contributing
 
 If you want to contribute to this project please follow the [Contribution Guidelines](https://github.com/EvolSoft/xWeb/blob/master/CONTRIBUTING.md)
