@@ -1,6 +1,6 @@
 ![start2](https://cloud.githubusercontent.com/assets/10303538/6315586/9463fa5c-ba06-11e4-8f30-ce7d8219c27d.png)
 
-# Contributing to PharTools
+# Contributing to xWeb
 
 First of all thank you to contribute and help us to improve our projects.
 
