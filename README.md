@@ -17,6 +17,8 @@ By default xWeb uses [Font-Awesome icons](http://fontawesome.io) by Dave Gandy a
 
 ##Documentation
 
+*The full documentation is available at http://xweb.evolsoft.tk*
+
 ###What is included?
 
 ######Precompiled version
@@ -61,8 +63,6 @@ less\
 ###Online version
 
 A ready-to-use version of [xWeb](http://xweb.evolsoft.tk) is available at our [xWeb CDN](http://xweb.evolsoft.tk/cdn).
-
-The full documentation is available at http://xweb.evolsoft.tk
 
 ##Known bugs
 
