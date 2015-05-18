@@ -1,6 +1,6 @@
 /*
  * xWeb (v1.0) by EvolSoft
- * Developer: EvolSoft
+ * Developer: EvolSoft (Flavius12)
  * Website: http://www.evolsoft.tk
  * Date: 11/05/2015 06:15 PM (UTC)
  * Copyright & License: (C) 2015 EvolSoft
