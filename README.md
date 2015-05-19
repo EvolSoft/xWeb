@@ -67,6 +67,8 @@ A ready-to-use version of [xWeb](http://xweb.evolsoft.tk) is available at our [x
 
 ##Compiling Source
 
+This is a small explanation of how to compile
+
 > By default xWeb has been compiled on Windows using WinLess but you can compile it also on other platforms.<br>You must remember only that the main file to compile is `xWeb.less`
 
 *1. Add xWeb source path in WinLess*
@@ -76,12 +78,10 @@ A ready-to-use version of [xWeb](http://xweb.evolsoft.tk) is available at our [x
 
 ##To-do
 
-Here there is a list of some xWeb features that may be implemented later:
 - Fixed alerts on screen
 
 ##Known bugs
 
-Here there is a list of current xWeb known bugs:
 - Menus don't work on IE < 9
 
 ##Contributing
