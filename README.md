@@ -11,7 +11,7 @@ HTML/CSS/JS Framework
 
 **xWeb** is a simple responsive HTML, CSS and JavaScript framework fast, easy to use and fully-featured.
 
-It has been written by [@_Flavius12](https://twitter.com/_Flavius12) at [EvolSoft](http://www.evolsoft.tk) using [Less.js](http://lesscss.org/) CSS pre-processor.
+It has been written by [@Flavius12_](https://twitter.com/Flavius12_) at [EvolSoft](http://www.evolsoft.tk) using [Less.js](http://lesscss.org/) CSS pre-processor.
 
 By default xWeb uses [Font-Awesome icons](http://fontawesome.io) by Dave Gandy and it has been compiled on Windows using the fantastic [WinLess](http://winless.org/) compiler :)
 
