@@ -15,6 +15,8 @@ It has been written by [@_Flavius12](https://twitter.com/_Flavius12) at [EvolSof
 
 By default xWeb uses [Font-Awesome icons](http://fontawesome.io) by Dave Gandy and it has been compiled on Windows using the fantastic [WinLess](http://winless.org/) compiler :)
 
+xWeb is licensed under MIT (License details provided [here](https://github.com/EvolSoft/xWeb/blob/master/LICENSE))</p>
+
 ##Documentation
 
 *The full documentation is available at http://xweb.evolsoft.tk*
@@ -63,6 +65,20 @@ less\
 ###Online version
 
 A ready-to-use version of [xWeb](http://xweb.evolsoft.tk) is available at our [xWeb CDN](http://xweb.evolsoft.tk/cdn).
+
+##Compiling Source
+
+> By default xWeb has been compiled on Windows using WinLess but you can compile it also on other platforms.<br>You must remember only that the main file to compile is `xWeb.less`
+
+*1. Add xWeb source path in WinLess*
+
+
+*2. Select the main file to compile (`xWeb.less`)*
+
+##To-do
+
+Here there is a list of some xWeb features that may be implemented later:
+- Fixed alerts on screen
 
 ##Known bugs
 
