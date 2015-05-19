@@ -67,7 +67,7 @@ A ready-to-use version of [xWeb](http://xweb.evolsoft.tk) is available at our [x
 
 ##Compiling Source
 
-This is a small explanation of how to compile
+This is a small explanation of how to compile xWeb
 
 > By default xWeb has been compiled on Windows using WinLess but you can compile it also on other platforms.<br>You must remember only that the main file to compile is `xWeb.less`
 
