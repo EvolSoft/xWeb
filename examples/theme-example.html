@@ -1,0 +1,337 @@
+<!DOCTYPE html>  
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>xWeb Theme Example</title>
+        <!-- jQuery -->
+        <script src="http://xweb.evolsoft.tk/cdn/1.0/js/jquery.min.js"></script>
+        <!-- Include xWeb js -->
+        <script src="http://xweb.evolsoft.tk/cdn/1.0/js/xweb.min.js"></script>
+        <!-- Include xWeb Stylesheet -->
+        <link rel="stylesheet" href="http://xweb.evolsoft.tk/cdn/1.0/css/xweb.min.css" id="default">
+		<link rel="stylesheet" href="http://xweb.evolsoft.tk/cdn/1.0/css/xweb.theme.min.css" id="theme">
+        <!-- Include Font-Awesome Stylesheet -->
+        <link rel="stylesheet" href="http://xweb.evolsoft.tk/cdn/1.0/css/font-awesome.min.css">
+		<script>
+			$(document).ready(function(){
+				$("#theme-switcher").click(function(){
+					if($("#theme").length > 0){
+						$("#theme-switcher").removeClass("active");
+						$("#theme-switcher-a").html("<i class=\"fa fa-toggle-off\"></i> Enable Theme");
+						$("#theme").remove();
+					}else{
+						$("#theme-switcher").addClass("active");
+						$("#theme-switcher-a").html("<i class=\"fa fa-toggle-on\"></i> Disable Theme");
+						$("#default").after("<link rel=\"stylesheet\" href=\"http://xweb.evolsoft.tk/cdn/1.0/css/xweb.theme.min.css\" id=\"theme\">");
+					}
+				});
+			});
+		</script>
+    </head>
+    <body>
+        <nav class="navbar navbar-fixed">
+            <button type="button" class="navbar-toggle"></button>
+		    <div class="navbar-content">
+			    <a class="navbar-title" href="#">Title</a>
+		        <ul class="navbar-links">
+                    <li class="active"><a href="#">Navbar Link 1</a></li>
+				    <li><a href="#">Navbar Link 2</a></li>
+				</ul>
+				<ul class="navbar-links navbar-links-right">
+					<li id="theme-switcher" class="active"><a id="theme-switcher-a"><i class="fa fa-toggle-on"></i> Disable Theme</a></li>
+				</ul>
+		    </div>
+        </nav>
+		<div style="padding: 30px;"></div> <!-- Spacing fix -->
+		<div class="content">
+		    <h1 class="alignment-center">xWeb Theme Example</h1>
+			<br>
+			<p class="alignment-center">This page shows you how to apply xWeb themes dynamically and how they works.</p>
+			<p class="alignment-center">In this page is used the <i>xWeb Metro Theme</i> which is included in xWeb by default</p>
+			<h2>Alerts</h2>
+			<br>
+			<div class="alert alert-info">Info alert <a>Link</a></div>
+			<div class="alert alert-success">Success alert <a>Link</a></div>
+			<div class="alert alert-warning">Warning alert <a>Link</a></div>
+			<div class="alert alert-error">Error alert <a>Link</a></div>
+			<h2>Badges</h2>
+			<br>
+			<a>Badge <span class="badge">17</span></a>
+			<br><br>
+			<a>Badge Primary <span class="badge badge-primary">17</span></a>
+			<br><br>
+			<a>Badge Success <span class="badge badge-success">17</span></a>
+			<br><br>
+			<a>Badge Warning <span class="badge badge-warning">17</span></a>
+			<br><br>
+			<a>Badge Error <span class="badge badge-error">17</span></a>
+			<br><br>
+			<a>Badge Info <span class="badge badge-info">17</span></a>
+			<br>
+			<h2>Breadcrumbs</h2>
+			<br>
+			<ul class="breadcrumb">
+				<li><a>Level 1</a></li>
+				<li><a>Level 2</a></li>
+				<li><a>Level 3</a></li>
+				<li>Level 4</li>
+			</ul>
+			<h2>Buttons</h2>
+			<br>
+			<button class="button">Button</button>
+			<button class="button button-primary">Primary</button>
+			<button class="button button-success">Success</button>
+			<button class="button button-warning">Warning</button>
+			<button class="button button-error">Error</button>
+			<button class="button button-info">Info</button>
+			<br>
+			<h2>Image Sliders</h2>
+			<br>
+			<div class="image-slider" style="width: 600px" auto-scroll="">
+				<ul class="image-slider-images" style="height: 300px">
+					<li class="image-slider-item active" img-item="1" style="margin-left: 0%;"><div class="image-slider-caption">Example Image Caption <a>Link...</a></p></div><img src="http://www.jssor.com/img/landscape/01.jpg"></li>
+					<li class="image-slider-item" img-item="2" style="margin-left: -100%;"><img src="http://www.jssor.com/img/landscape/02.jpg"></li>
+					<li class="image-slider-item" img-item="3" style="margin-left: -100%;"><img src="http://www.jssor.com/img/landscape/03.jpg"></li>  
+					<li class="image-slider-item" img-item="4" style="margin-left: -100%;"><img src="http://www.jssor.com/img/landscape/04.jpg"></li>
+				</ul>
+				<ul class="image-slider-navigation">
+					<li img-id="1" class="active"></li>
+					<li img-id="2" class=""></li>
+					<li img-id="3" class=""></li>
+					<li img-id="4" class=""></li>
+				</ul>
+				<a class="image-slider-control-left"></a>
+				<a class="image-slider-control-right"></a>
+			</div>
+			<br>
+			<h2>Inputs</h2>
+			<br>
+			<input class="input" placeholder="Input..."></input>
+			<br>
+			<input class="input input-success" placeholder="Input Success..."></input>
+			<br>
+			<input class="input input-warning" placeholder="Input Warning..."></input>
+			<br>
+			<input class="input input-error" placeholder="Input Error..."></input>
+			<br>
+			<h2>Labels</h2>
+			<br>
+			<span class="label">Label</span>
+			<span class="label label-primary">Label Primary</span>
+			<span class="label label-success">Label Success</span>
+			<span class="label label-warning">Label Warning</span>
+			<span class="label label-error">Label Error</span>
+			<span class="label label-info">Label Info</span>
+			<h2>Menus</h2>
+			<br>
+			<div class="menu-group">
+				<button class="button button-primary" openmenu>Click here to show menu</button>	
+				<ul class="menu">
+					<li class="active"><a>Menu Item 1</a></li>
+					<li><a>Menu Item 2</a></li>
+					<li><a>Menu Item 3</a></li>
+					<li><a>Menu Item 4</a></li>
+				</ul>
+			</div>
+			<br>
+			<h2>Modals</h2>
+			<br>
+			<button class="button button-primary" onclick="toggleModal('#modal')">Click here to show the modal</button>
+			<div class="modal" id="modal">
+				<div class="modal-background"></div>
+				<div class="modal-window">
+					<button class="close"></button>
+					<h2 class="modal-title">Modal Title</h2>
+					<hr>
+					<h4>Subtitle</h4>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consequat condimentum magna euismod porttitor. Integer turpis orci, hendrerit id sodales nec, euismod in nisi. Sed ut quam eget ipsum suscipit gravida. Maecenas sit amet massa vitae eros pretium vulputate ut vel metus. Pellentesque bibendum euismod augue eget aliquet. Vivamus nec congue neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris ac rhoncus diam. Suspendisse lectus eros, bibendum quis nisi sit amet, lobortis rhoncus nunc. Praesent luctus sollicitudin magna in dictum. Nulla justo diam, auctor sit amet rutrum vel, fringilla in magna. Praesent luctus lacus a massa molestie, vitae luctus est bibendum. Proin quis venenatis massa. Nam ut laoreet neque, ac consequat turpis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec vehicula ante sed massa dignissim, quis scelerisque velit tristique.</p>
+					<hr>
+					<div class="col-rs-12 ns alignment-right">
+						<button class="button button-primary">Button</button>
+					</div>
+				</div>
+			</div>
+			<br>
+			<h2>Navbar</h2>
+			<br>
+			<nav class="navbar">
+				<a class="navbar-title"><i class="fa fa-home"></i></a>
+				<button type="button" class="navbar-toggle"></button>
+				<ul class="navbar-links">
+					<li><a>Navbar Link 1</a></li>
+					<li class="menu-group">
+						<a openmenu="">Navbar Menu <span class="fa fa-caret-down"></span></a>
+						<ul class="menu">
+							<li><a>Menu Item 1</a></li>
+							<li><a>Menu Item 2</a></li>
+							<li><a>Menu Item 3</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<br>
+			<nav class="navbar navbar-dark">
+				<a class="navbar-title"><i class="fa fa-home"></i></a>
+				<button type="button" class="navbar-toggle"></button>
+				<ul class="navbar-links">
+					<li><a>Navbar Link 1</a></li>
+					<li class="menu-group">
+						<a openmenu="">Navbar Menu <span class="fa fa-caret-down"></span></a>
+						<ul class="menu">
+							<li><a>Menu Item 1</a></li>
+							<li><a>Menu Item 2</a></li>
+							<li><a>Menu Item 3</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+			<h2>Panels</h2>
+			<br>
+			<div class="row">		
+				<div class="col-6">
+					<div class="panel">
+						<div class="panel-header">
+							<div class="panel-title">Panel</div>
+						</div>
+						<div class="panel-content">
+							Panel content...
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="panel panel-primary">
+						<div class="panel-header">
+							<div class="panel-title">Panel Primary</div>
+						</div>
+						<div class="panel-content">
+							Panel content...
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="panel panel-primary-lt">
+						<div class="panel-header">
+							<div class="panel-title">Panel Primary (lighten)</div>
+						</div>
+						<div class="panel-content">
+							Panel content...
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="panel panel-success">
+						<div class="panel-header">
+							<div class="panel-title">Panel Success</div>
+						</div>
+						<div class="panel-content">
+							Panel content...
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="panel panel-success-lt">
+						<div class="panel-header">
+							<div class="panel-title">Panel Success (lighten)</div>
+						</div>
+						<div class="panel-content">
+							Panel content...
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="panel panel-warning">
+						<div class="panel-header">
+							<div class="panel-title">Panel Warning</div>
+						</div>
+						<div class="panel-content">
+							Panel content...
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="panel panel-warning-lt">
+						<div class="panel-header">
+							<div class="panel-title">Panel Warning (lighten)</div>
+						</div>
+						<div class="panel-content">
+							Panel content...
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="panel panel-error">
+						<div class="panel-header">
+							<div class="panel-title">Panel Error</div>
+						</div>
+						<div class="panel-content">
+							Panel content...
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="panel panel-error-lt">
+						<div class="panel-header">
+							<div class="panel-title">Panel Error (lighten)</div>
+						</div>
+						<div class="panel-content">
+							Panel content...
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="panel panel-info">
+						<div class="panel-header">
+							<div class="panel-title">Panel Info</div>
+						</div>
+						<div class="panel-content">
+							Panel content...
+						</div>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="panel panel-info-lt">
+						<div class="panel-header">
+							<div class="panel-title">Panel Info (lighten)</div>
+						</div>
+						<div class="panel-content">
+							Panel content...
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2>Progress bars</h2>
+			<br>
+			<div class="progress">
+				<div class="progress-bar" style="width: 50%;">50%</div>
+			</div>
+			<div class="progress">
+				<div class="progress-bar progress-bar-success" style="width: 50%;">50%</div>
+			</div>
+			<div class="progress">
+				<div class="progress-bar progress-bar-warning" style="width: 50%;">50%</div>
+			</div>
+			<div class="progress">
+				<div class="progress-bar progress-bar-error" style="width: 50%;">50%</div>
+			</div>
+			<div class="progress">
+				<div class="progress-bar progress-bar-info" style="width: 50%;">50%</div>
+			</div>
+			<div class="progress">
+				<div class="progress-bar" style="width: 25%;">25%</div>
+				<div class="progress-bar progress-bar-success" style="width: 20%;">20%</div>
+				<div class="progress-bar progress-bar-warning" style="width: 10%;">10%</div>
+				<div class="progress-bar progress-bar-error" style="width: 15%;">15%</div>
+				<div class="progress-bar progress-bar-info" style="width: 5%;">5%</div>
+			</div>
+			<h2>Sliders and Switches</h2>
+			<div class="slider">
+				<div class="slider-progress"></div>
+				<a class="slider-handle"></a>
+			</div>
+			<input type="checkbox" class="switch" id="switch1">
+			<label for="switch1"></label>
+		</div>
+		<br>
+    <body>
+</html>
