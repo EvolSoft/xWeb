@@ -71,9 +71,7 @@ A ready-to-use version of [xWeb](http://xweb.evolsoft.tk) is available at our [x
 
 *1. Add xWeb source path in WinLess*
 ![1](https://cloud.githubusercontent.com/assets/10297075/7705821/e4a33fbc-fe46-11e4-9b3c-faba986d2b9b.png)
-
 *2. Select the main file to compile (`xWeb.less`)*
-
 ![2](https://cloud.githubusercontent.com/assets/10297075/7705825/e6521504-fe46-11e4-82ad-84c1befa72a0.png)
 
 ##To-do
