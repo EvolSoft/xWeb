@@ -83,7 +83,7 @@ This is a small explanation of how to compile xWeb
 
 ##Known bugs
 
-- Nothing :D
+- Selects not working on IE < 9
 
 ##Contributing
 
