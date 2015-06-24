@@ -10,11 +10,17 @@
     right: 0;
     bottom: 0;
     left: 0;
+	height: 0;
     z-index: @modal-z-index;
 }
 
 .modal.modal-open {
+    height: auto;
 	visibility: visible;
+}
+
+.modal .modal-title {
+	margin-top: 10px;
 }
 
 .modal > .modal-background {
@@ -27,6 +33,10 @@
     z-index: @modal-z-index;
 	background: @modal;
 	opacity: 0;
+}
+
+.modal.closing {
+	height: auto;
 }
 
 .modal.closing > .modal-background { //Prevent transition to be shown on page loading
@@ -44,6 +54,7 @@
 	top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); //Center Modal Window
+	-ms-transform: translate(-50%, -50%); //Center Modal Window on IE
     z-index: @modal-window-z-index;
 	padding: @modal-window-padding;
 	min-height: @modal-window-min-height;
