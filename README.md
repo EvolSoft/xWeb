@@ -82,7 +82,7 @@ This is a small explanation of how to compile xWeb
 
 ##Known bugs
 
-- Menus don't work on IE < 9
+- Nothing :D
 
 ##Contributing
 
