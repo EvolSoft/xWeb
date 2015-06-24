@@ -79,6 +79,7 @@ This is a small explanation of how to compile xWeb
 ##To-do
 
 - Fixed alerts on screen
+- Better Button-Groups and Input-Groups
 
 ##Known bugs
 
