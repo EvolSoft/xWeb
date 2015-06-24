@@ -1,0 +1,54 @@
+//**** Thumbnails ****//
+
+//Base Style
+
+.thumbnail {
+   display: block;
+   padding: @thumbnail-padding;
+   border: 1px solid @thumbnail-border;
+   border-radius: @border-radius;
+}
+
+.thumbnail:hover {
+   border-color: @thumbnail-hover-border;
+}
+
+.thumbnail > .caption {
+   padding: @thumbnail-caption-padding;
+}
+
+//Primary
+
+.thumbnail.thumbnail-primary:hover {
+   border-color: @primary;
+}
+
+//Success
+
+.thumbnail.thumbnail-success:hover {
+   border-color: @success;
+}
+
+//Warning
+
+.thumbnail.thumbnail-warning:hover {
+   border-color: @warning;
+}
+
+//Error
+
+.thumbnail.thumbnail-error:hover {
+   border-color: @error;
+}
+
+//Info
+
+.thumbnail.thumbnail-info:hover {
+   border-color: @info;
+}
+
+//Styles (square-only)
+
+.thumbnail.square {
+   border-radius: @border-square-radius;
+}
