@@ -9,7 +9,7 @@
     border-radius: @border-radius;
 }
 
-.alert > a {
+.alert a {
     font-weight: bold;
 }
 
@@ -36,11 +36,11 @@
     border-color: @alert-info-border;
 }
 
-.alert.alert-info > a {
+.alert.alert-info a {
    color: darken(@alert-info-color, 5%);
 }
 
-.alert.alert-info > a:hover, .alert.alert-info > a:focus {
+.alert.alert-info a:hover, .alert.alert-info a:focus {
    color: darken(@alert-info-color, 10%);
 }
 
@@ -60,11 +60,11 @@
     border-color: @alert-success-border;
 }
 
-.alert.alert-success > a {
+.alert.alert-success a {
    color: darken(@alert-success-color, 5%);
 }
 
-.alert.alert-success > a:hover, .alert.alert-success > a:focus {
+.alert.alert-success a:hover, .alert.alert-success a:focus {
    color: darken(@alert-success-color, 10%);
 }
 
@@ -84,11 +84,11 @@
     border-color: @alert-warning-border;
 }
 
-.alert.alert-warning > a {
+.alert.alert-warning a {
    color: darken(@alert-warning-color, 5%);
 }
 
-.alert.alert-warning > a:hover, .alert.alert-warning > a:focus {
+.alert.alert-warning a:hover, .alert.alert-warning a:focus {
    color: darken(@alert-warning-color, 10%);
 }
 
@@ -100,28 +100,28 @@
    color: darken(@alert-warning-color, 5%);
 }
 
-//Danger
+//Error
 
-.alert.alert-danger {
-    color: @alert-danger-color;
-    background-color: @alert-danger;
-    border-color: @alert-danger-border;
+.alert.alert-error {
+    color: @alert-error-color;
+    background-color: @alert-error;
+    border-color: @alert-error-border;
 }
 
-.alert.alert-danger > a {
-   color: darken(@alert-danger-color, 5%);
+.alert.alert-error a {
+   color: darken(@alert-error-color, 5%);
 }
 
-.alert.alert-danger > a:hover, .alert.alert-danger > a:focus {
-   color: darken(@alert-danger-color, 10%);
+.alert.alert-error a:hover, .alert.alert-error a:focus {
+   color: darken(@alert-error-color, 10%);
 }
 
-.alert.alert-danger .close {
-   color: @alert-danger-color;
+.alert.alert-error .close {
+   color: @alert-error-color;
 }
 
-.alert.alert-danger .close:hover {
-   color: darken(@alert-danger-color, 5%);
+.alert.alert-error .close:hover {
+   color: darken(@alert-error-color, 5%);
 }
 
 //Styles
