@@ -7,11 +7,9 @@
 	background-color: @label;
     padding: @label-padding;
     font-size: @label-font-size;
-    font-weight: 700;
     color: @white;
     text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
+    vertical-align: @label-vertical-align;
     border-radius: @border-radius;
 }
 
@@ -33,10 +31,10 @@
     background-color: @label-warning-color;
 }
 
-//Danger
+//Error
 
-.label.label-danger {
-    background-color: @label-danger-color;
+.label.label-error {
+    background-color: @label-error-color;
 }
 
 //Info
