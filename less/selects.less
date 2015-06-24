@@ -1,0 +1,63 @@
+//**** Selects ****//
+
+//Base Style
+
+.select {
+    width: 100%;
+	background-color: @white;
+	border-radius: @border-radius;
+	border: 1px solid @input-border;
+	box-shadow: inset 0px 1px 1px 0px @input-shadow;
+	-webkit-box-shadow:inset 0px 1px 1px 0px @input-shadow;
+	color: @input-color;
+	display: block;
+	font-family: @default-font;
+	font-size: @default-font-size;
+	padding: @input-padding;
+	transition: border-color ease-in-out .1s, box-shadow ease-in-out .1s;
+    -webkit-transition: border-color ease-in-out .1s, box-shadow ease-in-out .1s;
+}
+
+.select:focus {
+	border-color: @input-default;
+	box-shadow: inset 0px 1px 1px 0px @input-shadow, 0px 0px 6px 1px @input-default;
+	-webkit-box-shadow: inset 0px 1px 1px 0px @input-shadow, 0px 0px 6px 1px @input-default;	
+	transition: box-shadow ease-in-out .1s;
+    -webkit-transition: box-shadow ease-in-out .1s;
+}
+
+//Disabled Input
+
+.select.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+	background: @gray-light_2;
+    opacity: @input-disabled-opacity;
+}
+
+//Sizing
+
+.select.ultra-small {
+    padding: @input-padding-ultra-small;
+	font-size: @default-font-size - 2px;
+}
+
+.select.small {
+    padding: @input-padding-small;
+	font-size: @default-font-size - 1px;
+}
+
+.select.large {
+    padding: @input-padding-large;
+	font-size: @default-font-size + 2px;
+}
+
+//Styles
+
+.select.square {
+    border-radius: @border-square-radius;
+}
+
+.select.ultra-rounded {
+    border-radius: @border-ultra-rounded-radius;
+}
