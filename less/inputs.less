@@ -9,7 +9,8 @@
 	box-shadow: inset 0px 1px 1px 0px @input-shadow;
 	-webkit-box-shadow:inset 0px 1px 1px 0px @input-shadow;
 	color: @input-color;
-	display: inline-block;
+	display: block;
+	width: 100%;
 	font-family: @default-font;
 	font-size: @default-font-size;
 	padding: @input-padding;
@@ -17,7 +18,7 @@
     -webkit-transition: border-color ease-in-out .1s, box-shadow ease-in-out .1s;
 }
 
-.input.input:focus {
+.input:focus {
 	border-color: @input-default;
 	box-shadow: inset 0px 1px 1px 0px @input-shadow, 0px 0px 6px 1px @input-default;
 	-webkit-box-shadow: inset 0px 1px 1px 0px @input-shadow, 0px 0px 6px 1px @input-default;	
@@ -89,16 +90,16 @@
     -webkit-transition: box-shadow ease-in-out .1s;
 }
 
-//Danger
+//Error
 
-.input.input-danger {
-	border-color: @input-danger;
+.input.input-error {
+	border-color: @input-error;
 }
 
-.input.input-danger:focus {
-	border-color: @input-danger;
-	box-shadow: inset 0px 1px 1px 0px @input-shadow, 0px 0px 6px 1px @input-danger;
-	-webkit-box-shadow: inset 0px 1px 1px 0px @input-shadow, 0px 0px 6px 1px @input-danger;	
+.input.input-error:focus {
+	border-color: @input-error;
+	box-shadow: inset 0px 1px 1px 0px @input-shadow, 0px 0px 6px 1px @input-error;
+	-webkit-box-shadow: inset 0px 1px 1px 0px @input-shadow, 0px 0px 6px 1px @input-error;	
 	transition: box-shadow ease-in-out .1s;
     -webkit-transition: box-shadow ease-in-out .1s;
 }
