@@ -30,7 +30,7 @@ nav {
    float: left;
    color: @navbar-color;
    line-height: @navbar-title-line-height;
-   padding: @navbar-title-padding-vertical;
+   padding: @navbar-title-padding @navbar-title-padding + 2px;
 }
 
 .navbar .navbar-title:hover {
@@ -55,7 +55,7 @@ nav {
    display: block;
    font-size: @navbar-links-font-size;
    line-height: @navbar-links-line-height;
-   padding: @navbar-links-padding-vertical;
+   padding: @navbar-links-padding @navbar-links-padding + 2px;
    color: @navbar-color;
 }
 
@@ -68,22 +68,115 @@ nav {
    color: @navbar-color-active;
 }
 
+.navbar .navbar-links .menu {
+   border-top-left-radius: 0px;   
+   border-top-right-radius: 0px;
+}
+
+.navbar .navbar-links .menu-group.open {
+   background: @navbar-active;
+   color: @navbar-color-active;
+}
+
+
+.navbar .navbar-links .fa-caret-down {
+   margin-left: 2px;
+}
+
+@media (min-width: @small-screen-width){ //Right alignment available only on medium/large devices
+   .navbar .navbar-links.navbar-links-right {
+      float: right;
+   }
+  .navbar .navbar-links.navbar-links-right .menu {
+      left: auto;
+	  right: 0;
+  }
+}
+
 @media (max-width: (@small-screen-width - 1px)){
    .navbar .navbar-links {
       display: none;
 	  clear: both;
 	  float: none;
-	  border-top: 1px solid @navbar-border;
-	  padding: 5px 0;
    }
+   
+   .navbar .navbar-links:nth-of-type(1){
+   	  border-top: 1px solid @navbar-border;
+   }
+   
+   .navbar .navbar-links:nth-of-type(1) > li:first-child {
+   	  border-top: 1px solid lighten(@navbar-border, 10%);
+   }
+   
+   .navbar.navbar-dark .navbar-links:nth-of-type(1){
+   	  border-top: 1px solid @navbar-dark-border;
+   }
+   
+   .navbar.navbar-dark .navbar-links:nth-of-type(1) > li:first-child {
+   	  border-top: 1px solid lighten(@navbar-dark-border, 10%);
+   }
+   
    .navbar .navbar-links > li {
 	  float: none;
    }
+   
    .navbar .navbar-links > li > a {
-	  padding: @navbar-links-padding-vertical - 2px;
+	  padding: @navbar-links-padding - 2px;
    }
+   
    .navbar .navbar-links.open {
       display: block;
+   }
+   
+   .navbar .navbar-links .menu {
+      position: relative;
+	  float: none;
+	  padding: 0;
+	  background: @navbar;
+	  border: none;
+	  border-radius: 0;
+	  box-shadow: none;
+	  -webkit-box-shadow: none;
+   }
+   
+   .navbar .navbar-links .menu > li > a {
+   	  color: @navbar-color;
+      padding: @navbar-links-padding @navbar-links-padding + 10px; 
+   }
+   
+   .navbar .navbar-links .menu > li > a:hover {
+      background: @navbar;
+   	  color: @navbar-color-hover;
+   }
+   
+   .navbar .navbar-links .menu > li.active > a {
+      background: @navbar-active;
+   	  color: @navbar-color-active;
+   }
+   
+   .navbar .navbar-links .menu hr {
+   	  border-color: @navbar-border;
+   }
+   
+   .navbar.navbar-dark .navbar-links .menu {
+	  background: @navbar-dark;
+   }
+   
+   .navbar.navbar-dark .navbar-links .menu > li > a {
+   	  color: @navbar-dark-color;
+   }
+   
+   .navbar.navbar-dark .navbar-links .menu > li > a:hover {
+      background: @navbar-dark;
+   	  color: @navbar-dark-color-hover;
+   }
+   
+   .navbar.navbar-dark .navbar-links .menu > li.active > a {
+      background: @navbar-dark-active;
+   	  color: @navbar-dark-color-active;
+   }
+   .navbar.navbar-dark .navbar-links .menu hr {
+   	  border-color: @navbar-dark-border;
    }
 }
 
@@ -91,7 +184,8 @@ nav {
    float: right;
    background: none;
    border: none;
-   padding: 14px;
+   line-height: 16px;
+   padding: @navbar-links-padding - 1px;
    color: @navbar-color;
 }
 
@@ -160,6 +254,12 @@ nav {
 }
 
 .navbar.navbar-dark .navbar-links > li.active > a {
+   background: @navbar-dark-active;
+   color: @navbar-dark-color-active;
+}
+
+
+.navbar.navbar-dark .navbar-links .menu-group.open {
    background: @navbar-dark-active;
    color: @navbar-dark-color-active;
 }
