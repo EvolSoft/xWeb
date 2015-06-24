@@ -28,9 +28,10 @@
 }
 
 .breadcrumb > li+li:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: @breadcrumb-separator;
     padding: @breadcrumb-separator-padding;
     color: @breadcrumb-color;
-    content: @breadcrumb-separator;
 }
 
 .breadcrumb > li {
