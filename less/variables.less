@@ -22,6 +22,10 @@
 @default-font-weight: 100;
 @default-text-align: left;
 
+//**** Default Line Height ****//
+
+@default-line-height: 1.2;
+
 //**** Default Margin ****//
 
 @default-margin: 20px;
@@ -382,8 +386,9 @@
 //Base Style
 
 @label: @gray;
-@label-padding: .3em .6em .4em;
-@label-font-size: 75%;
+@label-padding: .3em .6em;
+@label-vertical-align: 5%;
+@label-font-size: 73%;
 
 //Primary
 
@@ -459,7 +464,7 @@
 
 //Base Style
 
-@navbar-min-height: 50px;
+@navbar-min-height: 45px;
 @navbar: @gray-light;
 @navbar-active: darken(@navbar, 6%);
 @navbar-border: @navbar-active;
@@ -469,10 +474,10 @@
 @navbar-color-active: @navbar-color-hover;
 @navbar-title-font-size: 18px;
 @navbar-title-line-height: @navbar-title-font-size;
-@navbar-title-padding-vertical: @navbar-min-height / 2 - @navbar-title-line-height / 2;
+@navbar-title-padding: floor(@navbar-min-height / 2 - @navbar-title-line-height / 2);
 @navbar-links-font-size: @default-font-size;
 @navbar-links-line-height: @navbar-links-font-size + 6px; //Badges and Labels support
-@navbar-links-padding: @navbar-min-height / 2 - @navbar-links-line-height / 2;
+@navbar-links-padding: floor(@navbar-min-height / 2 - @navbar-links-line-height / 2);
 
 //Dark
 
@@ -735,6 +740,7 @@
 
 @typo-margin-min: 10px;
 @typo-margin-max: 20px;
+@typo-lh-line-height: 1.5;
 
 //Horizontal Rules
 
@@ -742,6 +748,10 @@
 @hr-margin: 20px;
 
 //Text Colors
+
+//White
+
+@out-white-color: @white;
 
 //Gray
 
@@ -789,9 +799,9 @@
 
 //Headers
 
-@h1-size: 28px;
-@h2-size: 24px;
-@h3-size: 20px;
+@h1-size: 40px;
+@h2-size: 30px;
+@h3-size: 25px;
 @h4-size: 18px;
 @h5-size: 14px;
 @h6-size: 12px;
