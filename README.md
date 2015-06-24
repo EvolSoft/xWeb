@@ -79,11 +79,13 @@ This is a small explanation of how to compile xWeb
 ##To-do
 
 - Fixed alerts on screen
+- Vertical sliders
 - Better Button-Groups and Input-Groups
 
 ##Known bugs
 
 - Selects not working on IE < 10
+- Sliders not working correctly on touchscreen devices
 
 ##Contributing
 
