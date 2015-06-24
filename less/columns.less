@@ -7,7 +7,7 @@
    padding-right: @column-padding;
 }
 
-@media(min-width: @desktop-width) {
+@media(min-width: @small-screen-width) {
 
    *[class*="col-"] {
        float: left;
@@ -127,7 +127,7 @@
 
 //Clearfix
 
-.panel-content:before, .panel-content:after, .row:before, .row:after, .clfx:after {
+.panel-content:before, .panel-content:after, .row:before, .row:after, .clfx:before, .clfx:after, .content:before, .content:after, .form:before, .form:after {
     content:"";
     display: table;
     clear:both;
