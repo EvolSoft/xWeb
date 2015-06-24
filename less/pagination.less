@@ -25,11 +25,6 @@
     border: 1px solid @button-border;
 }
 
-.pagination > li.active > a, .pagination > li.active > span {
-    background-color: #D6D6D6;
-	box-shadow: none;
-}
-
 .pagination > li:first-child > a, .pagination > li:first-child > span {
     border-top-left-radius: @border-radius;
     border-bottom-left-radius: @border-radius;
@@ -42,9 +37,14 @@
     box-shadow: inset 0px 1px 0px 0px @white;
 }
 
+.pagination > li.active > a, .pagination > li.active > span {
+    background-color: #D6D6D6;
+	box-shadow: none;
+}
+
 .pagination > li:hover > a, .pagination > li:hover > span  {
 	background-color: @button-hover;
-	box-shadow: none;
+	//box-shadow: none;
 }
 
 .pagination > li:active > a, .pagination > li:active > span, .pagination > li > a:focus , .pagination > li > span:focus {
@@ -108,15 +108,15 @@
 	color: @white;
 }
 
-//Danger
+//Error
 
-.pagination.pagination-danger > li.active > a, .pagination.pagination-danger > li.active > span {
+.pagination.pagination-error > li.active > a, .pagination.pagination-error > li.active > span {
     z-index: 100;
     box-shadow: none;
 	text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.5);
 	-webkit-box-shadow: none;
-	border: 1px solid @button-danger-active;
-	background: @button-danger-active;
+	border: 1px solid @button-error-active;
+	background: @button-error-active;
 	color: @white;
 }
 
