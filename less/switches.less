@@ -54,6 +54,7 @@ input.switch + label:hover:after {
 
 input.switch:checked + label:before {
    background: linear-gradient(@button-primary, darken(@button-primary, 15%));
+   background-color: @button-primary; //Fix for IE 9 and older
    box-shadow: inset 0px 1px 0px 0px lighten(@button-primary, 15%);
    border: 1px solid @button-primary-border;
 }
