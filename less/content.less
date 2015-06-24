@@ -3,29 +3,35 @@
 //Base Style
 
 .content {
-   padding: @content-padding;
-   margin: 0 auto;
-}
-
-.navbar .content {
-   padding: 0;
+	padding: @content-padding;
+	margin: 0 auto;
 }
 
 @media (min-width: @small-screen-width){
-   .content {
-      width: @content-small;
-   }
+	.content {
+		width: @content-small;
+	}
 }
 
 @media (min-width: @medium-screen-width){
-   .content {
-      width: @content-medium;
-   }
+	.content {
+		width: @content-medium;
+	}
+	.navbar .navbar-content {
+		padding: @content-padding;
+		margin: 0 auto;
+		width: @content-medium;
+	}
 }
 
 @media (min-width: @large-screen-width){
-   .content {
-      width: @content-large;
-   }
+	.content {
+		width: @content-large;
+	}
+	.navbar .navbar-content {
+		padding: @content-padding;
+		margin: 0 auto;
+		width: @content-large;
+	}
 }
 
