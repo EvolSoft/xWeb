@@ -1,0 +1,152 @@
+//**** Sliders ****//
+
+.slider {
+   display: block;
+   position: relative;
+   height: @slider-height;
+   margin: @slider-margin 0;
+   background-color: @slider;
+   border-radius: @border-radius;
+   box-shadow: @slider-box-shadow;
+   -webkit-box-shadow: @slider-box-shadow;
+}
+
+.slider > .slider-progress {
+   width: 50%;
+   color: @white;
+   text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.5);
+   text-align: center;
+   background: linear-gradient(@slider-progress, darken(@slider-progress, 15%));
+   background-color: @slider-progress; //Fix for IE 9 and older
+   border: 1px solid @slider-progress-border;
+   border-top-left-radius: @border-radius;
+   border-bottom-left-radius: @border-radius;
+   box-shadow: inset 0px 1px 0px 0px lighten(@slider-progress, 15%);
+   height: 100%;
+}
+
+.slider > .slider-handle {
+   position: absolute;
+   display: inline-block;
+   z-index: 2;
+   top: @slider-handle-top;
+   left: 50%;
+   height: @slider-handle-size;
+   width: @slider-handle-size;
+   background: @gray-light;
+   border-radius: @border-radius;
+   border: 1px solid @button-border;
+   box-shadow: inset 0px 1px 0px 0px @white;
+   -webkit-box-shadow: inset 0px 1px 0px 0px @white;
+   color: @gray-dark;
+   cursor: pointer;
+   padding: @slider-handle-padding;
+}
+
+.slider > .slider-handle:hover {
+	background: @button-hover;
+	box-shadow: inset 0px 1px 0px 0px lighten(@button-hover, 15%);
+	-webkit-box-shadow:inset 0px 1px 0px 0px lighten(@button-hover, 15%);
+}
+
+//Sizing
+
+.slider.ultra-small {
+    margin: @slider-margin / 2 0;
+	height: @slider-ultra-small-height;
+}
+
+.slider.ultra-small  > .slider-handle {
+   top: @slider-handle-ultra-small-top;
+   height: @slider-handle-ultra-small-size;
+   width: @slider-handle-ultra-small-size;
+   padding: @slider-handle-ultra-small-padding;
+}
+
+.slider.small {
+    margin: @slider-margin / 2 0;
+    height: @slider-small-height;
+}
+.slider.small  > .slider-handle {
+   top: @slider-handle-small-top;
+   height: @slider-handle-small-size;
+   width: @slider-handle-small-size;
+   padding: @slider-handle-small-padding;
+}
+.slider.large {
+    height: @slider-large-height;
+}
+.slider.large  > .slider-handle {
+   height: @slider-large-size;
+   width: @slider-large-size;
+   padding: @slider-large-padding;
+}
+
+//Success
+
+.slider.slider-success > .slider-progress {
+    background: linear-gradient(@slider-progress-success, darken(@slider-progress-success, 15%));
+	background-color: @slider-progress-success; //Fix for IE 9 and older
+	border: 1px solid @slider-progress-success-border;
+    box-shadow: inset 0px 1px 0px 0px lighten(@slider-progress-success, 15%);
+    -webkit-box-shadow: inset 0px 1px 0px 0px lighten(@slider-progress-success, 15%);
+}
+
+//Warning
+
+.slider.slider-warning  > .slider-progress {
+    background: linear-gradient(@slider-progress-warning, darken(@slider-progress-warning, 15%));
+	background-color: @slider-progress-warning; //Fix for IE 9 and older
+	border: 1px solid @slider-progress-warning-border;
+    box-shadow: inset 0px 1px 0px 0px lighten(@slider-progress-warning, 15%);
+    -webkit-box-shadow: inset 0px 1px 0px 0px lighten(@slider-progress-warning, 15%);
+}
+
+//Error
+
+.slider.slider-error  > .slider-progress {
+    background: linear-gradient(@progress-bar-error, darken(@slider-progress-error, 15%));
+	background-color: @slider-progress-error; //Fix for IE 9 and older
+	border: 1px solid @slider-progress-error-border;
+    box-shadow: inset 0px 1px 0px 0px lighten(@slider-progress-error, 15%);
+    -webkit-box-shadow: inset 0px 1px 0px 0px lighten(@slider-progress-error, 15%);
+}
+
+//Info
+
+.slider.slider-info  > .slider-progress {
+    background: linear-gradient(@slider-progress-info, darken(@slider-progress-info, 15%));
+	background-color: @slider-progress-info; //Fix for IE 9 and older
+	border: 1px solid @slider-progress-info-border;
+    box-shadow: inset 0px 1px 0px 0px lighten(@slider-progress-info, 15%);
+    -webkit-box-shadow: inset 0px 1px 0px 0px lighten(@slider-progress-info, 15%);
+}
+
+//Styles
+
+.slider.square {
+    border-radius: @border-square-radius;
+}
+
+.slider.square  > .slider-progress {
+    border-top-left-radius: @border-square-radius;
+	border-bottom-left-radius: @border-square-radius;
+}
+
+.slider.square > .slider-handle {
+    border-radius: @border-square-radius;
+}
+
+.slider.ultra-rounded {
+    border-radius: @border-ultra-rounded-radius;
+}
+
+.slider.ultra-rounded  > .slider-progress {
+    border-top-left-radius: @border-ultra-rounded-radius;
+	border-bottom-left-radius: @border-ultra-rounded-radius;
+}
+
+.slider.ultra-rounded > .slider-handle {
+    border-radius: @border-ultra-rounded-radius;
+}
+
