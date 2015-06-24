@@ -31,7 +31,9 @@
 	text-shadow: -1px 1px 0 rgba(0, 0, 0, 0.5);
     text-align: center;
     background: linear-gradient(@progress-bar, darken(@progress-bar, 15%));
+	background-color: @progress-bar; //Fix for IE 9 and older
 	border: 1px solid @progress-bar-border;
+	box-sizing: initial;
     box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar, 15%);
     -webkit-box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar, 15%);
     -webkit-transition: width .4s ease;
@@ -43,6 +45,7 @@
 
 .progress > .progress-bar-success {
     background: linear-gradient(@progress-bar-success, darken(@progress-bar-success, 15%));
+	background-color: @progress-bar-success; //Fix for IE 9 and older
 	border: 1px solid @progress-bar-success-border;
     box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar-success, 15%);
     -webkit-box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar-success, 15%);
@@ -52,24 +55,27 @@
 
 .progress > .progress-bar-warning {
     background: linear-gradient(@progress-bar-warning, darken(@progress-bar-warning, 15%));
+	background-color: @progress-bar-warning; //Fix for IE 9 and older
 	border: 1px solid @progress-bar-warning-border;
     box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar-warning, 15%);
     -webkit-box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar-warning, 15%);
 }
 
-//Danger
+//Error
 
-.progress > .progress-bar-danger {
-    background: linear-gradient(@progress-bar-danger, darken(@progress-bar-danger, 15%));
-	border: 1px solid @progress-bar-danger-border;
-    box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar-danger, 15%);
-    -webkit-box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar-danger, 15%);
+.progress > .progress-bar-error {
+    background: linear-gradient(@progress-bar-error, darken(@progress-bar-error, 15%));
+	background-color: @progress-bar-error; //Fix for IE 9 and older
+	border: 1px solid @progress-bar-error-border;
+    box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar-error, 15%);
+    -webkit-box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar-error, 15%);
 }
 
 //Info
 
 .progress > .progress-bar-info {
     background: linear-gradient(@progress-bar-info, darken(@progress-bar-info, 15%));
+	background-color: @progress-bar-info; //Fix for IE 9 and older
 	border: 1px solid @progress-bar-info-border;
     box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar-info, 15%);
     -webkit-box-shadow: inset 0px 1px 0px 0px lighten(@progress-bar-info, 15%);
