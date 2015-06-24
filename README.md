@@ -15,6 +15,8 @@ It has been written by [@Flavius12_](https://twitter.com/Flavius12_) at [EvolSof
 
 By default xWeb uses [Font-Awesome icons](http://fontawesome.io) by Dave Gandy and it has been compiled on Windows using the fantastic [WinLess](http://winless.org/) compiler :)
 
+xWeb uses also [jQuery](https://jquery.com/) which is used in the main xWeb JavaScript file
+
 xWeb is licensed under MIT (License details provided [here](https://github.com/EvolSoft/xWeb/blob/master/LICENSE))</p>
 
 ##Documentation
