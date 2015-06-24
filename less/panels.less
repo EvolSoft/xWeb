@@ -9,8 +9,8 @@
     border-radius: @border-radius;
 	border: 1px solid transparent;
 	border-color: @panel-border;
-    -webkit-box-shadow: @panel-box-shadow;
-    box-shadow: @panel-box-shadow;
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, .05);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, .05);
 }
 
 .panel-content {
@@ -115,30 +115,30 @@
     border-color: @panel-warning-lt-border;
 }
 
-//Danger
+//Error
 
-.panel.panel-danger {
-    border-color: @panel-danger-border;
+.panel.panel-error {
+    border-color: @panel-error-border;
 }
 
-.panel.panel-danger > .panel-header {
-    box-shadow: inset 0px 1px 0px 0px lighten(@panel-danger, 15%);
+.panel.panel-error > .panel-header {
+    box-shadow: inset 0px 1px 0px 0px lighten(@panel-error, 15%);
     color: @white;
-    background-color: @panel-danger;
-    border-color: @panel-danger-border;
+    background-color: @panel-error;
+    border-color: @panel-error-border;
 }
 
-//Danger Lighten
+//Error Lighten
 
-.panel.panel-danger-lt {
-    border-color: @panel-danger-lt-border;
+.panel.panel-error-lt {
+    border-color: @panel-error-lt-border;
 }
 
-.panel.panel-danger-lt > .panel-header {
-    box-shadow: inset 0px 1px 0px 0px lighten(@panel-danger-lt, 10%);
-    color: @panel-danger-lt-color;
-    background-color: @panel-danger-lt;
-    border-color: @panel-danger-lt-border;
+.panel.panel-error-lt > .panel-header {
+    box-shadow: inset 0px 1px 0px 0px lighten(@panel-error-lt, 10%);
+    color: @panel-error-lt-color;
+    background-color: @panel-error-lt;
+    border-color: @panel-error-lt-border;
 }
 
 //Info
