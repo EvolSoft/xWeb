@@ -6,7 +6,7 @@
     position: relative;
     font-size: 0px;
 	display: inline-block;
-    white-space: nowrap;
+	margin-bottom: @default-margin / 2;
 }
 
 .button-group > .button {
@@ -14,7 +14,7 @@
     border-radius: 0px;
 }
 
-.button-group > .button:focus {
+.button-group > .button:focus, .button-group > .button.active {
 	box-shadow: none;
 	-webkit-box-shadow: none;
 	background: @button-active;
@@ -57,7 +57,7 @@
 
 //Primary
 
-.button-group > .button.button-primary:focus {
+.button-group > .button.button-primary:focus, .button-group > .button.button-primary.active {
     box-shadow: none;
 	-webkit-box-shadow: none;
 	background: @button-primary-active;
@@ -65,7 +65,7 @@
 
 //Success
 
-.button-group > .button.button-success:focus {
+.button-group > .button.button-success:focus, .button-group > .button.button-success.active {
     box-shadow: none;
 	-webkit-box-shadow: none;
 	background: @button-success-active;
@@ -73,23 +73,23 @@
 
 //Warning
 
-.button-group > .button.button-warning:focus {
+.button-group > .button.button-warning:focus, .button-group > .button.button-warning.active {
     box-shadow: none;
 	-webkit-box-shadow: none;
 	background: @button-warning-active;
 }
 
-//Danger
+//Error
 
-.button-group > .button.button-danger:focus {
+.button-group > .button.button-error:focus, .button-group > .button.button-error.active {
     box-shadow: none;
 	-webkit-box-shadow: none;
-	background: @button-danger-active;
+	background: @button-error-active;
 }
 
 //Info
 
-.button-group > .button.button-info:focus {
+.button-group > .button.button-info:focus, .button-group > .button.button-info.active {
     box-shadow: none;
 	-webkit-box-shadow: none;
 	background: @button-info-active;
