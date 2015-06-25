@@ -36,6 +36,8 @@ css\
   font-awesome.min.css 
   xweb.css 
   xweb.min.css 
+  xweb.theme.css
+  xweb.theme.min.css
 examples\
   fixed-navbar-example.html 
   login-template.html 
