@@ -1,0 +1,273 @@
+/*
+ * xWeb (v1.0) by EvolSoft
+ * Developer: EvolSoft (Flavius12)
+ * Website: http://www.evolsoft.tk
+ * Date: 18/05/2015 06:57 PM (UTC)
+ * Copyright & License: (C) 2015 EvolSoft
+ * Licensed under MIT (https://github.com/EvolSoft/xWeb/blob/master/LICENSE)
+ */
+ 
+body {
+  font-family: Verdana !important;
+}
+* {
+  font-family: Verdana;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.alert.alert-info {
+  color: #ffffff;
+  background: #00dccf;
+  border: 1px solid #00a99f;
+}
+.alert.alert-success {
+  color: #ffffff;
+  background: #00dc00;
+  border: 1px solid #00a900;
+}
+.alert.alert-warning {
+  color: #ffffff;
+  background: #dca600;
+  border: 1px solid #a98000;
+}
+.alert.alert-error {
+  color: #ffffff;
+  background: #dc0000;
+  border: 1px solid #a90000;
+}
+.alert .close {
+  top: -14px;
+  right: -11px;
+}
+.alert.alert-info a,
+.alert.alert-info a:hover,
+.alert.alert-info .close,
+.alert.alert-info .close:hover,
+.alert.alert-warning a,
+.alert.alert-warning a:hover,
+.alert.alert-warning .close,
+.alert.alert-warning .close:hover,
+.alert.alert-success a,
+.alert.alert-success a:hover,
+.alert.alert-success .close,
+.alert.alert-success .close:hover,
+.alert.alert-error a,
+.alert.alert-error a:hover,
+.alert.alert-error .close,
+.alert.alert-error .close:hover {
+  color: #ffffff;
+}
+.breadcrumb {
+  padding: 10px 15px 11px 15px;
+  font-family: Verdana;
+  font-size: 15px;
+}
+.breadcrumb > li + li:before {
+  content: "\f054";
+}
+.button {
+  font-family: Verdana !important;
+  text-shadow: none !important;
+  border: 1px solid #e0e0e0 !important;
+  box-shadow: none !important;
+  background: #f8f8f8 !important;
+}
+.button:hover {
+  border: 1px solid #c7c7c7 !important;
+  background: #ececec;
+}
+.button:active {
+  border: 1px solid #c7c7c7 !important;
+  background: #dfdfdf;
+}
+.button.button-primary {
+  border: 1px solid #0072dc !important;
+  background: #0072dc !important;
+}
+.button.button-primary:hover {
+  border: 1px solid #0065c3 !important;
+  background: #0065c3 !important;
+}
+.button.button-primary:active {
+  background: #0058a9 !important;
+}
+.button.button-success {
+  border: 1px solid #00dc00 !important;
+  background: #00dc00 !important;
+}
+.button.button-success:hover {
+  border: 1px solid #00c300 !important;
+  background: #00c300 !important;
+}
+.button.button-success:active {
+  background: #00a900 !important;
+}
+.button.button-warning {
+  border: 1px solid #dca600 !important;
+  background: #dca600 !important;
+}
+.button.button-warning:hover {
+  border: 1px solid #c39300 !important;
+  background: #c39300 !important;
+}
+.button.button-warning:active {
+  background: #a98000 !important;
+}
+.button.button-error {
+  border: 1px solid #dc0000 !important;
+  background: #dc0000 !important;
+}
+.button.button-error:hover {
+  border: 1px solid #c30000 !important;
+  background: #c30000 !important;
+}
+.button.button-error:active {
+  background: #a90000 !important;
+}
+.button.button-info {
+  border: 1px solid #00dccf !important;
+  background: #00dccf !important;
+}
+.button.button-info:hover {
+  border: 1px solid #00c3b7 !important;
+  background: #00c3b7 !important;
+}
+.button.button-info:active {
+  background: #00a99f !important;
+}
+.panel .panel-header {
+  padding: 10px 15px;
+  border-bottom: none;
+}
+.panel .panel-title {
+  font-size: 17px;
+}
+.input {
+  font-family: Verdana !important;
+}
+.menu {
+  padding: 0;
+  min-width: 185px;
+}
+.menu > li > a {
+  padding: 9px 15px;
+}
+.navbar {
+  background: #1A4FFF;
+  min-height: 55px;
+  border: none !important;
+}
+.navbar .navbar-title,
+.navbar .navbar-title:hover {
+  line-height: 18px;
+  padding: 18px 15px;
+  color: #ffffff;
+}
+.navbar .navbar-links > li > a,
+.navbar .navbar-links > li > a:hover,
+.navbar .navbar-links > li > a:focus {
+  line-height: 19px;
+  font-size: 15px;
+  padding: 17px 14px;
+  color: #ffffff;
+}
+.navbar .navbar-links > li.active > a {
+  background: #004DDD;
+  color: #ffffff;
+}
+.navbar .navbar-links .menu-group.open {
+  background: #004DDD;
+  color: #ffffff;
+}
+@media (max-width: 749px) {
+  .navbar .navbar-links:nth-of-type(1) {
+    border-top: 1px solid #002BBC;
+  }
+  .navbar .navbar-links:nth-of-type(1) > li:first-child {
+    border-top: 1px solid #678aff;
+  }
+  .navbar .navbar-links .menu {
+    background: #1A4FFF;
+  }
+  .navbar .navbar-links .menu > li > a {
+    color: #ffffff;
+  }
+  .navbar .navbar-links .menu > li > a:hover {
+    background: #1A4FFF;
+    color: #ffffff;
+  }
+  .navbar .navbar-links .menu > li.active > a {
+    background: #004DDD;
+    color: #ffffff;
+  }
+  .navbar .navbar-links .menu hr {
+    border-color: #678aff;
+  }
+}
+.navbar.navbar-static {
+  border-bottom: none;
+}
+.navbar .navbar-toggle {
+  line-height: 18px;
+  padding: 16px;
+  color: #ffffff;
+}
+.navbar .navbar-toggle:hover {
+  color: #ffffff;
+}
+.progress {
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+}
+.progress > .progress-bar {
+  height: 100%;
+  text-shadow: none !important;
+  border: none !important;
+  background: #0072dc;
+}
+.progress > .progress-bar-success {
+  background: #00dc00;
+}
+.progress > .progress-bar-warning {
+  background: #dca600;
+}
+.progress > .progress-bar-error {
+  background: #dc0000;
+}
+.progress > .progress-bar-info {
+  background: #00dccf;
+}
+.slider {
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+}
+.slider > .slider-progress {
+  border: none !important;
+  background: #0072dc;
+}
+input.switch + label:before {
+  box-shadow: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+}
+input.switch + label:after {
+  width: 49%;
+  border-radius: 0;
+  background: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  box-shadow: none;
+}
+input.switch + label:hover:after {
+  border-radius: 0;
+  background: #ececec;
+  border: 1px solid #e0e0e0;
+  box-shadow: none;
+}
+input.switch:checked + label:before {
+  background: #0072dc;
+  border: none;
+  box-shadow: none;
+}
+.textarea {
+  font-family: Verdana;
+}
