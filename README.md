@@ -21,7 +21,7 @@ xWeb is licensed under MIT (License details provided [here](https://github.com/E
 
 ##Documentation
 
-*The full documentation is available at http://xweb.evolsoft.tk*
+*The full documentation is available at https://www.evolsoft.tk/xweb/*
 
 ###What is included?
 
